@@ -8,6 +8,7 @@
 import UIKit
 import Utilities
 import Foundation
+import SwiftUI
 
 public protocol SignInViewRouterProtocol: AnyObject {
     init(context: UIViewController?)
@@ -23,13 +24,12 @@ public final class SignInViewRouter: SignInViewRouterProtocol {
     }
     
     public func start() {
-        let view = SignInViewController.instantiate(with: "SignInView", identifier: "SignInViewController")
-        
         if
-            let view = view,
             let context = context?.children.first as? UINavigationController
         {
-            context.pushViewController(view, animated: false)
+            let view = SignInView()
+            let viewController = UIHostingController(rootView: view)
+            context.pushViewController(viewController, animated: true)
         }
     }
 }

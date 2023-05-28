@@ -11,10 +11,9 @@
 		F3150B2C2A23B27200C90C7A /* SigningKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B212A23B27200C90C7A /* SigningKit.framework */; };
 		F3150B312A23B27200C90C7A /* SigningKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B302A23B27200C90C7A /* SigningKitTests.swift */; };
 		F3150B322A23B27200C90C7A /* SigningKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3150B242A23B27200C90C7A /* SigningKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3150B412A23B2B900C90C7A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B402A23B2B900C90C7A /* SignInViewController.swift */; };
-		F3150B432A23B2C500C90C7A /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3150B422A23B2C500C90C7A /* SignInView.storyboard */; };
 		F3150B462A23B2D600C90C7A /* SignInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */; };
 		F3150B6F2A23B46A00C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B6E2A23B46A00C90C7A /* Utilities.framework */; };
+		F3150B772A23B81200C90C7A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B762A23B81200C90C7A /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +32,9 @@
 		F3150B252A23B27200C90C7A /* SigningKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SigningKit.docc; sourceTree = "<group>"; };
 		F3150B2B2A23B27200C90C7A /* SigningKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigningKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150B302A23B27200C90C7A /* SigningKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningKitTests.swift; sourceTree = "<group>"; };
-		F3150B402A23B2B900C90C7A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		F3150B422A23B2C500C90C7A /* SignInView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInView.storyboard; sourceTree = "<group>"; };
 		F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewRouter.swift; sourceTree = "<group>"; };
 		F3150B6E2A23B46A00C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3150B762A23B81200C90C7A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */,
-				F3150B402A23B2B900C90C7A /* SignInViewController.swift */,
-				F3150B422A23B2C500C90C7A /* SignInView.storyboard */,
+				F3150B762A23B81200C90C7A /* SignInView.swift */,
 			);
 			path = SignInView;
 			sourceTree = "<group>";
@@ -206,7 +203,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150B432A23B2C500C90C7A /* SignInView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3150B462A23B2D600C90C7A /* SignInViewRouter.swift in Sources */,
-				F3150B412A23B2B900C90C7A /* SignInViewController.swift in Sources */,
+				F3150B772A23B81200C90C7A /* SignInView.swift in Sources */,
 				F3150B262A23B27200C90C7A /* SigningKit.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
