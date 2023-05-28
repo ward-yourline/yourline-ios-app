@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Utilities/Utilities.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SigningKit/SigningKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:yourline-ios-app/yourline-ios-app.xcodeproj">
    </FileRef>
 </Workspace>

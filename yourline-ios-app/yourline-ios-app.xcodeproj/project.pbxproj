@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3150B3D2A23B28800C90C7A /* SigningKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B3C2A23B28800C90C7A /* SigningKit.framework */; };
+		F3150B3E2A23B28800C90C7A /* SigningKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B3C2A23B28800C90C7A /* SigningKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3150B732A23B47800C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B722A23B47800C90C7A /* Utilities.framework */; };
+		F3150B742A23B47800C90C7A /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B722A23B47800C90C7A /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F317B0482A23AAC300438B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B0472A23AAC300438B9F /* AppDelegate.swift */; };
 		F317B04A2A23AAC300438B9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B0492A23AAC300438B9F /* SceneDelegate.swift */; };
 		F317B04C2A23AAC300438B9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B04B2A23AAC300438B9F /* MainViewController.swift */; };
@@ -37,7 +41,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F3150B3F2A23B28800C90C7A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F3150B3E2A23B28800C90C7A /* SigningKit.framework in Embed Frameworks */,
+				F3150B742A23B47800C90C7A /* Utilities.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F3150B3C2A23B28800C90C7A /* SigningKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SigningKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3150B722A23B47800C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F317B0442A23AAC300438B9F /* yourline-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yourline-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F317B0472A23AAC300438B9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F317B0492A23AAC300438B9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3150B3D2A23B28800C90C7A /* SigningKit.framework in Frameworks */,
+				F3150B732A23B47800C90C7A /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +103,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3150B3B2A23B28800C90C7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3150B722A23B47800C90C7A /* Utilities.framework */,
+				F3150B3C2A23B28800C90C7A /* SigningKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3150B752A23B5A900C90C7A /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				F373E26D2A23AC9B00EED2E8 /* MainViewRouter.swift */,
+				F317B04B2A23AAC300438B9F /* MainViewController.swift */,
+				F317B04D2A23AAC300438B9F /* Main.storyboard */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		F317B03B2A23AAC300438B9F = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +129,7 @@
 				F317B0602A23AAC500438B9F /* yourline-ios-appTests */,
 				F317B06A2A23AAC500438B9F /* yourline-ios-appUITests */,
 				F317B0452A23AAC300438B9F /* Products */,
+				F3150B3B2A23B28800C90C7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,9 +148,7 @@
 			children = (
 				F317B0472A23AAC300438B9F /* AppDelegate.swift */,
 				F317B0492A23AAC300438B9F /* SceneDelegate.swift */,
-				F373E26D2A23AC9B00EED2E8 /* MainViewRouter.swift */,
-				F317B04B2A23AAC300438B9F /* MainViewController.swift */,
-				F317B04D2A23AAC300438B9F /* Main.storyboard */,
+				F3150B752A23B5A900C90C7A /* MainView */,
 				F317B0532A23AAC500438B9F /* Assets.xcassets */,
 				F317B0552A23AAC500438B9F /* LaunchScreen.storyboard */,
 				F317B0582A23AAC500438B9F /* Info.plist */,
@@ -143,6 +184,7 @@
 				F317B0402A23AAC300438B9F /* Sources */,
 				F317B0412A23AAC300438B9F /* Frameworks */,
 				F317B0422A23AAC300438B9F /* Resources */,
+				F3150B3F2A23B28800C90C7A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
