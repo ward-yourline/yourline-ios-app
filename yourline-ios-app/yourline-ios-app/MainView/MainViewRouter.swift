@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SigningKit
 import Utilities
+import Resources
 
 final class MainViewRouter {
     
@@ -29,7 +30,7 @@ final class MainViewRouter {
         
         mainViewController.view.addSubview(navigationController.view)
         navigationController.view.frame = mainViewController.view.frame
-//        
+//
 //        navigationController.view.addConstraints([
 //            NSLayoutConstraint(
 //                item: navigationController.view!,
@@ -89,5 +90,9 @@ final class MainViewRouter {
     
     func openServiceProviderLandingView() {
         
+    }
+    
+    func initialise() {
+        Fonts.install()
     }
 }

@@ -5,6 +5,9 @@
       location = "group:Utilities/Utilities.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Resources/Resources.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SigningKit/SigningKit.xcodeproj">
    </FileRef>
    <FileRef

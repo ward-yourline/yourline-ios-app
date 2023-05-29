@@ -14,6 +14,9 @@
 		F3150B462A23B2D600C90C7A /* SignInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */; };
 		F3150B6F2A23B46A00C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B6E2A23B46A00C90C7A /* Utilities.framework */; };
 		F3150B772A23B81200C90C7A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B762A23B81200C90C7A /* SignInView.swift */; };
+		F3150B7B2A23D29600C90C7A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B792A23D29600C90C7A /* SignUpView.swift */; };
+		F3150B7C2A23D29600C90C7A /* SignUpViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B7A2A23D29600C90C7A /* SignUpViewRouter.swift */; };
+		F3150BAA2A252B5000C90C7A /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BA92A252B5000C90C7A /* Resources.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 		F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewRouter.swift; sourceTree = "<group>"; };
 		F3150B6E2A23B46A00C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150B762A23B81200C90C7A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		F3150B792A23D29600C90C7A /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		F3150B7A2A23D29600C90C7A /* SignUpViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
+		F3150BA92A252B5000C90C7A /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3150BAA2A252B5000C90C7A /* Resources.framework in Frameworks */,
 				F3150B6F2A23B46A00C90C7A /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,6 +86,7 @@
 		F3150B232A23B27200C90C7A /* SigningKit */ = {
 			isa = PBXGroup;
 			children = (
+				F3150B782A23D26C00C90C7A /* SignUpView */,
 				F3150B442A23B2CC00C90C7A /* SignInView */,
 				F3150B242A23B27200C90C7A /* SigningKit.h */,
 				F3150B252A23B27200C90C7A /* SigningKit.docc */,
@@ -106,9 +114,19 @@
 		F3150B6D2A23B46A00C90C7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3150BA92A252B5000C90C7A /* Resources.framework */,
 				F3150B6E2A23B46A00C90C7A /* Utilities.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3150B782A23D26C00C90C7A /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				F3150B792A23D29600C90C7A /* SignUpView.swift */,
+				F3150B7A2A23D29600C90C7A /* SignUpViewRouter.swift */,
+			);
+			path = SignUpView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3150B7B2A23D29600C90C7A /* SignUpView.swift in Sources */,
 				F3150B462A23B2D600C90C7A /* SignInViewRouter.swift in Sources */,
+				F3150B7C2A23D29600C90C7A /* SignUpViewRouter.swift in Sources */,
 				F3150B772A23B81200C90C7A /* SignInView.swift in Sources */,
 				F3150B262A23B27200C90C7A /* SigningKit.docc in Sources */,
 			);

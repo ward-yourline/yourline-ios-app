@@ -20,6 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         router = MainViewRouter(window: window)
+        router?.initialise()
+        
         router?.start()
     }
 

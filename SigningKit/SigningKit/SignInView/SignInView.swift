@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Resources
 
 struct SignInView: View {
     @State private var emailText: String = ""
@@ -14,19 +15,26 @@ struct SignInView: View {
     var body: some View {
         VStack(spacing: 20) {
             VStack {
-                Text("YourLine")
+                HStack {
+                    Text("Your")
+                        .font(.custom(Fonts.bold.name, size: 48))
+                        .foregroundColor(CustomColors.blue.color)
+                    Text("Line")
+                        .font(.custom(Fonts.bold.name, size: 48))
+                        .foregroundColor(CustomColors.darkGrey.color)
+                }
                 
                 Rectangle()
-                    .frame(height: 1)
-                    .foregroundColor(Color.black)
-                    .padding(.horizontal, 40)
-                    .padding(.top, 10)
+                    .frame(height: 0.5)
+                    .foregroundColor(Color(UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)))
+                    .padding(.horizontal, 10)
                 
-                Text("Business and pleasure")
+                Text("Business and pleasure").font(.custom(Fonts.regular.name, size: 20))
             }
             
             VStack(alignment: .leading, spacing: 20) {
-                Text("Sign in")
+                Text("Sign in").font(.custom(Fonts.bold.name, size: 18))
+
                 TextField("Enter email", text: $emailText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Enter password", text: $passwordText)
@@ -47,18 +55,19 @@ struct SignInView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .padding()
-                        .background(Color.blue)
+                        .background(CustomColors.darkGrey.color)
                         .cornerRadius(8)
+                        .font(.custom(Fonts.bold.name, size: 16))
+
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 0)
             
             Rectangle()
-                .frame(height: 1)
-                .foregroundColor(Color.black)
-                .padding(.horizontal, 40)
-                .padding(.vertical, 10)
+                .frame(height: 0.5)
+                .foregroundColor(Color(UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)))
+                .padding(.horizontal, 10)
             
             VStack {
                 Button(action: {
@@ -68,6 +77,7 @@ struct SignInView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.black)
                         .padding()
+                        .font(.custom(Fonts.bold.name, size: 16))
                         .background(
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color.black, lineWidth: 1)
@@ -80,6 +90,7 @@ struct SignInView: View {
             }) {
                 Text("New to YourLine? Sign up here")
                     .padding()
+                    .font(.custom(Fonts.regular.name, size: 16))
             }
         }
         .padding(.horizontal, 20.0)

@@ -12,6 +12,7 @@
 		F3150B612A23B42D00C90C7A /* UtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B602A23B42D00C90C7A /* UtilitiesTests.swift */; };
 		F3150B622A23B42D00C90C7A /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = F3150B542A23B42D00C90C7A /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3150B6C2A23B43B00C90C7A /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B6B2A23B43B00C90C7A /* UIViewController+Extensions.swift */; };
+		F3150BAE2A252DD300C90C7A /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150BAD2A252DD300C90C7A /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		F3150B5B2A23B42D00C90C7A /* UtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150B602A23B42D00C90C7A /* UtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTests.swift; sourceTree = "<group>"; };
 		F3150B6B2A23B43B00C90C7A /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F3150BAD2A252DD300C90C7A /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				F3150B6B2A23B43B00C90C7A /* UIViewController+Extensions.swift */,
 				F3150B542A23B42D00C90C7A /* Utilities.h */,
 				F3150B552A23B42D00C90C7A /* Utilities.docc */,
+				F3150BAD2A252DD300C90C7A /* Color+Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				F3150B6C2A23B43B00C90C7A /* UIViewController+Extensions.swift in Sources */,
 				F3150B562A23B42D00C90C7A /* Utilities.docc in Sources */,
+				F3150BAE2A252DD300C90C7A /* Color+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
