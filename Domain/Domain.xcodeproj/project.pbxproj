@@ -12,6 +12,9 @@
 		F3150BFD2A26253800C90C7A /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150BFC2A26253800C90C7A /* DomainTests.swift */; };
 		F3150BFE2A26253800C90C7A /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = F3150BF02A26253700C90C7A /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3150C092A26254300C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C082A26254300C90C7A /* Utilities.framework */; };
+		F3150C192A26261D00C90C7A /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = F3150C182A26261D00C90C7A /* Apollo */; };
+		F3150C1B2A26261D00C90C7A /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F3150C1A2A26261D00C90C7A /* ApolloAPI */; };
+		F3150C1D2A26261D00C90C7A /* apollo-ios-cli in Frameworks */ = {isa = PBXBuildFile; productRef = F3150C1C2A26261D00C90C7A /* apollo-ios-cli */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3150C1B2A26261D00C90C7A /* ApolloAPI in Frameworks */,
 				F3150C092A26254300C90C7A /* Utilities.framework in Frameworks */,
+				F3150C1D2A26261D00C90C7A /* apollo-ios-cli in Frameworks */,
+				F3150C192A26261D00C90C7A /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +131,11 @@
 			dependencies = (
 			);
 			name = Domain;
+			packageProductDependencies = (
+				F3150C182A26261D00C90C7A /* Apollo */,
+				F3150C1A2A26261D00C90C7A /* ApolloAPI */,
+				F3150C1C2A26261D00C90C7A /* apollo-ios-cli */,
+			);
 			productName = Domain;
 			productReference = F3150BED2A26253700C90C7A /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
@@ -174,6 +185,9 @@
 				Base,
 			);
 			mainGroup = F3150BE32A26253700C90C7A;
+			packageReferences = (
+				F3150C172A26261D00C90C7A /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = F3150BEE2A26253700C90C7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -472,6 +486,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3150C172A26261D00C90C7A /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3150C182A26261D00C90C7A /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3150C172A26261D00C90C7A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		F3150C1A2A26261D00C90C7A /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3150C172A26261D00C90C7A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		F3150C1C2A26261D00C90C7A /* apollo-ios-cli */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3150C172A26261D00C90C7A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = "apollo-ios-cli";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3150BE42A26253700C90C7A /* Project object */;
 }
