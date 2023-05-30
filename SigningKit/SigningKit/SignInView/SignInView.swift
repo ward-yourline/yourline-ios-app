@@ -9,10 +9,17 @@ import SwiftUI
 import Resources
 
 struct SignInView: View {
+    
     @State private var emailText: String = ""
     @State private var passwordText: String = ""
+        
+    private var router: SignInViewRouter?
+    init(router: SignInViewRouter? = nil) {
+        self.router = router
+    }
     
     var body: some View {
+
         VStack(spacing: 20) {
             VStack {
                 HStack {
@@ -26,7 +33,7 @@ struct SignInView: View {
                 
                 Rectangle()
                     .frame(height: 0.5)
-                    .foregroundColor(Color(UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)))
+                    .foregroundColor(CustomColors.lightGrey.color)
                     .padding(.horizontal, 10)
                 
                 Text("Business and pleasure").font(.custom(Fonts.regular.name, size: 20))
@@ -34,7 +41,7 @@ struct SignInView: View {
             
             VStack(alignment: .leading, spacing: 20) {
                 Text("Sign in").font(.custom(Fonts.bold.name, size: 18))
-
+                
                 TextField("Enter email", text: $emailText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Enter password", text: $passwordText)
@@ -58,7 +65,7 @@ struct SignInView: View {
                         .background(CustomColors.darkGrey.color)
                         .cornerRadius(8)
                         .font(.custom(Fonts.bold.name, size: 16))
-
+                    
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -66,7 +73,7 @@ struct SignInView: View {
             
             Rectangle()
                 .frame(height: 0.5)
-                .foregroundColor(Color(UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)))
+                .foregroundColor(CustomColors.lightGrey.color)
                 .padding(.horizontal, 10)
             
             VStack {
@@ -80,13 +87,13 @@ struct SignInView: View {
                         .font(.custom(Fonts.bold.name, size: 16))
                         .background(
                             RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.black, lineWidth: 1)
+                                .stroke(CustomColors.lightGrey.color, lineWidth: 1)
                         )
                 }
             }
             Spacer()
             Button(action: {
-                // Action to perform when the button is tapped
+                router?.openSignUp()
             }) {
                 Text("New to YourLine? Sign up here")
                     .padding()

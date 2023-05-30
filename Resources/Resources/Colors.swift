@@ -12,6 +12,7 @@ import Utilities
 public enum CustomColors: String {
     case blue = "75BCD2"
     case darkGrey = "3b5e69"
+    case lightGrey = "D6DBDF"
     
     public var color: Color {
         return Color(hex: self.rawValue)

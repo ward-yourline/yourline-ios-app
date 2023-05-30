@@ -13,6 +13,7 @@
 		F3150B742A23B47800C90C7A /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B722A23B47800C90C7A /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F3150BA32A2529F500C90C7A /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BA22A2529F500C90C7A /* Resources.framework */; };
 		F3150BA42A2529F500C90C7A /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BA22A2529F500C90C7A /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3150BB22A25409D00C90C7A /* CustomAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3150BB12A25409D00C90C7A /* CustomAssets.xcassets */; };
 		F317B0482A23AAC300438B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B0472A23AAC300438B9F /* AppDelegate.swift */; };
 		F317B04A2A23AAC300438B9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B0492A23AAC300438B9F /* SceneDelegate.swift */; };
 		F317B04C2A23AAC300438B9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B04B2A23AAC300438B9F /* MainViewController.swift */; };
@@ -63,6 +64,7 @@
 		F3150B3C2A23B28800C90C7A /* SigningKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SigningKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150B722A23B47800C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150BA22A2529F500C90C7A /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3150BB12A25409D00C90C7A /* CustomAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CustomAssets.xcassets; path = ../../Resources/Resources/CustomAssets.xcassets; sourceTree = "<group>"; };
 		F317B0442A23AAC300438B9F /* yourline-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yourline-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F317B0472A23AAC300438B9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F317B0492A23AAC300438B9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				F3150B752A23B5A900C90C7A /* MainView */,
 				F317B0532A23AAC500438B9F /* Assets.xcassets */,
 				F317B0552A23AAC500438B9F /* LaunchScreen.storyboard */,
+				F3150BB12A25409D00C90C7A /* CustomAssets.xcassets */,
 				F317B0582A23AAC500438B9F /* Info.plist */,
 				F317B0502A23AAC300438B9F /* yourline_ios_app.xcdatamodeld */,
 			);
@@ -288,6 +291,7 @@
 				F317B0572A23AAC500438B9F /* LaunchScreen.storyboard in Resources */,
 				F317B0542A23AAC500438B9F /* Assets.xcassets in Resources */,
 				F317B04F2A23AAC300438B9F /* Main.storyboard in Resources */,
+				F3150BB22A25409D00C90C7A /* CustomAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

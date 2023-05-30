@@ -27,9 +27,19 @@ public final class SignInViewRouter: SignInViewRouterProtocol {
         if
             let context = context?.children.first as? UINavigationController
         {
-            let view = SignInView()
+            let view = SignInView(router: self)
+            
             let viewController = UIHostingController(rootView: view)
             context.pushViewController(viewController, animated: true)
         }
+    }
+    
+    public func openSignUp() {
+        let router = SignUpViewRouter(context: context)
+        router.start()
+    }
+    
+    public func openForgotPassword() {
+        // TODO
     }
 }
