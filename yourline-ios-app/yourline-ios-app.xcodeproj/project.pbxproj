@@ -212,6 +212,8 @@
 			dependencies = (
 			);
 			name = "yourline-ios-app";
+			packageProductDependencies = (
+			);
 			productName = "yourline-ios-app";
 			productReference = F317B0442A23AAC300438B9F /* yourline-ios-app.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +286,8 @@
 				Base,
 			);
 			mainGroup = F317B03B2A23AAC300438B9F;
+			packageReferences = (
+			);
 			productRefGroup = F317B0452A23AAC300438B9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
