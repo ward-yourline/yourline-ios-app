@@ -28,6 +28,48 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3A361ED2832C35800690696"
+               BuildableName = "Resources.framework"
+               BlueprintName = "Resources"
+               ReferencedContainer = "container:../Resources/Resources.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3150BEC2A26253700C90C7A"
+               BuildableName = "Domain.framework"
+               BlueprintName = "Domain"
+               ReferencedContainer = "container:../Domain/Domain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3150BBC2A2624D700C90C7A"
+               BuildableName = "Webservice.framework"
+               BlueprintName = "Webservice"
+               ReferencedContainer = "container:../Webservice/Webservice.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F3150B202A23B27200C90C7A"
                BuildableName = "SigningKit.framework"
                BlueprintName = "SigningKit"
@@ -46,20 +88,6 @@
                BuildableName = "yourline-ios-app.app"
                BlueprintName = "yourline-ios-app"
                ReferencedContainer = "container:yourline-ios-app.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F3A361ED2832C35800690696"
-               BuildableName = "Resources.framework"
-               BlueprintName = "Resources"
-               ReferencedContainer = "container:../Resources/Resources.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

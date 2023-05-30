@@ -14,6 +14,10 @@
 		F3150BA32A2529F500C90C7A /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BA22A2529F500C90C7A /* Resources.framework */; };
 		F3150BA42A2529F500C90C7A /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BA22A2529F500C90C7A /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F3150BB22A25409D00C90C7A /* CustomAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3150BB12A25409D00C90C7A /* CustomAssets.xcassets */; };
+		F3150BE12A26251B00C90C7A /* Webservice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BE02A26251B00C90C7A /* Webservice.framework */; };
+		F3150BE22A26251B00C90C7A /* Webservice.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BE02A26251B00C90C7A /* Webservice.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3150C152A26256800C90C7A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C142A26256800C90C7A /* Domain.framework */; };
+		F3150C162A26256800C90C7A /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C142A26256800C90C7A /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F317B0482A23AAC300438B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B0472A23AAC300438B9F /* AppDelegate.swift */; };
 		F317B04A2A23AAC300438B9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B0492A23AAC300438B9F /* SceneDelegate.swift */; };
 		F317B04C2A23AAC300438B9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B04B2A23AAC300438B9F /* MainViewController.swift */; };
@@ -51,9 +55,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F3150C162A26256800C90C7A /* Domain.framework in Embed Frameworks */,
 				F3150B3E2A23B28800C90C7A /* SigningKit.framework in Embed Frameworks */,
 				F3150B742A23B47800C90C7A /* Utilities.framework in Embed Frameworks */,
 				F3150BA42A2529F500C90C7A /* Resources.framework in Embed Frameworks */,
+				F3150BE22A26251B00C90C7A /* Webservice.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +71,8 @@
 		F3150B722A23B47800C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150BA22A2529F500C90C7A /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150BB12A25409D00C90C7A /* CustomAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CustomAssets.xcassets; path = ../../Resources/Resources/CustomAssets.xcassets; sourceTree = "<group>"; };
+		F3150BE02A26251B00C90C7A /* Webservice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Webservice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3150C142A26256800C90C7A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F317B0442A23AAC300438B9F /* yourline-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yourline-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F317B0472A23AAC300438B9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F317B0492A23AAC300438B9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,9 +95,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3150C152A26256800C90C7A /* Domain.framework in Frameworks */,
 				F3150B3D2A23B28800C90C7A /* SigningKit.framework in Frameworks */,
 				F3150B732A23B47800C90C7A /* Utilities.framework in Frameworks */,
 				F3150BA32A2529F500C90C7A /* Resources.framework in Frameworks */,
+				F3150BE12A26251B00C90C7A /* Webservice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +123,8 @@
 		F3150B3B2A23B28800C90C7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3150C142A26256800C90C7A /* Domain.framework */,
+				F3150BE02A26251B00C90C7A /* Webservice.framework */,
 				F3150BA22A2529F500C90C7A /* Resources.framework */,
 				F3150B722A23B47800C90C7A /* Utilities.framework */,
 				F3150B3C2A23B28800C90C7A /* SigningKit.framework */,

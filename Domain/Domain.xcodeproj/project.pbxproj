@@ -7,205 +7,165 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F3150B262A23B27200C90C7A /* SigningKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = F3150B252A23B27200C90C7A /* SigningKit.docc */; };
-		F3150B2C2A23B27200C90C7A /* SigningKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B212A23B27200C90C7A /* SigningKit.framework */; };
-		F3150B312A23B27200C90C7A /* SigningKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B302A23B27200C90C7A /* SigningKitTests.swift */; };
-		F3150B322A23B27200C90C7A /* SigningKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3150B242A23B27200C90C7A /* SigningKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3150B462A23B2D600C90C7A /* SignInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */; };
-		F3150B6F2A23B46A00C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B6E2A23B46A00C90C7A /* Utilities.framework */; };
-		F3150B772A23B81200C90C7A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B762A23B81200C90C7A /* SignInView.swift */; };
-		F3150B7B2A23D29600C90C7A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B792A23D29600C90C7A /* SignUpView.swift */; };
-		F3150B7C2A23D29600C90C7A /* SignUpViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B7A2A23D29600C90C7A /* SignUpViewRouter.swift */; };
-		F3150BAA2A252B5000C90C7A /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BA92A252B5000C90C7A /* Resources.framework */; };
-		F3150BDD2A26251000C90C7A /* Webservice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BDC2A26251000C90C7A /* Webservice.framework */; };
-		F3150C112A26255C00C90C7A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C102A26255C00C90C7A /* Domain.framework */; };
+		F3150BF22A26253700C90C7A /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = F3150BF12A26253700C90C7A /* Domain.docc */; };
+		F3150BF82A26253800C90C7A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BED2A26253700C90C7A /* Domain.framework */; };
+		F3150BFD2A26253800C90C7A /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150BFC2A26253800C90C7A /* DomainTests.swift */; };
+		F3150BFE2A26253800C90C7A /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = F3150BF02A26253700C90C7A /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3150C092A26254300C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C082A26254300C90C7A /* Utilities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F3150B2D2A23B27200C90C7A /* PBXContainerItemProxy */ = {
+		F3150BF92A26253800C90C7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F3150B182A23B27200C90C7A /* Project object */;
+			containerPortal = F3150BE42A26253700C90C7A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F3150B202A23B27200C90C7A;
-			remoteInfo = SigningKit;
+			remoteGlobalIDString = F3150BEC2A26253700C90C7A;
+			remoteInfo = Domain;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F3150B212A23B27200C90C7A /* SigningKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SigningKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3150B242A23B27200C90C7A /* SigningKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SigningKit.h; sourceTree = "<group>"; };
-		F3150B252A23B27200C90C7A /* SigningKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SigningKit.docc; sourceTree = "<group>"; };
-		F3150B2B2A23B27200C90C7A /* SigningKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigningKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3150B302A23B27200C90C7A /* SigningKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningKitTests.swift; sourceTree = "<group>"; };
-		F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewRouter.swift; sourceTree = "<group>"; };
-		F3150B6E2A23B46A00C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3150B762A23B81200C90C7A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		F3150B792A23D29600C90C7A /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		F3150B7A2A23D29600C90C7A /* SignUpViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
-		F3150BA92A252B5000C90C7A /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3150BDC2A26251000C90C7A /* Webservice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Webservice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3150C102A26255C00C90C7A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3150BED2A26253700C90C7A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3150BF02A26253700C90C7A /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		F3150BF12A26253700C90C7A /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
+		F3150BF72A26253800C90C7A /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3150BFC2A26253800C90C7A /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		F3150C082A26254300C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F3150B1E2A23B27200C90C7A /* Frameworks */ = {
+		F3150BEA2A26253700C90C7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150C112A26255C00C90C7A /* Domain.framework in Frameworks */,
-				F3150BAA2A252B5000C90C7A /* Resources.framework in Frameworks */,
-				F3150BDD2A26251000C90C7A /* Webservice.framework in Frameworks */,
-				F3150B6F2A23B46A00C90C7A /* Utilities.framework in Frameworks */,
+				F3150C092A26254300C90C7A /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3150B282A23B27200C90C7A /* Frameworks */ = {
+		F3150BF42A26253800C90C7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150B2C2A23B27200C90C7A /* SigningKit.framework in Frameworks */,
+				F3150BF82A26253800C90C7A /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F3150B172A23B27200C90C7A = {
+		F3150BE32A26253700C90C7A = {
 			isa = PBXGroup;
 			children = (
-				F3150B232A23B27200C90C7A /* SigningKit */,
-				F3150B2F2A23B27200C90C7A /* SigningKitTests */,
-				F3150B222A23B27200C90C7A /* Products */,
-				F3150B6D2A23B46A00C90C7A /* Frameworks */,
+				F3150BEF2A26253700C90C7A /* Domain */,
+				F3150BFB2A26253800C90C7A /* DomainTests */,
+				F3150BEE2A26253700C90C7A /* Products */,
+				F3150C072A26254300C90C7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		F3150B222A23B27200C90C7A /* Products */ = {
+		F3150BEE2A26253700C90C7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3150B212A23B27200C90C7A /* SigningKit.framework */,
-				F3150B2B2A23B27200C90C7A /* SigningKitTests.xctest */,
+				F3150BED2A26253700C90C7A /* Domain.framework */,
+				F3150BF72A26253800C90C7A /* DomainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F3150B232A23B27200C90C7A /* SigningKit */ = {
+		F3150BEF2A26253700C90C7A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				F3150B782A23D26C00C90C7A /* SignUpView */,
-				F3150B442A23B2CC00C90C7A /* SignInView */,
-				F3150B242A23B27200C90C7A /* SigningKit.h */,
-				F3150B252A23B27200C90C7A /* SigningKit.docc */,
+				F3150BF02A26253700C90C7A /* Domain.h */,
+				F3150BF12A26253700C90C7A /* Domain.docc */,
 			);
-			path = SigningKit;
+			path = Domain;
 			sourceTree = "<group>";
 		};
-		F3150B2F2A23B27200C90C7A /* SigningKitTests */ = {
+		F3150BFB2A26253800C90C7A /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
-				F3150B302A23B27200C90C7A /* SigningKitTests.swift */,
+				F3150BFC2A26253800C90C7A /* DomainTests.swift */,
 			);
-			path = SigningKitTests;
+			path = DomainTests;
 			sourceTree = "<group>";
 		};
-		F3150B442A23B2CC00C90C7A /* SignInView */ = {
+		F3150C072A26254300C90C7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */,
-				F3150B762A23B81200C90C7A /* SignInView.swift */,
-			);
-			path = SignInView;
-			sourceTree = "<group>";
-		};
-		F3150B6D2A23B46A00C90C7A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F3150C102A26255C00C90C7A /* Domain.framework */,
-				F3150BDC2A26251000C90C7A /* Webservice.framework */,
-				F3150BA92A252B5000C90C7A /* Resources.framework */,
-				F3150B6E2A23B46A00C90C7A /* Utilities.framework */,
+				F3150C082A26254300C90C7A /* Utilities.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F3150B782A23D26C00C90C7A /* SignUpView */ = {
-			isa = PBXGroup;
-			children = (
-				F3150B792A23D29600C90C7A /* SignUpView.swift */,
-				F3150B7A2A23D29600C90C7A /* SignUpViewRouter.swift */,
-			);
-			path = SignUpView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F3150B1C2A23B27200C90C7A /* Headers */ = {
+		F3150BE82A26253700C90C7A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150B322A23B27200C90C7A /* SigningKit.h in Headers */,
+				F3150BFE2A26253800C90C7A /* Domain.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F3150B202A23B27200C90C7A /* SigningKit */ = {
+		F3150BEC2A26253700C90C7A /* Domain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3150B352A23B27300C90C7A /* Build configuration list for PBXNativeTarget "SigningKit" */;
+			buildConfigurationList = F3150C012A26253800C90C7A /* Build configuration list for PBXNativeTarget "Domain" */;
 			buildPhases = (
-				F3150B1C2A23B27200C90C7A /* Headers */,
-				F3150B1D2A23B27200C90C7A /* Sources */,
-				F3150B1E2A23B27200C90C7A /* Frameworks */,
-				F3150B1F2A23B27200C90C7A /* Resources */,
+				F3150BE82A26253700C90C7A /* Headers */,
+				F3150BE92A26253700C90C7A /* Sources */,
+				F3150BEA2A26253700C90C7A /* Frameworks */,
+				F3150BEB2A26253700C90C7A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SigningKit;
-			productName = SigningKit;
-			productReference = F3150B212A23B27200C90C7A /* SigningKit.framework */;
+			name = Domain;
+			productName = Domain;
+			productReference = F3150BED2A26253700C90C7A /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F3150B2A2A23B27200C90C7A /* SigningKitTests */ = {
+		F3150BF62A26253800C90C7A /* DomainTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3150B382A23B27300C90C7A /* Build configuration list for PBXNativeTarget "SigningKitTests" */;
+			buildConfigurationList = F3150C042A26253800C90C7A /* Build configuration list for PBXNativeTarget "DomainTests" */;
 			buildPhases = (
-				F3150B272A23B27200C90C7A /* Sources */,
-				F3150B282A23B27200C90C7A /* Frameworks */,
-				F3150B292A23B27200C90C7A /* Resources */,
+				F3150BF32A26253800C90C7A /* Sources */,
+				F3150BF42A26253800C90C7A /* Frameworks */,
+				F3150BF52A26253800C90C7A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F3150B2E2A23B27200C90C7A /* PBXTargetDependency */,
+				F3150BFA2A26253800C90C7A /* PBXTargetDependency */,
 			);
-			name = SigningKitTests;
-			productName = SigningKitTests;
-			productReference = F3150B2B2A23B27200C90C7A /* SigningKitTests.xctest */;
+			name = DomainTests;
+			productName = DomainTests;
+			productReference = F3150BF72A26253800C90C7A /* DomainTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F3150B182A23B27200C90C7A /* Project object */ = {
+		F3150BE42A26253700C90C7A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					F3150B202A23B27200C90C7A = {
+					F3150BEC2A26253700C90C7A = {
 						CreatedOnToolsVersion = 14.3;
 					};
-					F3150B2A2A23B27200C90C7A = {
+					F3150BF62A26253800C90C7A = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
-			buildConfigurationList = F3150B1B2A23B27200C90C7A /* Build configuration list for PBXProject "SigningKit" */;
+			buildConfigurationList = F3150BE72A26253700C90C7A /* Build configuration list for PBXProject "Domain" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -213,26 +173,26 @@
 				en,
 				Base,
 			);
-			mainGroup = F3150B172A23B27200C90C7A;
-			productRefGroup = F3150B222A23B27200C90C7A /* Products */;
+			mainGroup = F3150BE32A26253700C90C7A;
+			productRefGroup = F3150BEE2A26253700C90C7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3150B202A23B27200C90C7A /* SigningKit */,
-				F3150B2A2A23B27200C90C7A /* SigningKitTests */,
+				F3150BEC2A26253700C90C7A /* Domain */,
+				F3150BF62A26253800C90C7A /* DomainTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F3150B1F2A23B27200C90C7A /* Resources */ = {
+		F3150BEB2A26253700C90C7A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3150B292A23B27200C90C7A /* Resources */ = {
+		F3150BF52A26253800C90C7A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,38 +202,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F3150B1D2A23B27200C90C7A /* Sources */ = {
+		F3150BE92A26253700C90C7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150B7B2A23D29600C90C7A /* SignUpView.swift in Sources */,
-				F3150B462A23B2D600C90C7A /* SignInViewRouter.swift in Sources */,
-				F3150B7C2A23D29600C90C7A /* SignUpViewRouter.swift in Sources */,
-				F3150B772A23B81200C90C7A /* SignInView.swift in Sources */,
-				F3150B262A23B27200C90C7A /* SigningKit.docc in Sources */,
+				F3150BF22A26253700C90C7A /* Domain.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3150B272A23B27200C90C7A /* Sources */ = {
+		F3150BF32A26253800C90C7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150B312A23B27200C90C7A /* SigningKitTests.swift in Sources */,
+				F3150BFD2A26253800C90C7A /* DomainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F3150B2E2A23B27200C90C7A /* PBXTargetDependency */ = {
+		F3150BFA2A26253800C90C7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F3150B202A23B27200C90C7A /* SigningKit */;
-			targetProxy = F3150B2D2A23B27200C90C7A /* PBXContainerItemProxy */;
+			target = F3150BEC2A26253700C90C7A /* Domain */;
+			targetProxy = F3150BF92A26253800C90C7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F3150B332A23B27200C90C7A /* Debug */ = {
+		F3150BFF2A26253800C90C7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -324,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -336,7 +292,7 @@
 			};
 			name = Debug;
 		};
-		F3150B342A23B27200C90C7A /* Release */ = {
+		F3150C002A26253800C90C7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -381,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -393,7 +349,7 @@
 			};
 			name = Release;
 		};
-		F3150B362A23B27300C90C7A /* Debug */ = {
+		F3150C022A26253800C90C7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -406,6 +362,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,7 +371,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.SigningKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -423,7 +380,7 @@
 			};
 			name = Debug;
 		};
-		F3150B372A23B27300C90C7A /* Release */ = {
+		F3150C032A26253800C90C7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -436,6 +393,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +402,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.SigningKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -453,15 +411,14 @@
 			};
 			name = Release;
 		};
-		F3150B392A23B27300C90C7A /* Debug */ = {
+		F3150C052A26253800C90C7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.SigningKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.DomainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -469,15 +426,14 @@
 			};
 			name = Debug;
 		};
-		F3150B3A2A23B27300C90C7A /* Release */ = {
+		F3150C062A26253800C90C7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.SigningKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.DomainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -488,34 +444,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3150B1B2A23B27200C90C7A /* Build configuration list for PBXProject "SigningKit" */ = {
+		F3150BE72A26253700C90C7A /* Build configuration list for PBXProject "Domain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3150B332A23B27200C90C7A /* Debug */,
-				F3150B342A23B27200C90C7A /* Release */,
+				F3150BFF2A26253800C90C7A /* Debug */,
+				F3150C002A26253800C90C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3150B352A23B27300C90C7A /* Build configuration list for PBXNativeTarget "SigningKit" */ = {
+		F3150C012A26253800C90C7A /* Build configuration list for PBXNativeTarget "Domain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3150B362A23B27300C90C7A /* Debug */,
-				F3150B372A23B27300C90C7A /* Release */,
+				F3150C022A26253800C90C7A /* Debug */,
+				F3150C032A26253800C90C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3150B382A23B27300C90C7A /* Build configuration list for PBXNativeTarget "SigningKitTests" */ = {
+		F3150C042A26253800C90C7A /* Build configuration list for PBXNativeTarget "DomainTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3150B392A23B27300C90C7A /* Debug */,
-				F3150B3A2A23B27300C90C7A /* Release */,
+				F3150C052A26253800C90C7A /* Debug */,
+				F3150C062A26253800C90C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F3150B182A23B27200C90C7A /* Project object */;
+	rootObject = F3150BE42A26253700C90C7A /* Project object */;
 }

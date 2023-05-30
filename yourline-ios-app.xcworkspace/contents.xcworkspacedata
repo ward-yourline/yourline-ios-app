@@ -8,6 +8,12 @@
       location = "group:Resources/Resources.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Domain/Domain.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Webservice/Webservice.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SigningKit/SigningKit.xcodeproj">
    </FileRef>
    <FileRef
