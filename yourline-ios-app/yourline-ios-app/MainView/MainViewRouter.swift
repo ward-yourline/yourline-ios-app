@@ -10,6 +10,7 @@ import UIKit
 import SigningKit
 import Utilities
 import Resources
+import CustomerKit
 
 final class MainViewRouter {
     
@@ -76,7 +77,7 @@ final class MainViewRouter {
     }
     
     func openSignInView() {
-        let router = SignInViewRouter(context: context)
+        let router = SignInViewRouter(context: context, delegate: self)
         router.start()
     }
     
@@ -94,5 +95,12 @@ final class MainViewRouter {
     
     func initialise() {
         Fonts.install()
+    }
+}
+
+extension MainViewRouter: SignInDelegate {
+    func didSignIn() {
+        let router = CustomerLandingViewRouter(context: context)
+        router.start()
     }
 }

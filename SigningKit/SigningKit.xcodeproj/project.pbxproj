@@ -21,6 +21,7 @@
 		F3150C112A26255C00C90C7A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C102A26255C00C90C7A /* Domain.framework */; };
 		F3D413C92A27D73600308061 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413C82A27D73600308061 /* Presentation.framework */; };
 		F3D413CA2A27D73600308061 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413C82A27D73600308061 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3D414082A27D90F00308061 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414072A27D90F00308061 /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		F3150BDC2A26251000C90C7A /* Webservice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Webservice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150C102A26255C00C90C7A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413C82A27D73600308061 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D414072A27D90F00308061 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		F3150B232A23B27200C90C7A /* SigningKit */ = {
 			isa = PBXGroup;
 			children = (
+				F3D414072A27D90F00308061 /* Protocols.swift */,
 				F3150B442A23B2CC00C90C7A /* SignInView */,
 				F3150B782A23D26C00C90C7A /* SignUpView */,
 				F3150B242A23B27200C90C7A /* SigningKit.h */,
@@ -269,6 +272,7 @@
 				F3150B7B2A23D29600C90C7A /* SignUpView.swift in Sources */,
 				F3150B462A23B2D600C90C7A /* SignInViewRouter.swift in Sources */,
 				F3150B7C2A23D29600C90C7A /* SignUpViewRouter.swift in Sources */,
+				F3D414082A27D90F00308061 /* Protocols.swift in Sources */,
 				F3150B772A23B81200C90C7A /* SignInView.swift in Sources */,
 				F3150B262A23B27200C90C7A /* SigningKit.docc in Sources */,
 			);

@@ -17,6 +17,9 @@
       location = "group:Presentation/Presentation.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:CustomerKit/CustomerKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SigningKit/SigningKit.xcodeproj">
    </FileRef>
    <FileRef

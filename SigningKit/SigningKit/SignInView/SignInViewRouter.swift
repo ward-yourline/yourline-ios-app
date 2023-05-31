@@ -11,17 +11,14 @@ import Foundation
 import SwiftUI
 import Webservice
 
-public protocol SignInViewRouterProtocol: AnyObject {
-    init(context: UIViewController?)
-    func start()
-}
-
 public final class SignInViewRouter: SignInViewRouterProtocol {
     
     private weak var context: UIViewController?
+    private weak var delegate: SignInDelegate?
     
-    public init(context: UIViewController?) {
+    public init(context: UIViewController?, delegate: SignInDelegate?) {
         self.context = context
+        self.delegate = delegate
     }
     
     public func start() {
@@ -45,7 +42,7 @@ public final class SignInViewRouter: SignInViewRouterProtocol {
         // TODO
     }
     
-    public func openCustomerLandingView() {
-        print("Opening customer landing view")
+    public func didSignIn() {
+        delegate?.didSignIn()
     }
 }

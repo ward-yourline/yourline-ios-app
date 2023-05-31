@@ -98,6 +98,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3D413D82A27D81100308061"
+               BuildableName = "CustomerKit.framework"
+               BlueprintName = "CustomerKit"
+               ReferencedContainer = "container:../CustomerKit/CustomerKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F317B0432A23AAC300438B9F"
                BuildableName = "yourline-ios-app.app"
                BlueprintName = "yourline-ios-app"

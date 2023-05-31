@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F3150BA62A252A2600C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BA52A252A2600C90C7A /* Utilities.framework */; };
-		F3150BA72A252A2600C90C7A /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BA52A252A2600C90C7A /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F3150BB02A252E8700C90C7A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150BAF2A252E8700C90C7A /* Colors.swift */; };
 		F3A361F32832C35800690696 /* Resources.docc in Sources */ = {isa = PBXBuildFile; fileRef = F3A361F22832C35800690696 /* Resources.docc */; };
 		F3A361F92832C35900690696 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A361EE2832C35800690696 /* Resources.framework */; };
@@ -46,20 +45,6 @@
 			remoteInfo = Resources;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F3150BA82A252A2600C90C7A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F3150BA72A252A2600C90C7A /* Utilities.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F3150BA52A252A2600C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,7 +197,6 @@
 				F3A361EA2832C35800690696 /* Sources */,
 				F3A361EB2832C35800690696 /* Frameworks */,
 				F3A361EC2832C35800690696 /* Resources */,
-				F3150BA82A252A2600C90C7A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
