@@ -11,6 +11,9 @@ import Apollo
 public typealias RequestCompletion = (Result<Data, Error>) -> Void
 
 public protocol WebServiceProtocol {
+    
+    var apollo: ApolloClient { get }
+    
     func signIn(with email: String, password: String, and completion: @escaping RequestCompletion)
     func signUp(with email: String, password: String, and completion: @escaping RequestCompletion)
     func getItems()
@@ -24,7 +27,7 @@ public final class WebService: WebServiceProtocol {
     
     let url = "http://localhost:8080/query"
     
-    private(set) lazy var apollo = ApolloClient(url: URL(string: url)!)
+    public private(set) lazy var apollo = ApolloClient(url: URL(string: url)!)
     
     public init() {}
     

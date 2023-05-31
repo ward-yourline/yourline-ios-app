@@ -102,8 +102,8 @@
 		F3150BBF2A2624D700C90C7A /* Webservice */ = {
 			isa = PBXGroup;
 			children = (
-				F3D413752A27C87A00308061 /* GraphQL */,
 				F3D413312A27AE5500308061 /* WebService.swift */,
+				F3D413752A27C87A00308061 /* GraphQL */,
 				F3150BC02A2624D700C90C7A /* Webservice.h */,
 				F3150BC12A2624D700C90C7A /* Webservice.docc */,
 			);

@@ -60,15 +60,22 @@ struct SignInView: View {
             
             VStack(spacing: 10) {
                 Button(action: {
-                    // Sign in service call
-                    webService.signIn(with: "customer@customer.com", password: "123") { result in
+                    let input = UserSignInInput(email: emailText, password: passwordText)
+                    let query = SignInQuery(input: input)
+                    
+                    webService.apollo.fetch(query: query) { result in // Change the query name to your query name
                         switch result {
-                        case .success(let data):
-                            print(data)
+                        case .success(let graphQLResult):
+                            if let errors = graphQLResult.errors {
+                                
+                            } else {
+                                print("Success! Result: \(graphQLResult)")
+                            }
                         case .failure(let error):
-                            print(error)
+                            print("Failure! Error: \(error)")
                         }
                     }
+
                 }) {
                     Text("Sign in")
                         .frame(maxWidth: .infinity)
