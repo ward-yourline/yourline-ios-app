@@ -46,7 +46,7 @@ public struct CustomerLandingView: View {
                         print(errors)
                     }
                     if let items = fetchAllItems.data?.fetchAllItems {
-                        print(fetchAllItems)
+                        print(items)
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
