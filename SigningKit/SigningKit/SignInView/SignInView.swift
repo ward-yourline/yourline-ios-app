@@ -56,7 +56,7 @@ struct SignInView: View {
             
             VStack(spacing: 10) {
                 Button(action: {
-                    // Action to perform when the button is tapped
+                    // Sign in service call
                 }) {
                     Text("Sign in")
                         .frame(maxWidth: .infinity)
