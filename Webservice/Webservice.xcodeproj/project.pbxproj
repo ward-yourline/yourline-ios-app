@@ -25,6 +25,9 @@
 		F3D413912A27C87A00308061 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413872A27C87A00308061 /* SchemaMetadata.graphql.swift */; };
 		F3D413942A27C8B500308061 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = F3D413932A27C8B500308061 /* Apollo */; };
 		F3D413962A27C8B500308061 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F3D413952A27C8B500308061 /* ApolloAPI */; };
+		F3D4140F2A27DFE400308061 /* ItemQueries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F3D4140E2A27DFE400308061 /* ItemQueries.graphql */; };
+		F3D414112A27E07400308061 /* FetAllItemsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414102A27E07400308061 /* FetAllItemsQuery.graphql.swift */; };
+		F3D414132A27E15500308061 /* Item.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414122A27E15500308061 /* Item.graphql.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		F3D413842A27C87A00308061 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
 		F3D413862A27C87A00308061 /* UserSignInInput.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignInInput.graphql.swift; sourceTree = "<group>"; };
 		F3D413872A27C87A00308061 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
+		F3D4140E2A27DFE400308061 /* ItemQueries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ItemQueries.graphql; sourceTree = "<group>"; };
+		F3D414102A27E07400308061 /* FetAllItemsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetAllItemsQuery.graphql.swift; sourceTree = "<group>"; };
+		F3D414122A27E15500308061 /* Item.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.graphql.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				F3D413782A27C87A00308061 /* Signing.graphql */,
+				F3D4140E2A27DFE400308061 /* ItemQueries.graphql */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 		F3D4137E2A27C87A00308061 /* Queries */ = {
 			isa = PBXGroup;
 			children = (
+				F3D414102A27E07400308061 /* FetAllItemsQuery.graphql.swift */,
 				F3D4137F2A27C87A00308061 /* SignInQuery.graphql.swift */,
 			);
 			path = Queries;
@@ -193,6 +201,7 @@
 		F3D413812A27C87A00308061 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				F3D414122A27E15500308061 /* Item.graphql.swift */,
 				F3D413822A27C87A00308061 /* Query.graphql.swift */,
 				F3D413832A27C87A00308061 /* Authentication.graphql.swift */,
 			);
@@ -306,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D4140F2A27DFE400308061 /* ItemQueries.graphql in Resources */,
 				F3D4138B2A27C87A00308061 /* schema.json in Resources */,
 				F3D413882A27C87A00308061 /* apollo-codegen-config.json in Resources */,
 				F3D413892A27C87A00308061 /* Signing.graphql in Resources */,
@@ -331,8 +341,10 @@
 				F3D413902A27C87A00308061 /* UserSignInInput.graphql.swift in Sources */,
 				F3D4138F2A27C87A00308061 /* SchemaConfiguration.swift in Sources */,
 				F3150BC22A2624D700C90C7A /* Webservice.docc in Sources */,
+				F3D414132A27E15500308061 /* Item.graphql.swift in Sources */,
 				F3D4138D2A27C87A00308061 /* Query.graphql.swift in Sources */,
 				F3D4138C2A27C87A00308061 /* SignInQuery.graphql.swift in Sources */,
+				F3D414112A27E07400308061 /* FetAllItemsQuery.graphql.swift in Sources */,
 				F3D4138E2A27C87A00308061 /* Authentication.graphql.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

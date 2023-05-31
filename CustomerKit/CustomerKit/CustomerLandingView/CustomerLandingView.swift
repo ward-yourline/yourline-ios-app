@@ -6,8 +6,19 @@
 //
 
 import SwiftUI
+import Webservice
+import Utilities
 
 public struct CustomerLandingView: View {
+    
+    private let router: CustomerLandingViewRouterProtocol
+    private let webService: WebServiceProtocol
+    
+    internal init(router: CustomerLandingViewRouterProtocol, webService: WebServiceProtocol) {
+        self.router = router
+        self.webService = webService
+    }
+    
     public var body: some View {
         NavigationView {
             Form {
@@ -26,12 +37,27 @@ public struct CustomerLandingView: View {
                 }
             }
             .navigationTitle("YourLine")
+        }.onAppear {
+            let query = FetAllItemsQuery()
+            webService.apollo.fetch(query: query) { result in
+                switch result {
+                case .success(let fetchAllItems):
+                    if let errors = fetchAllItems.errors {
+                        print(errors)
+                    }
+                    if let items = fetchAllItems.data?.fetchAllItems {
+                        print(fetchAllItems)
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
         }
     }
 }
 
 struct CustomerLandingView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomerLandingView()
+        CustomerLandingView(router: CustomerLandingViewRouter(context: nil), webService: WebService())
     }
 }

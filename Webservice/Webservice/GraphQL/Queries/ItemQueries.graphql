@@ -1,0 +1,9 @@
+query FetAllItems {
+    fetchAllItems {
+      name
+      id
+      type
+      parentID
+      categoryID
+    }
+}

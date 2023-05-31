@@ -29,9 +29,8 @@ public final class CustomerLandingViewRouter: CustomerLandingViewRouterProtocol 
             let context = context?.children.first as? UINavigationController
         {
             context.viewControllers.removeAll()
-            //            let webService = WebService()
-            //            let view = SignInView(router: self, webService: webService)
-            let view = CustomerLandingView()
+            let webService = WebService()
+            let view = CustomerLandingView(router: self, webService: webService)
             
             let viewController = UIHostingController(rootView: view)
             context.pushViewController(viewController, animated: false)
