@@ -9,11 +9,42 @@ import SwiftUI
 import Resources
 import Webservice
 
+// TODO: Put in presentation layer
+struct WideButton: View {
+    private let buttonTitle: String
+    private var completion: () -> Void
+    
+    internal init(buttonTitle: String, completion: @escaping () -> Void) {
+        self.buttonTitle = buttonTitle
+        self.completion = completion
+    }
+
+    var body: some View {
+        VStack(spacing: 10) {
+            Button(action: {
+                completion()
+            }) {
+                Text(buttonTitle)
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(CustomColors.darkGrey.color)
+                    .cornerRadius(8)
+                    .font(.custom(Fonts.bold.name, size: 16))
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 0)
+    }
+}
+
 struct SignInView: View {
     
-    @State private var emailText: String = ""
-    @State private var passwordText: String = ""
-        
+    @State private var emailText = ""
+    @State private var passwordText = ""
+    @State private var errorMessage = ""
+    @State private var isSignInError = false
+    
     private var router: SignInViewRouter?
     private let webService: WebServiceProtocol
     
@@ -21,9 +52,8 @@ struct SignInView: View {
         self.router = router
         self.webService = webService
     }
-    
-    var body: some View {
 
+    var body: some View {
         VStack(spacing: 20) {
             VStack {
                 HStack {
@@ -48,6 +78,8 @@ struct SignInView: View {
                 
                 TextField("Enter email", text: $emailText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .autocorrectionDisabled(true)
+                    .textInputAutocapitalization(.never)
                 TextField("Enter password", text: $passwordText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button(action: {
@@ -57,38 +89,30 @@ struct SignInView: View {
                         .padding(.vertical, 10)
                 }.frame(maxWidth: .infinity, alignment: .trailing)
             }
-            
-            VStack(spacing: 10) {
-                Button(action: {
-                    let input = UserSignInInput(email: emailText, password: passwordText)
-                    let query = SignInQuery(input: input)
-                    
-                    webService.apollo.fetch(query: query) { result in // Change the query name to your query name
-                        switch result {
-                        case .success(let graphQLResult):
-                            if let errors = graphQLResult.errors {
-                                
-                            } else {
-                                print("Success! Result: \(graphQLResult)")
-                            }
-                        case .failure(let error):
-                            print("Failure! Error: \(error)")
+           
+            WideButton(buttonTitle: "Sign in") {
+                let input = UserSignInInput(email: emailText, password: passwordText)
+                let query = SignInQuery(input: input)
+                
+                webService.apollo.fetch(query: query) { result in // Change the query name to your query name
+                    switch result {
+                    case .success(let graphQLResult):
+                        if let errors = graphQLResult.errors {
+                            isSignInError = true
+                            errorMessage = errors.first?.message ?? ""
+                        } else {
+                            print("Success! Result: \(graphQLResult)")
+                            router?.openCustomerLandingView()
                         }
+                    case .failure(let error):
+                        print("Failure! Error: \(error)")
+                        isSignInError = true
+                        errorMessage = error.localizedDescription
                     }
-
-                }) {
-                    Text("Sign in")
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(CustomColors.darkGrey.color)
-                        .cornerRadius(8)
-                        .font(.custom(Fonts.bold.name, size: 16))
-                    
                 }
+            }.alert(isPresented: $isSignInError) {
+                Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("Okay")))
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 0)
             
             Rectangle()
                 .frame(height: 0.5)
@@ -112,7 +136,7 @@ struct SignInView: View {
             }
             Spacer()
             Button(action: {
-                router?.openSignUp()
+                router?.openSignUpView()
             }) {
                 Text("New to YourLine? Sign up here")
                     .padding()

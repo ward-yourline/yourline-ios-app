@@ -36,12 +36,16 @@ public final class SignInViewRouter: SignInViewRouterProtocol {
         }
     }
     
-    public func openSignUp() {
+    public func openSignUpView() {
         let router = SignUpViewRouter(context: context)
         router.start()
     }
     
-    public func openForgotPassword() {
+    public func openForgotPasswordView() {
         // TODO
+    }
+    
+    public func openCustomerLandingView() {
+        print("Opening customer landing view")
     }
 }
