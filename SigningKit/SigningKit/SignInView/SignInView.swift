@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Resources
+import Webservice
 
 struct SignInView: View {
     
@@ -14,8 +15,11 @@ struct SignInView: View {
     @State private var passwordText: String = ""
         
     private var router: SignInViewRouter?
-    init(router: SignInViewRouter? = nil) {
+    private let webService: WebServiceProtocol
+    
+    init(router: SignInViewRouter? = nil, webService: WebServiceProtocol) {
         self.router = router
+        self.webService = webService
     }
     
     var body: some View {
@@ -107,6 +111,6 @@ struct SignInView: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
+        SignInView(router: nil, webService: WebService())
     }
 }

@@ -92,8 +92,8 @@
 		F3150B232A23B27200C90C7A /* SigningKit */ = {
 			isa = PBXGroup;
 			children = (
-				F3150B782A23D26C00C90C7A /* SignUpView */,
 				F3150B442A23B2CC00C90C7A /* SignInView */,
+				F3150B782A23D26C00C90C7A /* SignUpView */,
 				F3150B242A23B27200C90C7A /* SigningKit.h */,
 				F3150B252A23B27200C90C7A /* SigningKit.docc */,
 			);

@@ -9,6 +9,7 @@ import UIKit
 import Utilities
 import Foundation
 import SwiftUI
+import Webservice
 
 public protocol SignInViewRouterProtocol: AnyObject {
     init(context: UIViewController?)
@@ -27,7 +28,8 @@ public final class SignInViewRouter: SignInViewRouterProtocol {
         if
             let context = context?.children.first as? UINavigationController
         {
-            let view = SignInView(router: self)
+            let webService = WebService()
+            let view = SignInView(router: self, webService: webService)
             
             let viewController = UIHostingController(rootView: view)
             context.pushViewController(viewController, animated: true)

@@ -13,8 +13,13 @@ public protocol WebServiceProtocol {
     func signIn(with email: String, password: String, and completion: @escaping RequestCompletion)
     func signUp(with email: String, password: String, and completion: @escaping RequestCompletion)
     func getItems()
+    
+    init()
 }
-public final class WebService {
+
+public final class WebService: WebServiceProtocol {
+    
+    public init() {}
     
     public func signIn(with email: String, password: String, and completion: @escaping RequestCompletion) {
         // Magic here
