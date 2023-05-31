@@ -61,6 +61,14 @@ struct SignInView: View {
             VStack(spacing: 10) {
                 Button(action: {
                     // Sign in service call
+                    webService.signIn(with: "customer@customer.com", password: "123") { result in
+                        switch result {
+                        case .success(let data):
+                            print(data)
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
                 }) {
                     Text("Sign in")
                         .frame(maxWidth: .infinity)

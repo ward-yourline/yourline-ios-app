@@ -14,6 +14,17 @@
 		F3150BD92A2624FC00C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BD82A2624FC00C90C7A /* Utilities.framework */; };
 		F3150C0D2A26255400C90C7A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C0C2A26255400C90C7A /* Domain.framework */; };
 		F3D413322A27AE5500308061 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413312A27AE5500308061 /* WebService.swift */; };
+		F3D413882A27C87A00308061 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = F3D413762A27C87A00308061 /* apollo-codegen-config.json */; };
+		F3D413892A27C87A00308061 /* Signing.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F3D413782A27C87A00308061 /* Signing.graphql */; };
+		F3D4138B2A27C87A00308061 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = F3D4137B2A27C87A00308061 /* schema.json */; };
+		F3D4138C2A27C87A00308061 /* SignInQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4137F2A27C87A00308061 /* SignInQuery.graphql.swift */; };
+		F3D4138D2A27C87A00308061 /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413822A27C87A00308061 /* Query.graphql.swift */; };
+		F3D4138E2A27C87A00308061 /* Authentication.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413832A27C87A00308061 /* Authentication.graphql.swift */; };
+		F3D4138F2A27C87A00308061 /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413842A27C87A00308061 /* SchemaConfiguration.swift */; };
+		F3D413902A27C87A00308061 /* UserSignInInput.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413862A27C87A00308061 /* UserSignInInput.graphql.swift */; };
+		F3D413912A27C87A00308061 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413872A27C87A00308061 /* SchemaMetadata.graphql.swift */; };
+		F3D413942A27C8B500308061 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = F3D413932A27C8B500308061 /* Apollo */; };
+		F3D413962A27C8B500308061 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F3D413952A27C8B500308061 /* ApolloAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,15 @@
 		F3150BD82A2624FC00C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150C0C2A26255400C90C7A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413312A27AE5500308061 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		F3D413762A27C87A00308061 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
+		F3D413782A27C87A00308061 /* Signing.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Signing.graphql; sourceTree = "<group>"; };
+		F3D4137B2A27C87A00308061 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		F3D4137F2A27C87A00308061 /* SignInQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInQuery.graphql.swift; sourceTree = "<group>"; };
+		F3D413822A27C87A00308061 /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
+		F3D413832A27C87A00308061 /* Authentication.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.graphql.swift; sourceTree = "<group>"; };
+		F3D413842A27C87A00308061 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
+		F3D413862A27C87A00308061 /* UserSignInInput.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignInInput.graphql.swift; sourceTree = "<group>"; };
+		F3D413872A27C87A00308061 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3150C0D2A26255400C90C7A /* Domain.framework in Frameworks */,
+				F3D413942A27C8B500308061 /* Apollo in Frameworks */,
+				F3D413962A27C8B500308061 /* ApolloAPI in Frameworks */,
 				F3150BD92A2624FC00C90C7A /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +102,7 @@
 		F3150BBF2A2624D700C90C7A /* Webservice */ = {
 			isa = PBXGroup;
 			children = (
+				F3D413752A27C87A00308061 /* GraphQL */,
 				F3D413312A27AE5500308061 /* WebService.swift */,
 				F3150BC02A2624D700C90C7A /* Webservice.h */,
 				F3150BC12A2624D700C90C7A /* Webservice.docc */,
@@ -102,6 +125,86 @@
 				F3150BD82A2624FC00C90C7A /* Utilities.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3D413752A27C87A00308061 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				F3D413762A27C87A00308061 /* apollo-codegen-config.json */,
+				F3D413772A27C87A00308061 /* Queries */,
+				F3D4137A2A27C87A00308061 /* Schema */,
+				F3D4137C2A27C87A00308061 /* YourLineAPI */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		F3D413772A27C87A00308061 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				F3D413782A27C87A00308061 /* Signing.graphql */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		F3D4137A2A27C87A00308061 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				F3D4137B2A27C87A00308061 /* schema.json */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		F3D4137C2A27C87A00308061 /* YourLineAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F3D4137D2A27C87A00308061 /* Operations */,
+				F3D413802A27C87A00308061 /* Schema */,
+			);
+			path = YourLineAPI;
+			sourceTree = "<group>";
+		};
+		F3D4137D2A27C87A00308061 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				F3D4137E2A27C87A00308061 /* Queries */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		F3D4137E2A27C87A00308061 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				F3D4137F2A27C87A00308061 /* SignInQuery.graphql.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		F3D413802A27C87A00308061 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				F3D413812A27C87A00308061 /* Objects */,
+				F3D413842A27C87A00308061 /* SchemaConfiguration.swift */,
+				F3D413852A27C87A00308061 /* InputObjects */,
+				F3D413872A27C87A00308061 /* SchemaMetadata.graphql.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		F3D413812A27C87A00308061 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F3D413822A27C87A00308061 /* Query.graphql.swift */,
+				F3D413832A27C87A00308061 /* Authentication.graphql.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		F3D413852A27C87A00308061 /* InputObjects */ = {
+			isa = PBXGroup;
+			children = (
+				F3D413862A27C87A00308061 /* UserSignInInput.graphql.swift */,
+			);
+			path = InputObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +236,8 @@
 			);
 			name = Webservice;
 			packageProductDependencies = (
+				F3D413932A27C8B500308061 /* Apollo */,
+				F3D413952A27C8B500308061 /* ApolloAPI */,
 			);
 			productName = Webservice;
 			productReference = F3150BBD2A2624D700C90C7A /* Webservice.framework */;
@@ -184,6 +289,7 @@
 			);
 			mainGroup = F3150BB32A2624D700C90C7A;
 			packageReferences = (
+				F3D413922A27C8B500308061 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = F3150BBE2A2624D700C90C7A /* Products */;
 			projectDirPath = "";
@@ -200,6 +306,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D4138B2A27C87A00308061 /* schema.json in Resources */,
+				F3D413882A27C87A00308061 /* apollo-codegen-config.json in Resources */,
+				F3D413892A27C87A00308061 /* Signing.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +327,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3D413322A27AE5500308061 /* WebService.swift in Sources */,
+				F3D413912A27C87A00308061 /* SchemaMetadata.graphql.swift in Sources */,
+				F3D413902A27C87A00308061 /* UserSignInInput.graphql.swift in Sources */,
+				F3D4138F2A27C87A00308061 /* SchemaConfiguration.swift in Sources */,
 				F3150BC22A2624D700C90C7A /* Webservice.docc in Sources */,
+				F3D4138D2A27C87A00308061 /* Query.graphql.swift in Sources */,
+				F3D4138C2A27C87A00308061 /* SignInQuery.graphql.swift in Sources */,
+				F3D4138E2A27C87A00308061 /* Authentication.graphql.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +601,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3D413922A27C8B500308061 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3D413932A27C8B500308061 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3D413922A27C8B500308061 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		F3D413952A27C8B500308061 /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3D413922A27C8B500308061 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3150BB42A2624D700C90C7A /* Project object */;
 }
