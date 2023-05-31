@@ -8,35 +8,7 @@
 import SwiftUI
 import Resources
 import Webservice
-
-// TODO: Put in presentation layer
-struct WideButton: View {
-    private let buttonTitle: String
-    private var completion: () -> Void
-    
-    internal init(buttonTitle: String, completion: @escaping () -> Void) {
-        self.buttonTitle = buttonTitle
-        self.completion = completion
-    }
-
-    var body: some View {
-        VStack(spacing: 10) {
-            Button(action: {
-                completion()
-            }) {
-                Text(buttonTitle)
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(CustomColors.darkGrey.color)
-                    .cornerRadius(8)
-                    .font(.custom(Fonts.bold.name, size: 16))
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, 0)
-    }
-}
+import Presentation
 
 struct SignInView: View {
     

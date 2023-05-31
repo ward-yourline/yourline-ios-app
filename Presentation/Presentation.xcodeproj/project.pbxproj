@@ -7,40 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F3150B262A23B27200C90C7A /* SigningKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = F3150B252A23B27200C90C7A /* SigningKit.docc */; };
-		F3150B2C2A23B27200C90C7A /* SigningKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B212A23B27200C90C7A /* SigningKit.framework */; };
-		F3150B312A23B27200C90C7A /* SigningKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B302A23B27200C90C7A /* SigningKitTests.swift */; };
-		F3150B322A23B27200C90C7A /* SigningKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F3150B242A23B27200C90C7A /* SigningKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3150B462A23B2D600C90C7A /* SignInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */; };
-		F3150B6F2A23B46A00C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150B6E2A23B46A00C90C7A /* Utilities.framework */; };
-		F3150B772A23B81200C90C7A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B762A23B81200C90C7A /* SignInView.swift */; };
-		F3150B7B2A23D29600C90C7A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B792A23D29600C90C7A /* SignUpView.swift */; };
-		F3150B7C2A23D29600C90C7A /* SignUpViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B7A2A23D29600C90C7A /* SignUpViewRouter.swift */; };
-		F3150BAA2A252B5000C90C7A /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BA92A252B5000C90C7A /* Resources.framework */; };
-		F3150BDD2A26251000C90C7A /* Webservice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BDC2A26251000C90C7A /* Webservice.framework */; };
-		F3150C112A26255C00C90C7A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C102A26255C00C90C7A /* Domain.framework */; };
-		F3D413C92A27D73600308061 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413C82A27D73600308061 /* Presentation.framework */; };
-		F3D413CA2A27D73600308061 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413C82A27D73600308061 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3D413A62A27D6C900308061 /* Presentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = F3D413A52A27D6C900308061 /* Presentation.docc */; };
+		F3D413AC2A27D6C900308061 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413A12A27D6C900308061 /* Presentation.framework */; };
+		F3D413B12A27D6C900308061 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413B02A27D6C900308061 /* PresentationTests.swift */; };
+		F3D413B22A27D6C900308061 /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D413A42A27D6C900308061 /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3D413BC2A27D6E200308061 /* WideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413BB2A27D6E200308061 /* WideButton.swift */; };
+		F3D413C12A27D70500308061 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413BE2A27D70500308061 /* Domain.framework */; };
+		F3D413C22A27D70500308061 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413BE2A27D70500308061 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3D413C32A27D70600308061 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413BF2A27D70500308061 /* Resources.framework */; };
+		F3D413C42A27D70600308061 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413BF2A27D70500308061 /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3D413C52A27D70600308061 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413C02A27D70500308061 /* Utilities.framework */; };
+		F3D413C62A27D70600308061 /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413C02A27D70500308061 /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F3150B2D2A23B27200C90C7A /* PBXContainerItemProxy */ = {
+		F3D413AD2A27D6C900308061 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F3150B182A23B27200C90C7A /* Project object */;
+			containerPortal = F3D413982A27D6C900308061 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F3150B202A23B27200C90C7A;
-			remoteInfo = SigningKit;
+			remoteGlobalIDString = F3D413A02A27D6C900308061;
+			remoteInfo = Presentation;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F3D413CB2A27D73600308061 /* Embed Frameworks */ = {
+		F3D413C72A27D70600308061 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F3D413CA2A27D73600308061 /* Presentation.framework in Embed Frameworks */,
+				F3D413C42A27D70600308061 /* Resources.framework in Embed Frameworks */,
+				F3D413C62A27D70600308061 /* Utilities.framework in Embed Frameworks */,
+				F3D413C22A27D70500308061 /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,184 +47,156 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F3150B212A23B27200C90C7A /* SigningKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SigningKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3150B242A23B27200C90C7A /* SigningKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SigningKit.h; sourceTree = "<group>"; };
-		F3150B252A23B27200C90C7A /* SigningKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SigningKit.docc; sourceTree = "<group>"; };
-		F3150B2B2A23B27200C90C7A /* SigningKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigningKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3150B302A23B27200C90C7A /* SigningKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningKitTests.swift; sourceTree = "<group>"; };
-		F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewRouter.swift; sourceTree = "<group>"; };
-		F3150B6E2A23B46A00C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3150B762A23B81200C90C7A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		F3150B792A23D29600C90C7A /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		F3150B7A2A23D29600C90C7A /* SignUpViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
-		F3150BA92A252B5000C90C7A /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3150BDC2A26251000C90C7A /* Webservice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Webservice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3150C102A26255C00C90C7A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3D413C82A27D73600308061 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D413A12A27D6C900308061 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D413A42A27D6C900308061 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
+		F3D413A52A27D6C900308061 /* Presentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Presentation.docc; sourceTree = "<group>"; };
+		F3D413AB2A27D6C900308061 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D413B02A27D6C900308061 /* PresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationTests.swift; sourceTree = "<group>"; };
+		F3D413BB2A27D6E200308061 /* WideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideButton.swift; sourceTree = "<group>"; };
+		F3D413BE2A27D70500308061 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D413BF2A27D70500308061 /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D413C02A27D70500308061 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F3150B1E2A23B27200C90C7A /* Frameworks */ = {
+		F3D4139E2A27D6C900308061 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150C112A26255C00C90C7A /* Domain.framework in Frameworks */,
-				F3150BAA2A252B5000C90C7A /* Resources.framework in Frameworks */,
-				F3150BDD2A26251000C90C7A /* Webservice.framework in Frameworks */,
-				F3D413C92A27D73600308061 /* Presentation.framework in Frameworks */,
-				F3150B6F2A23B46A00C90C7A /* Utilities.framework in Frameworks */,
+				F3D413C32A27D70600308061 /* Resources.framework in Frameworks */,
+				F3D413C52A27D70600308061 /* Utilities.framework in Frameworks */,
+				F3D413C12A27D70500308061 /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3150B282A23B27200C90C7A /* Frameworks */ = {
+		F3D413A82A27D6C900308061 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150B2C2A23B27200C90C7A /* SigningKit.framework in Frameworks */,
+				F3D413AC2A27D6C900308061 /* Presentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F3150B172A23B27200C90C7A = {
+		F3D413972A27D6C900308061 = {
 			isa = PBXGroup;
 			children = (
-				F3150B232A23B27200C90C7A /* SigningKit */,
-				F3150B2F2A23B27200C90C7A /* SigningKitTests */,
-				F3150B222A23B27200C90C7A /* Products */,
-				F3150B6D2A23B46A00C90C7A /* Frameworks */,
+				F3D413A32A27D6C900308061 /* Presentation */,
+				F3D413AF2A27D6C900308061 /* PresentationTests */,
+				F3D413A22A27D6C900308061 /* Products */,
+				F3D413BD2A27D70500308061 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		F3150B222A23B27200C90C7A /* Products */ = {
+		F3D413A22A27D6C900308061 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3150B212A23B27200C90C7A /* SigningKit.framework */,
-				F3150B2B2A23B27200C90C7A /* SigningKitTests.xctest */,
+				F3D413A12A27D6C900308061 /* Presentation.framework */,
+				F3D413AB2A27D6C900308061 /* PresentationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F3150B232A23B27200C90C7A /* SigningKit */ = {
+		F3D413A32A27D6C900308061 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				F3150B442A23B2CC00C90C7A /* SignInView */,
-				F3150B782A23D26C00C90C7A /* SignUpView */,
-				F3150B242A23B27200C90C7A /* SigningKit.h */,
-				F3150B252A23B27200C90C7A /* SigningKit.docc */,
+				F3D413A42A27D6C900308061 /* Presentation.h */,
+				F3D413A52A27D6C900308061 /* Presentation.docc */,
+				F3D413BB2A27D6E200308061 /* WideButton.swift */,
 			);
-			path = SigningKit;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		F3150B2F2A23B27200C90C7A /* SigningKitTests */ = {
+		F3D413AF2A27D6C900308061 /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				F3150B302A23B27200C90C7A /* SigningKitTests.swift */,
+				F3D413B02A27D6C900308061 /* PresentationTests.swift */,
 			);
-			path = SigningKitTests;
+			path = PresentationTests;
 			sourceTree = "<group>";
 		};
-		F3150B442A23B2CC00C90C7A /* SignInView */ = {
+		F3D413BD2A27D70500308061 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3150B452A23B2D600C90C7A /* SignInViewRouter.swift */,
-				F3150B762A23B81200C90C7A /* SignInView.swift */,
-			);
-			path = SignInView;
-			sourceTree = "<group>";
-		};
-		F3150B6D2A23B46A00C90C7A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F3D413C82A27D73600308061 /* Presentation.framework */,
-				F3150C102A26255C00C90C7A /* Domain.framework */,
-				F3150BDC2A26251000C90C7A /* Webservice.framework */,
-				F3150BA92A252B5000C90C7A /* Resources.framework */,
-				F3150B6E2A23B46A00C90C7A /* Utilities.framework */,
+				F3D413BE2A27D70500308061 /* Domain.framework */,
+				F3D413BF2A27D70500308061 /* Resources.framework */,
+				F3D413C02A27D70500308061 /* Utilities.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F3150B782A23D26C00C90C7A /* SignUpView */ = {
-			isa = PBXGroup;
-			children = (
-				F3150B792A23D29600C90C7A /* SignUpView.swift */,
-				F3150B7A2A23D29600C90C7A /* SignUpViewRouter.swift */,
-			);
-			path = SignUpView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F3150B1C2A23B27200C90C7A /* Headers */ = {
+		F3D4139C2A27D6C900308061 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150B322A23B27200C90C7A /* SigningKit.h in Headers */,
+				F3D413B22A27D6C900308061 /* Presentation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F3150B202A23B27200C90C7A /* SigningKit */ = {
+		F3D413A02A27D6C900308061 /* Presentation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3150B352A23B27300C90C7A /* Build configuration list for PBXNativeTarget "SigningKit" */;
+			buildConfigurationList = F3D413B52A27D6C900308061 /* Build configuration list for PBXNativeTarget "Presentation" */;
 			buildPhases = (
-				F3150B1C2A23B27200C90C7A /* Headers */,
-				F3150B1D2A23B27200C90C7A /* Sources */,
-				F3150B1E2A23B27200C90C7A /* Frameworks */,
-				F3150B1F2A23B27200C90C7A /* Resources */,
-				F3D413CB2A27D73600308061 /* Embed Frameworks */,
+				F3D4139C2A27D6C900308061 /* Headers */,
+				F3D4139D2A27D6C900308061 /* Sources */,
+				F3D4139E2A27D6C900308061 /* Frameworks */,
+				F3D4139F2A27D6C900308061 /* Resources */,
+				F3D413C72A27D70600308061 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SigningKit;
-			productName = SigningKit;
-			productReference = F3150B212A23B27200C90C7A /* SigningKit.framework */;
+			name = Presentation;
+			productName = Presentation;
+			productReference = F3D413A12A27D6C900308061 /* Presentation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F3150B2A2A23B27200C90C7A /* SigningKitTests */ = {
+		F3D413AA2A27D6C900308061 /* PresentationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3150B382A23B27300C90C7A /* Build configuration list for PBXNativeTarget "SigningKitTests" */;
+			buildConfigurationList = F3D413B82A27D6C900308061 /* Build configuration list for PBXNativeTarget "PresentationTests" */;
 			buildPhases = (
-				F3150B272A23B27200C90C7A /* Sources */,
-				F3150B282A23B27200C90C7A /* Frameworks */,
-				F3150B292A23B27200C90C7A /* Resources */,
+				F3D413A72A27D6C900308061 /* Sources */,
+				F3D413A82A27D6C900308061 /* Frameworks */,
+				F3D413A92A27D6C900308061 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F3150B2E2A23B27200C90C7A /* PBXTargetDependency */,
+				F3D413AE2A27D6C900308061 /* PBXTargetDependency */,
 			);
-			name = SigningKitTests;
-			productName = SigningKitTests;
-			productReference = F3150B2B2A23B27200C90C7A /* SigningKitTests.xctest */;
+			name = PresentationTests;
+			productName = PresentationTests;
+			productReference = F3D413AB2A27D6C900308061 /* PresentationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F3150B182A23B27200C90C7A /* Project object */ = {
+		F3D413982A27D6C900308061 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					F3150B202A23B27200C90C7A = {
+					F3D413A02A27D6C900308061 = {
 						CreatedOnToolsVersion = 14.3;
 					};
-					F3150B2A2A23B27200C90C7A = {
+					F3D413AA2A27D6C900308061 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
-			buildConfigurationList = F3150B1B2A23B27200C90C7A /* Build configuration list for PBXProject "SigningKit" */;
+			buildConfigurationList = F3D4139B2A27D6C900308061 /* Build configuration list for PBXProject "Presentation" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -233,26 +204,26 @@
 				en,
 				Base,
 			);
-			mainGroup = F3150B172A23B27200C90C7A;
-			productRefGroup = F3150B222A23B27200C90C7A /* Products */;
+			mainGroup = F3D413972A27D6C900308061;
+			productRefGroup = F3D413A22A27D6C900308061 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3150B202A23B27200C90C7A /* SigningKit */,
-				F3150B2A2A23B27200C90C7A /* SigningKitTests */,
+				F3D413A02A27D6C900308061 /* Presentation */,
+				F3D413AA2A27D6C900308061 /* PresentationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F3150B1F2A23B27200C90C7A /* Resources */ = {
+		F3D4139F2A27D6C900308061 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3150B292A23B27200C90C7A /* Resources */ = {
+		F3D413A92A27D6C900308061 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,38 +233,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F3150B1D2A23B27200C90C7A /* Sources */ = {
+		F3D4139D2A27D6C900308061 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150B7B2A23D29600C90C7A /* SignUpView.swift in Sources */,
-				F3150B462A23B2D600C90C7A /* SignInViewRouter.swift in Sources */,
-				F3150B7C2A23D29600C90C7A /* SignUpViewRouter.swift in Sources */,
-				F3150B772A23B81200C90C7A /* SignInView.swift in Sources */,
-				F3150B262A23B27200C90C7A /* SigningKit.docc in Sources */,
+				F3D413BC2A27D6E200308061 /* WideButton.swift in Sources */,
+				F3D413A62A27D6C900308061 /* Presentation.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3150B272A23B27200C90C7A /* Sources */ = {
+		F3D413A72A27D6C900308061 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3150B312A23B27200C90C7A /* SigningKitTests.swift in Sources */,
+				F3D413B12A27D6C900308061 /* PresentationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F3150B2E2A23B27200C90C7A /* PBXTargetDependency */ = {
+		F3D413AE2A27D6C900308061 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F3150B202A23B27200C90C7A /* SigningKit */;
-			targetProxy = F3150B2D2A23B27200C90C7A /* PBXContainerItemProxy */;
+			target = F3D413A02A27D6C900308061 /* Presentation */;
+			targetProxy = F3D413AD2A27D6C900308061 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F3150B332A23B27200C90C7A /* Debug */ = {
+		F3D413B32A27D6C900308061 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -344,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -356,7 +324,7 @@
 			};
 			name = Debug;
 		};
-		F3150B342A23B27200C90C7A /* Release */ = {
+		F3D413B42A27D6C900308061 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -401,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -413,7 +381,7 @@
 			};
 			name = Release;
 		};
-		F3150B362A23B27300C90C7A /* Debug */ = {
+		F3D413B62A27D6C900308061 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -426,6 +394,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,7 +403,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.SigningKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.Presentation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -446,7 +415,7 @@
 			};
 			name = Debug;
 		};
-		F3150B372A23B27300C90C7A /* Release */ = {
+		F3D413B72A27D6C900308061 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -459,6 +428,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +437,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.SigningKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.Presentation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -479,7 +449,7 @@
 			};
 			name = Release;
 		};
-		F3150B392A23B27300C90C7A /* Debug */ = {
+		F3D413B92A27D6C900308061 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -487,7 +457,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.SigningKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.PresentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -495,7 +465,7 @@
 			};
 			name = Debug;
 		};
-		F3150B3A2A23B27300C90C7A /* Release */ = {
+		F3D413BA2A27D6C900308061 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -503,7 +473,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.SigningKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warrd.adlani.PresentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -514,34 +484,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3150B1B2A23B27200C90C7A /* Build configuration list for PBXProject "SigningKit" */ = {
+		F3D4139B2A27D6C900308061 /* Build configuration list for PBXProject "Presentation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3150B332A23B27200C90C7A /* Debug */,
-				F3150B342A23B27200C90C7A /* Release */,
+				F3D413B32A27D6C900308061 /* Debug */,
+				F3D413B42A27D6C900308061 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3150B352A23B27300C90C7A /* Build configuration list for PBXNativeTarget "SigningKit" */ = {
+		F3D413B52A27D6C900308061 /* Build configuration list for PBXNativeTarget "Presentation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3150B362A23B27300C90C7A /* Debug */,
-				F3150B372A23B27300C90C7A /* Release */,
+				F3D413B62A27D6C900308061 /* Debug */,
+				F3D413B72A27D6C900308061 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3150B382A23B27300C90C7A /* Build configuration list for PBXNativeTarget "SigningKitTests" */ = {
+		F3D413B82A27D6C900308061 /* Build configuration list for PBXNativeTarget "PresentationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3150B392A23B27300C90C7A /* Debug */,
-				F3150B3A2A23B27300C90C7A /* Release */,
+				F3D413B92A27D6C900308061 /* Debug */,
+				F3D413BA2A27D6C900308061 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F3150B182A23B27200C90C7A /* Project object */;
+	rootObject = F3D413982A27D6C900308061 /* Project object */;
 }
