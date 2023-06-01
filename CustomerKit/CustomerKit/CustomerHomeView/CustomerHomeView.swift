@@ -53,7 +53,8 @@ struct CustomerHomeView: View {
                             id: item.id,
                             imageURL: "",
                             title: item.name,
-                            subTitle: "Brief description of a product or service")
+                            subTitle: item.description ?? ""
+                        )
                     })).padding(.horizontal, 10)
                 }
             }

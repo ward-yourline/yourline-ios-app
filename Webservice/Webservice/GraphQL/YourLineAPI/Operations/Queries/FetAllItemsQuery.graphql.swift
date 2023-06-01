@@ -16,6 +16,7 @@ public class FetAllItemsQuery: GraphQLQuery {
           type
           parentID
           categoryID
+          description
         }
       }
       """#
@@ -48,7 +49,7 @@ public class FetAllItemsQuery: GraphQLQuery {
         .field("id", ID.self),
         .field("type", String.self),
         .field("parentID", ID?.self),
-        .field("categoryID", ID?.self),
+        .field("description", String.self),
       ] }
 
       public var name: String { __data["name"] }
@@ -56,6 +57,7 @@ public class FetAllItemsQuery: GraphQLQuery {
       public var type: String { __data["type"] }
       public var parentID: ID? { __data["parentID"] }
       public var categoryID: ID? { __data["categoryID"] }
+      public var description: String? { __data["description"]}
     }
   }
 }

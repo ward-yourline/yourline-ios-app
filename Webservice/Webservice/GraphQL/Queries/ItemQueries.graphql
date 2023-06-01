@@ -5,5 +5,6 @@ query FetAllItems {
       type
       parentID
       categoryID
+      description
     }
 }
