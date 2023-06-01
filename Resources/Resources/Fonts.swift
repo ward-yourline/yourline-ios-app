@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Utilities
+import SwiftUI
 
 public enum Fonts :String, CaseIterable {
     case regular = "Poppins-Regular"
@@ -20,6 +21,10 @@ public enum Fonts :String, CaseIterable {
     
     public var name: String {
         return self.rawValue
+    }
+    
+    public func swifUIFont(size: CGFloat = 16) -> Font {
+        return Font.custom(self.rawValue, size: size)
     }
 }
 

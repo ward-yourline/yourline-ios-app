@@ -15,6 +15,8 @@
 		F3D413C12A27D70500308061 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413BE2A27D70500308061 /* Domain.framework */; };
 		F3D413C32A27D70600308061 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413BF2A27D70500308061 /* Resources.framework */; };
 		F3D413C52A27D70600308061 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413C02A27D70500308061 /* Utilities.framework */; };
+		F3D414162A29133600308061 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414152A29133600308061 /* NavigationBarView.swift */; };
+		F3D414212A2934BC00308061 /* ItemsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414202A2934BC00308061 /* ItemsCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		F3D413BE2A27D70500308061 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413BF2A27D70500308061 /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413C02A27D70500308061 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D414152A29133600308061 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		F3D414202A2934BC00308061 /* ItemsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +87,9 @@
 		F3D413A32A27D6C900308061 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F3D414142A29132A00308061 /* Views */,
 				F3D413A42A27D6C900308061 /* Presentation.h */,
 				F3D413A52A27D6C900308061 /* Presentation.docc */,
-				F3D413BB2A27D6E200308061 /* WideButton.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -106,6 +110,16 @@
 				F3D413C02A27D70500308061 /* Utilities.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3D414142A29132A00308061 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3D413BB2A27D6E200308061 /* WideButton.swift */,
+				F3D414152A29133600308061 /* NavigationBarView.swift */,
+				F3D414202A2934BC00308061 /* ItemsCollectionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +233,8 @@
 			files = (
 				F3D413BC2A27D6E200308061 /* WideButton.swift in Sources */,
 				F3D413A62A27D6C900308061 /* Presentation.docc in Sources */,
+				F3D414212A2934BC00308061 /* ItemsCollectionView.swift in Sources */,
+				F3D414162A29133600308061 /* NavigationBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

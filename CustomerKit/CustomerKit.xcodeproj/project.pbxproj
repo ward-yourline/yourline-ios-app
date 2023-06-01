@@ -18,6 +18,9 @@
 		F3D414012A27D82E00308061 /* Webservice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413F82A27D82E00308061 /* Webservice.framework */; };
 		F3D414062A27D87800308061 /* CustomerLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414052A27D87800308061 /* CustomerLandingView.swift */; };
 		F3D4140D2A27D9CB00308061 /* CustomerLandingViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4140C2A27D9CB00308061 /* CustomerLandingViewRouter.swift */; };
+		F3D4141A2A29229500308061 /* CustomerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414192A29229500308061 /* CustomerHomeView.swift */; };
+		F3D4141C2A2922A000308061 /* CustomerStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4141B2A2922A000308061 /* CustomerStoreView.swift */; };
+		F3D4141F2A29233000308061 /* CustomerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4141E2A29233000308061 /* CustomerSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		F3D413F82A27D82E00308061 /* Webservice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Webservice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D414052A27D87800308061 /* CustomerLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerLandingView.swift; sourceTree = "<group>"; };
 		F3D4140C2A27D9CB00308061 /* CustomerLandingViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerLandingViewRouter.swift; sourceTree = "<group>"; };
+		F3D414192A29229500308061 /* CustomerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHomeView.swift; sourceTree = "<group>"; };
+		F3D4141B2A2922A000308061 /* CustomerStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerStoreView.swift; sourceTree = "<group>"; };
+		F3D4141E2A29233000308061 /* CustomerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,9 @@
 		F3D413DB2A27D81100308061 /* CustomerKit */ = {
 			isa = PBXGroup;
 			children = (
+				F3D4141D2A29232600308061 /* CustomerSettingsView */,
+				F3D414182A29227C00308061 /* CustomerHomeView */,
+				F3D414172A29226C00308061 /* CustomerStoreView */,
 				F3D414042A27D86200308061 /* CustomerLandingView */,
 				F3D413DC2A27D81100308061 /* CustomerKit.h */,
 				F3D413DD2A27D81100308061 /* CustomerKit.docc */,
@@ -125,6 +134,30 @@
 				F3D414052A27D87800308061 /* CustomerLandingView.swift */,
 			);
 			path = CustomerLandingView;
+			sourceTree = "<group>";
+		};
+		F3D414172A29226C00308061 /* CustomerStoreView */ = {
+			isa = PBXGroup;
+			children = (
+				F3D4141B2A2922A000308061 /* CustomerStoreView.swift */,
+			);
+			path = CustomerStoreView;
+			sourceTree = "<group>";
+		};
+		F3D414182A29227C00308061 /* CustomerHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				F3D414192A29229500308061 /* CustomerHomeView.swift */,
+			);
+			path = CustomerHomeView;
+			sourceTree = "<group>";
+		};
+		F3D4141D2A29232600308061 /* CustomerSettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				F3D4141E2A29233000308061 /* CustomerSettingsView.swift */,
+			);
+			path = CustomerSettingsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +271,10 @@
 			files = (
 				F3D414062A27D87800308061 /* CustomerLandingView.swift in Sources */,
 				F3D413DE2A27D81100308061 /* CustomerKit.docc in Sources */,
+				F3D4141C2A2922A000308061 /* CustomerStoreView.swift in Sources */,
 				F3D4140D2A27D9CB00308061 /* CustomerLandingViewRouter.swift in Sources */,
+				F3D4141A2A29229500308061 /* CustomerHomeView.swift in Sources */,
+				F3D4141F2A29233000308061 /* CustomerSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
