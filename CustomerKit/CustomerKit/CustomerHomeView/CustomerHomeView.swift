@@ -12,29 +12,6 @@ import Presentation
 
 typealias Item = Webservice.FetAllItemsQuery.Data.FetchAllItem
 
-//struct ItemsCollectionView: View {
-//    let item: Item
-//    
-//    var body: some View {
-//        VStack(spacing: 8) {
-//            Image(systemName:"gear")
-//                .resizable()
-//                .aspectRatio(contentMode: .fit)
-//                .frame(height: 150)
-//            
-//            Text(item.name)
-//                .font(.headline)
-//            
-//            Text(item.name)
-//                .font(.subheadline)
-//        }
-//        .padding()
-//        .background(Color.white)
-//        .cornerRadius(8)
-//        .shadow(radius: 4)
-//    }
-//}
-
 struct CustomerHomeView: View {
     private let webService: WebServiceProtocol
     
@@ -56,26 +33,32 @@ struct CustomerHomeView: View {
                             subTitle: item.description ?? ""
                         )
                     })).padding(.horizontal, 10)
+                        .refreshable {
+                        }
                 }
             }
             .navigationTitle("Home")
         }
         .onAppear {
-            let query = FetAllItemsQuery()
-            webService.apollo.fetch(query: query) { result in
-                switch result {
-                case .success(let fetchAllItems):
-                    if let errors = fetchAllItems.errors {
-                        print(errors)
-                    }
-                    if let items = fetchAllItems.data?.fetchAllItems {
-                        DispatchQueue.main.async {
-                            self.items = items.compactMap { $0 }
-                        }
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
+            getItems()
+        }
+    }
+    
+    func getItems() {
+        let query = FetAllItemsQuery()
+        webService.apollo.fetch(query: query) { result in
+            switch result {
+            case .success(let fetchAllItems):
+                if let errors = fetchAllItems.errors {
+                    print(errors)
                 }
+                if let items = fetchAllItems.data?.fetchAllItems {
+                    DispatchQueue.main.async {
+                        self.items = items.compactMap { $0 }
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
