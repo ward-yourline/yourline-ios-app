@@ -28,6 +28,9 @@ public struct CustomerSettingsView: View {
                             
                             // Reset logic
                         }
+                        WideButton(buttonTitle: "Sign out") {
+                            // TODO
+                        }
                     }
                 }
                 .navigationBarTitle("Settings")

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3169C3C2A2A895A00F48565 /* CustomerHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3169C3B2A2A895A00F48565 /* CustomerHomeViewModel.swift */; };
+		F3169C3F2A2A8E0E00F48565 /* CustomerCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3169C3E2A2A8E0E00F48565 /* CustomerCartView.swift */; };
 		F3D413DE2A27D81100308061 /* CustomerKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = F3D413DD2A27D81100308061 /* CustomerKit.docc */; };
 		F3D413E42A27D81200308061 /* CustomerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413D92A27D81100308061 /* CustomerKit.framework */; };
 		F3D413E92A27D81200308061 /* CustomerKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413E82A27D81200308061 /* CustomerKitTests.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F3169C3B2A2A895A00F48565 /* CustomerHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHomeViewModel.swift; sourceTree = "<group>"; };
+		F3169C3E2A2A8E0E00F48565 /* CustomerCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCartView.swift; sourceTree = "<group>"; };
 		F3D413D92A27D81100308061 /* CustomerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413DC2A27D81100308061 /* CustomerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerKit.h; sourceTree = "<group>"; };
 		F3D413DD2A27D81100308061 /* CustomerKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CustomerKit.docc; sourceTree = "<group>"; };
@@ -75,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3169C3D2A2A8DFB00F48565 /* CustomerCartView */ = {
+			isa = PBXGroup;
+			children = (
+				F3169C3E2A2A8E0E00F48565 /* CustomerCartView.swift */,
+			);
+			path = CustomerCartView;
+			sourceTree = "<group>";
+		};
 		F3D413CF2A27D81100308061 = {
 			isa = PBXGroup;
 			children = (
@@ -97,10 +109,11 @@
 		F3D413DB2A27D81100308061 /* CustomerKit */ = {
 			isa = PBXGroup;
 			children = (
-				F3D4141D2A29232600308061 /* CustomerSettingsView */,
-				F3D414182A29227C00308061 /* CustomerHomeView */,
-				F3D414172A29226C00308061 /* CustomerStoreView */,
 				F3D414042A27D86200308061 /* CustomerLandingView */,
+				F3D414182A29227C00308061 /* CustomerHomeView */,
+				F3169C3D2A2A8DFB00F48565 /* CustomerCartView */,
+				F3D4141D2A29232600308061 /* CustomerSettingsView */,
+				F3D414172A29226C00308061 /* CustomerStoreView */,
 				F3D413DC2A27D81100308061 /* CustomerKit.h */,
 				F3D413DD2A27D81100308061 /* CustomerKit.docc */,
 			);
@@ -148,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				F3D414192A29229500308061 /* CustomerHomeView.swift */,
+				F3169C3B2A2A895A00F48565 /* CustomerHomeViewModel.swift */,
 			);
 			path = CustomerHomeView;
 			sourceTree = "<group>";
@@ -269,11 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3169C3F2A2A8E0E00F48565 /* CustomerCartView.swift in Sources */,
 				F3D414062A27D87800308061 /* CustomerLandingView.swift in Sources */,
 				F3D413DE2A27D81100308061 /* CustomerKit.docc in Sources */,
 				F3D4141C2A2922A000308061 /* CustomerStoreView.swift in Sources */,
 				F3D4140D2A27D9CB00308061 /* CustomerLandingViewRouter.swift in Sources */,
 				F3D4141A2A29229500308061 /* CustomerHomeView.swift in Sources */,
+				F3169C3C2A2A895A00F48565 /* CustomerHomeViewModel.swift in Sources */,
 				F3D4141F2A29233000308061 /* CustomerSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

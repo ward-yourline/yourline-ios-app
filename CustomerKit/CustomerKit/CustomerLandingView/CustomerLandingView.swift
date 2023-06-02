@@ -35,6 +35,10 @@ public struct CustomerLandingView: View {
                 Image("store-store_symbol")
                 Text("Store")
             }
+            CustomerCartView().tabItem {
+                Image("shopping_cart-shopping_cart_symbol")
+                Text("Cart")
+            }
             CustomerSettingsView().tabItem {
                 Image("settings-settings_symbol")
                 Text("Settings")

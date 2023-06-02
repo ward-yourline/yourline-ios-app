@@ -9,62 +9,45 @@ import SwiftUI
 import Webservice
 import Utilities
 import Presentation
+import Domain
 
 typealias Item = Webservice.FetAllItemsQuery.Data.FetchAllItem
 
 struct CustomerHomeView: View {
-    private let webService: WebServiceProtocol
+    @StateObject private var viewModel: CustomerHomeViewModel
     
     init(webService: WebServiceProtocol) {
-        self.webService = webService
+        let viewModel = CustomerHomeViewModel(webService: webService)
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
-    
-    @State private var items = [Item]()
     
     var body: some View {
         NavigationView {
             ZStack {
                 ScrollView {
-                    ItemsCollectionView(items: items.map({ item in
-                        return CollectionItem(
-                            id: item.id,
-                            imageURL: item.mainImage ?? "",
-                            title: item.name,
-                            subTitle: item.description ?? ""
-                        )
-                    })).padding(.horizontal, 10)
+                    ItemsCollectionView(items: viewModel.items, delegate: viewModel)
+                        .padding(.horizontal, 10)
                         .refreshable {
-                            // TODO
+                            viewModel.getItems()
                         }
+                }
+                // NavigationLink
+                if let selectedItem = viewModel.selectedItem {
+                    NavigationLink(
+                        destination: ItemDetailView(item: selectedItem),
+                        isActive: $viewModel.isShowingDetailView,
+                        label: { EmptyView() }
+                    )
+                    .hidden()
                 }
             }
             .navigationTitle("Home")
         }
         .onAppear {
-            getItems()
-        }
-    }
-    
-    func getItems() {
-        let query = FetAllItemsQuery()
-        webService.apollo.fetch(query: query) { result in
-            switch result {
-            case .success(let fetchAllItems):
-                if let errors = fetchAllItems.errors {
-                    print(errors)
-                }
-                if let items = fetchAllItems.data?.fetchAllItems {
-                    DispatchQueue.main.async {
-                        self.items = items.compactMap { $0 }
-                    }
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
+            viewModel.getItems()
         }
     }
 }
-
 
 struct CustomerHomeView_Previews: PreviewProvider {
     static var previews: some View {
