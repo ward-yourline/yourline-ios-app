@@ -21,7 +21,6 @@ public struct CollectionItem {
         self.subTitle = subTitle
     }
 }
-
 public struct ItemsCollectionView: View {
     
     let items: [CollectionItem]
@@ -31,38 +30,61 @@ public struct ItemsCollectionView: View {
     }
     
     public var body: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 10) {
-            ForEach(items, id: \.id) { item in
-                VStack(spacing: 8) {
-                    Image("product_placeholder")
-                        .resizable()
+        let gridItems = [
+            GridItem(.flexible(), spacing: 10),
+            GridItem(.flexible(), spacing: 10)
+        ]
+        
+        ScrollView {
+            LazyVGrid(columns: gridItems, spacing: 10) {
+                ForEach(items, id: \.id) { item in
+                    VStack(spacing: 8) {
+                        AsyncImage(url: URL(string: item.imageURL)) { phase in
+                            switch phase {
+                            case .empty:
+                                Image("product_placeholder")
+                                    .resizable()
+                            case .success(let image):
+                                image
+                                    .resizable()
+                            case .failure:
+                                Image(systemName: "exclamationmark.circle")
+                                    .resizable()
+                                    .foregroundColor(.red)
+                            @unknown default:
+                                fatalError("Unhandled AsyncImage phase")
+                            }
+                        }
                         .aspectRatio(contentMode: .fit)
-                        .frame(height: 128)
+                        .frame(height: 100) // Adjust the height as needed
 
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text(item.title)
-                            .font(.headline)
-                        
-                        Text(item.subTitle)
-                            .font(.subheadline)
-                        
-                        Text("£100")
-                            .font(.callout)
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text(item.title)
+                                .font(.headline)
+                                .frame(height: 40)
+                            
+                            Text(item.subTitle)
+                                .font(.subheadline)
+                                .frame(height: 40)
+                            
+                            Text("£100")
+                                .font(.callout)
+                                .frame(height: 20)
+                        }
+                        WideButton(buttonTitle: "Buy") {
+                            // TODO
+                        }
                     }
-  
-                    WideButton(buttonTitle: "Buy") {
-                        // TODO
-                    }
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .shadow(radius: 4)
                 }
-                .padding()
-                .background(Color.white)
-                .cornerRadius(8)
-                .shadow(radius: 4)
             }
+            .padding(10)
         }
     }
 }
-
 
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {

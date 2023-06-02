@@ -28,12 +28,13 @@ struct CustomerHomeView: View {
                     ItemsCollectionView(items: items.map({ item in
                         return CollectionItem(
                             id: item.id,
-                            imageURL: "",
+                            imageURL: item.mainImage ?? "",
                             title: item.name,
                             subTitle: item.description ?? ""
                         )
                     })).padding(.horizontal, 10)
                         .refreshable {
+                            // TODO
                         }
                 }
             }
