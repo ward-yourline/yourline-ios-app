@@ -12,87 +12,125 @@ import Resources
 public struct ItemDetailView: View {
     
     private let item: CollectionItem
-    @State private var quantity = "1"
+    @State private var quantity = 1
+    @State private var showPicker = false
     
     public init(item: CollectionItem) {
         self.item = item
     }
     
     public var body: some View {
-        VStack(spacing: 10) {
-            ScrollView {
-                AsyncImage(url: URL(string: item.imageURL)) { phase in
-                    switch phase {
-                    case .empty:
-                        Image("product_placeholder")
-                            .resizable()
-                    case .success(let image):
-                        image
-                            .resizable()
-                    case .failure:
-                        Image(systemName: "exclamationmark.circle")
-                            .resizable()
-                            .foregroundColor(.red)
-                    @unknown default:
-                        fatalError("Unhandled AsyncImage phase")
-                    }
-                }
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 200)
-                .padding(.bottom, 10)
-                
-                Divider()
-                
-                HStack {
-                    VStack {
-                        HStack {
-                            VStack {
-                                Text("Quantity").padding(.horizontal, 10)
-                                    .padding(.top, 5)
-                                    .frame(maxWidth: .infinity ,alignment: .leading)
-                                Text("1")
-                                    .padding(.horizontal, 10)
-                                    .padding(.bottom, 5)
-                                    .frame(maxWidth: .infinity ,alignment: .leading)
-                            }
-                            Button {
-                                //
-                            } label: {
-                                Image(systemName: "chevron.down")
-                            }
-                            .frame(maxHeight: .infinity)
-                            .padding(.horizontal, 10)
-                            .foregroundColor(.black)
+        ZStack {
+            VStack(spacing: 10) {
+                ScrollView {
+                    AsyncImage(url: URL(string: item.imageURL)) { phase in
+                        switch phase {
+                        case .empty:
+                            Image("product_placeholder")
+                                .resizable()
+                        case .success(let image):
+                            image
+                                .resizable()
+                        case .failure:
+                            Image(systemName: "exclamationmark.circle")
+                                .resizable()
+                                .foregroundColor(.red)
+                        @unknown default:
+                            fatalError("Unhandled AsyncImage phase")
                         }
                     }
-                    .frame(width: 140, height: 50)
-                    .addBorder(CustomColors.lightGrey.color)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 200)
+                    .padding(.bottom, 10)
                     
-                    WideButton(buttonTitle: "Buy") {
-                        // TODO
+                    Divider()
+                    
+                    HStack {
+                        VStack {
+                            HStack {
+                                VStack {
+                                    Text("Quantity")
+                                        .font(.callout)
+                                        .fontWeight(.bold)
+                                        .padding(.horizontal, 10)
+                                        .padding(.top, 5)
+                                        .frame(maxWidth: .infinity ,alignment: .leading)
+                                    Text("\(quantity)")
+                                        .padding(.horizontal, 10)
+                                        .padding(.bottom, 5)
+                                        .frame(maxWidth: .infinity ,alignment: .leading)
+                                }
+                                Button {
+                                    showPicker = true
+                                } label: {
+                                    Image(systemName: "chevron.down")
+                                }
+                                .frame(maxHeight: .infinity)
+                                .padding(.horizontal, 10)
+                                .foregroundColor(.black)
+                            }
+                        }
+                        .frame(width: 140, height: 50)
+                        .addBorder(CustomColors.lightGrey.color)
+                        
+                        WideButton(buttonTitle: "Buy") {
+                            // TODO
+                        }
                     }
+                    .padding(.vertical, 10)
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(item.title)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text(item.price)
+                            .font(.callout)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text(item.description)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    .frame(maxWidth: .infinity)
                 }
-                .padding(.vertical, 10)
-                
-                VStack(alignment: .leading, spacing: 10) {
-                    Text(item.title)
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(item.price)
-                        .font(.callout)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(item.description)
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .frame(maxWidth: .infinity)
+                .padding(.bottom, 10)
             }
-            .padding(.bottom, 10)
+            .padding()
+            .sheet(isPresented: $showPicker, content: {
+                VStack(spacing: 0) {
+                    HStack {
+                        Spacer()
+                        Button("Cancel") {
+                            showPicker = false
+                            // Perform any action with the selected value
+                            print("Selected number:", quantity)
+                        }
+                        .padding()
+                        .foregroundColor(.blue)
+                    }
+                    .background(Color.white)
+                    
+                    Text("Quantity").font(.title)
+                    Picker("Select a number", selection: $quantity) {
+                        ForEach(0...100, id: \.self) { number in
+                            Text("\(number)")
+                        }
+                    }
+                    .pickerStyle(.wheel)
+                    .padding()
+                    WideButton(buttonTitle: "Select") {
+                        showPicker = false
+                        print("Selected number:", quantity)
+                    }
+                    .padding()
+                    
+                    Spacer()
+                }
+            })
         }
-        .padding()
+        .navigationTitle("Store")
     }
 }
 
