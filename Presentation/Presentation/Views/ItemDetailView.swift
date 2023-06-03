@@ -27,7 +27,7 @@ public struct ItemDetailView: View {
                     
                     Divider()
                     
-                    ItemPurchaseView(showPicker: showPicker, quantity: quantity, showPickerCallBack: {
+                    ItemPurchaseView(showPicker: showPicker, quantity: $quantity, showPickerCallBack: {
                         showPicker = true
                     })
                     ItemInfoView(item: item)
@@ -36,10 +36,10 @@ public struct ItemDetailView: View {
             }
             .padding()
             .sheet(isPresented: $showPicker, content: {
-                QuantityPickerView(showPicker: showPicker, hidePickerCallBack: { quantity in
+                QuantityPickerView(showPicker: showPicker, quantity: $quantity, hidePickerCallBack: { selectedQuantity in
                     showPicker = false
-                    if let quantity = quantity {
-                        print(quantity)
+                    if let selectedQuantity = selectedQuantity {
+                        self.quantity = selectedQuantity
                     }
                 })
                 
@@ -52,7 +52,7 @@ public struct ItemDetailView: View {
 
 struct QuantityPickerView: View {
     @State private(set) var showPicker = false
-    @State private var quantity = 1
+    @Binding private(set) var quantity: Int
     
     private(set) var hidePickerCallBack: (_ quantity: Int? ) -> Void
     
@@ -72,7 +72,7 @@ struct QuantityPickerView: View {
             
             Text("Quantity").font(.title)
             Picker("Select a number", selection: $quantity) {
-                ForEach(0...100, id: \.self) { number in
+                ForEach(1...100, id: \.self) { number in
                     Text("\(number)")
                 }
             }
@@ -116,7 +116,7 @@ struct ItemImageView: View {
 struct ItemPurchaseView: View {
     
     @State private(set) var showPicker = false
-    @State private(set) var quantity = 1
+    @Binding private(set) var quantity: Int
     
     private(set) var showPickerCallBack: () -> Void
     
