@@ -8,6 +8,7 @@
 import SwiftUI
 import Domain
 import Resources
+import Utilities
 
 public struct ItemDetailView: View {
     

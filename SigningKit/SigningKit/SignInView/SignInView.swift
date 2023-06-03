@@ -39,11 +39,9 @@ struct SignInView: View {
                             .font(.custom(Fonts.bold.name, size: 48))
                             .foregroundColor(CustomColors.darkGrey.color)
                     }
-                    
-                    Divider()
-                    
                     Text("Business and pleasure").font(.custom(Fonts.regular.name, size: 20))
                 }
+                .padding(.bottom, 40)
                 
                 VStack(alignment: .leading, spacing: 20) {
                     Text("Sign in").font(.custom(Fonts.bold.name, size: 18))
@@ -59,7 +57,7 @@ struct SignInView: View {
                     }) {
                         Text("Forgot password")
                             .padding(.vertical, 10)
-                    }.frame(maxWidth: .infinity, alignment: .trailing)
+                    }.frame(maxWidth: .infinity, alignment: .leading)
                 }
                 
                 WideButton(buttonTitle: "Sign in") {
@@ -86,6 +84,7 @@ struct SignInView: View {
                 }.alert(isPresented: $isSignInError) {
                     Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("Okay")))
                 }
+                
                 Divider()
                 
                 VStack {

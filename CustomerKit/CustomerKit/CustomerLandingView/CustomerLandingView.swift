@@ -43,7 +43,8 @@ public struct CustomerLandingView: View {
                 Image("settings-settings_symbol")
                 Text("Settings")
             }
-        }.tint(CustomColors.darkGrey.color)
+        }
+        .tint(CustomColors.darkGrey.color)
     }
 }
 

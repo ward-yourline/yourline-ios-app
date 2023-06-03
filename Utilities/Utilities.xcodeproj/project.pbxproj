@@ -13,6 +13,7 @@
 		F3150B622A23B42D00C90C7A /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = F3150B542A23B42D00C90C7A /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3150B6C2A23B43B00C90C7A /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150B6B2A23B43B00C90C7A /* UIViewController+Extensions.swift */; };
 		F3150BAE2A252DD300C90C7A /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3150BAD2A252DD300C90C7A /* Color+Extensions.swift */; };
+		F3E6081B2A2BCE7D00645DB0 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E6081A2A2BCE7D00645DB0 /* Badge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		F3150B602A23B42D00C90C7A /* UtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTests.swift; sourceTree = "<group>"; };
 		F3150B6B2A23B43B00C90C7A /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		F3150BAD2A252DD300C90C7A /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		F3E6081A2A2BCE7D00645DB0 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				F3150B542A23B42D00C90C7A /* Utilities.h */,
 				F3150B552A23B42D00C90C7A /* Utilities.docc */,
 				F3150BAD2A252DD300C90C7A /* Color+Extensions.swift */,
+				F3E6081A2A2BCE7D00645DB0 /* Badge.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3150B6C2A23B43B00C90C7A /* UIViewController+Extensions.swift in Sources */,
+				F3E6081B2A2BCE7D00645DB0 /* Badge.swift in Sources */,
 				F3150B562A23B42D00C90C7A /* Utilities.docc in Sources */,
 				F3150BAE2A252DD300C90C7A /* Color+Extensions.swift in Sources */,
 			);
