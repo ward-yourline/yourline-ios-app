@@ -23,11 +23,36 @@ struct CustomerHomeView: View {
         NavigationView {
             ZStack {
                 ScrollView {
-                    ItemsCollectionView(items: viewModel.items, delegate: viewModel)
-                        .padding(.horizontal, 10)
-                        .refreshable {
-                            viewModel.getItems()
+                    VStack {
+                        VStack {
+                            ZStack {
+                                Image("product_placeholder")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 200)
+                                    .overlay(.foreground)
+                                    .opacity(0.1)
+                                Text("Promotional")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white)
+                            }
                         }
+                        
+                        VStack(alignment: .leading) {
+                            Text("Recommended for you")
+                                .font(.headline)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, 10)
+                        
+                        ItemsCollectionView(items: viewModel.items, delegate: viewModel)
+                            .padding(.horizontal, 10)
+                            .refreshable {
+                                viewModel.getItems()
+                            }
+                    }
                 }
                 // NavigationLink
                 if let selectedItem = viewModel.selectedItem {

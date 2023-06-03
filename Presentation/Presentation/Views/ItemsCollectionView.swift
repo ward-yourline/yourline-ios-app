@@ -55,7 +55,8 @@ public struct ItemsCollectionView: View {
                                     fatalError("Unhandled AsyncImage phase")
                                 }
                             }
-                            .aspectRatio(contentMode: .fit)
+                            .aspectRatio(contentMode: .fill)
+                            .frame(maxWidth: .infinity)
                             .frame(height: 100) // Adjust the fixed height here
 
                             VStack(spacing: 10) {
@@ -81,8 +82,8 @@ public struct ItemsCollectionView: View {
                             WideButton(buttonTitle: "Buy") {
                                 // TODO
                             }
+                            .padding()
                         }
-                        .padding()
                         .background(Color.white)
                         .cornerRadius(8)
                         .shadow(radius: 4)

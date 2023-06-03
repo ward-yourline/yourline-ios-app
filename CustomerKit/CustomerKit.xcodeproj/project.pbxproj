@@ -23,6 +23,7 @@
 		F3D4141A2A29229500308061 /* CustomerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414192A29229500308061 /* CustomerHomeView.swift */; };
 		F3D4141C2A2922A000308061 /* CustomerStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4141B2A2922A000308061 /* CustomerStoreView.swift */; };
 		F3D4141F2A29233000308061 /* CustomerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4141E2A29233000308061 /* CustomerSettingsView.swift */; };
+		F3E608192A2BC43000645DB0 /* CustomAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3E608182A2BC42F00645DB0 /* CustomAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F3D414192A29229500308061 /* CustomerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHomeView.swift; sourceTree = "<group>"; };
 		F3D4141B2A2922A000308061 /* CustomerStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerStoreView.swift; sourceTree = "<group>"; };
 		F3D4141E2A29233000308061 /* CustomerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSettingsView.swift; sourceTree = "<group>"; };
+		F3E608182A2BC42F00645DB0 /* CustomAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CustomAssets.xcassets; path = ../../Resources/Resources/CustomAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				F3D4141D2A29232600308061 /* CustomerSettingsView */,
 				F3D414172A29226C00308061 /* CustomerStoreView */,
 				F3D413DC2A27D81100308061 /* CustomerKit.h */,
+				F3E608182A2BC42F00645DB0 /* CustomAssets.xcassets */,
 				F3D413DD2A27D81100308061 /* CustomerKit.docc */,
 			);
 			path = CustomerKit;
@@ -266,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E608192A2BC43000645DB0 /* CustomAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
