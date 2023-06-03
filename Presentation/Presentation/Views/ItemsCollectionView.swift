@@ -16,10 +16,10 @@ public protocol ItemsCollectionViewDelegate {
 public struct ItemsCollectionView: View {
     
     // Private properties
-    private let items: [CollectionItem]
+    private let items: [Item]
     private var delegate: ItemsCollectionViewDelegate?
     
-    public init(items: [CollectionItem], delegate: ItemsCollectionViewDelegate?) {
+    public init(items: [Item], delegate: ItemsCollectionViewDelegate?) {
         self.items = items
         self.delegate = delegate
     }

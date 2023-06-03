@@ -32,7 +32,7 @@ public struct WideButton: View {
                     .font(.custom(Fonts.bold.name, size: 16))
             }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .padding(.horizontal, 0)
     }
 }

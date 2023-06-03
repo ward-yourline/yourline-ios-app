@@ -13,9 +13,9 @@ import Presentation
 class CustomerHomeViewModel: ObservableObject, ItemsCollectionViewDelegate {
     private let webService: WebServiceProtocol
     
-    @Published var items: [CollectionItem] = []
+    @Published var items: [Item] = []
     @Published var isShowingDetailView = false
-    @Published var selectedItem: CollectionItem?
+    @Published var selectedItem: Item?
     
     init(webService: WebServiceProtocol) {
         self.webService = webService
@@ -32,7 +32,7 @@ class CustomerHomeViewModel: ObservableObject, ItemsCollectionViewDelegate {
                 if let items = fetchAllItems.data?.fetchAllItems {
                     DispatchQueue.main.async {
                         self.items = items.compactMap { $0 }.map { item in
-                            CollectionItem(
+                            Item(
                                 id: item.id,
                                 imageURL: item.mainImage ?? "",
                                 title: item.name,

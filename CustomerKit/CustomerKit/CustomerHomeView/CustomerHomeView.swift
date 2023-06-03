@@ -11,8 +11,6 @@ import Utilities
 import Presentation
 import Domain
 
-typealias Item = Webservice.FetAllItemsQuery.Data.FetchAllItem
-
 struct CustomerHomeView: View {
     @StateObject private var viewModel: CustomerHomeViewModel
     
