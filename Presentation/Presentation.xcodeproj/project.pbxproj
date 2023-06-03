@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F3169C382A2A84DF00F48565 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3169C372A2A84DF00F48565 /* ItemDetailView.swift */; };
+		F3169C412A2B91E800F48565 /* CustomAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3169C402A2B91E800F48565 /* CustomAssets.xcassets */; };
 		F3D413A62A27D6C900308061 /* Presentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = F3D413A52A27D6C900308061 /* Presentation.docc */; };
 		F3D413AC2A27D6C900308061 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413A12A27D6C900308061 /* Presentation.framework */; };
 		F3D413B12A27D6C900308061 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413B02A27D6C900308061 /* PresentationTests.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		F3169C372A2A84DF00F48565 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		F3169C402A2B91E800F48565 /* CustomAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CustomAssets.xcassets; path = ../../Resources/Resources/CustomAssets.xcassets; sourceTree = "<group>"; };
 		F3D413A12A27D6C900308061 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413A42A27D6C900308061 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		F3D413A52A27D6C900308061 /* Presentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Presentation.docc; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				F3D414142A29132A00308061 /* Views */,
 				F3D413A42A27D6C900308061 /* Presentation.h */,
+				F3169C402A2B91E800F48565 /* CustomAssets.xcassets */,
 				F3D413A52A27D6C900308061 /* Presentation.docc */,
 			);
 			path = Presentation;
@@ -217,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3169C412A2B91E800F48565 /* CustomAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

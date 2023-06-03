@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Domain
+import Resources
 
 public struct ItemDetailView: View {
     
@@ -19,7 +20,6 @@ public struct ItemDetailView: View {
     public var body: some View {
         VStack(spacing: 10) {
             ScrollView {
-                
                 AsyncImage(url: URL(string: item.imageURL)) { phase in
                     switch phase {
                     case .empty:
@@ -38,6 +38,7 @@ public struct ItemDetailView: View {
                 }
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 200)
+                .foregroundColor(.red)
                 
                 Text(item.title)
                     .font(.title)
@@ -55,5 +56,12 @@ public struct ItemDetailView: View {
             .padding(.bottom, 10)
         }
         .padding()
+    }
+}
+
+
+struct ItemDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        ItemDetailView(item: CollectionItem(id: "", imageURL: "", title: "", subTitle: ""))
     }
 }
