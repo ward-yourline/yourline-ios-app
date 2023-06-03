@@ -19,6 +19,7 @@
 		F3D413C52A27D70600308061 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413C02A27D70500308061 /* Utilities.framework */; };
 		F3D414162A29133600308061 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414152A29133600308061 /* NavigationBarView.swift */; };
 		F3D414212A2934BC00308061 /* ItemsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414202A2934BC00308061 /* ItemsCollectionView.swift */; };
+		F3E608152A2B99EA00645DB0 /* VStack+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E608142A2B99EA00645DB0 /* VStack+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		F3D413C02A27D70500308061 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D414152A29133600308061 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		F3D414202A2934BC00308061 /* ItemsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionView.swift; sourceTree = "<group>"; };
+		F3E608142A2B99EA00645DB0 /* VStack+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VStack+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		F3D413A32A27D6C900308061 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F3E608132A2B99DC00645DB0 /* Extensions */,
 				F3D414142A29132A00308061 /* Views */,
 				F3D413A42A27D6C900308061 /* Presentation.h */,
 				F3169C402A2B91E800F48565 /* CustomAssets.xcassets */,
@@ -126,6 +129,14 @@
 				F3169C372A2A84DF00F48565 /* ItemDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F3E608132A2B99DC00645DB0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3E608142A2B99EA00645DB0 /* VStack+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3169C382A2A84DF00F48565 /* ItemDetailView.swift in Sources */,
+				F3E608152A2B99EA00645DB0 /* VStack+Extensions.swift in Sources */,
 				F3D413BC2A27D6E200308061 /* WideButton.swift in Sources */,
 				F3D413A62A27D6C900308061 /* Presentation.docc in Sources */,
 				F3D414212A2934BC00308061 /* ItemsCollectionView.swift in Sources */,

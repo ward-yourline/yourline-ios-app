@@ -7,23 +7,10 @@
 
 import SwiftUI
 import Resources
+import Domain
 
 public protocol ItemsCollectionViewDelegate {
     func didTapItem(with id: String, at index: Int)
-}
-
-public struct CollectionItem {
-    public let id: String
-    public let imageURL: String
-    public let title: String
-    public let subTitle: String
-    
-    public init(id: String, imageURL: String, title: String, subTitle: String) {
-        self.id = id
-        self.imageURL = imageURL
-        self.title = title
-        self.subTitle = subTitle
-    }
 }
 
 public struct ItemsCollectionView: View {
@@ -78,7 +65,7 @@ public struct ItemsCollectionView: View {
                                     .multilineTextAlignment(.center)
                                     .frame(height: 60)
                                 
-                                Text(items[index].subTitle)
+                                Text(items[index].description)
                                     .font(.subheadline)
                                     .lineLimit(2)
                                     .multilineTextAlignment(.center)
@@ -110,12 +97,12 @@ public struct ItemsCollectionView: View {
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
         ItemsCollectionView(items: [
-            .init(id: "1", imageURL: "image1", title: "Mock Title", subTitle: "Mock subtitle"),
-            .init(id: "2", imageURL: "image2", title: "Mock Title", subTitle: "Mock subtitle"),
-            .init(id: "3", imageURL: "image3", title: "Mock Title", subTitle: "Mock subtitle"),
-            .init(id: "4", imageURL: "image4", title: "Mock Title", subTitle: "Mock subtitle"),
-            .init(id: "5", imageURL: "image5", title: "Mock Title", subTitle: "Mock subtitle"),
-            .init(id: "6", imageURL: "image6", title: "Mock Title", subTitle: "Mock subtitle")
+            .init(id: "1", imageURL: "image1", title: "Mock Title", description: "Mock subtitle", price: "£100.00"),
+            .init(id: "2", imageURL: "image2", title: "Mock Title", description: "Mock subtitle", price: "£100.00"),
+            .init(id: "3", imageURL: "image3", title: "Mock Title", description: "Mock subtitle", price: "£100.00"),
+            .init(id: "4", imageURL: "image4", title: "Mock Title", description: "Mock subtitle", price: "£100.00"),
+            .init(id: "5", imageURL: "image5", title: "Mock Title", description: "Mock subtitle", price: "£100.00"),
+            .init(id: "6", imageURL: "image6", title: "Mock Title", description: "Mock subtitle", price: "£100.00")
         ], delegate: nil)
     }
 }

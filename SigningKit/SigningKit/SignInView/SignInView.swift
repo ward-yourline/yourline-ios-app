@@ -40,10 +40,7 @@ struct SignInView: View {
                             .foregroundColor(CustomColors.darkGrey.color)
                     }
                     
-                    Rectangle()
-                        .frame(height: 0.5)
-                        .foregroundColor(CustomColors.lightGrey.color)
-                        .padding(.horizontal, 10)
+                    Divider()
                     
                     Text("Business and pleasure").font(.custom(Fonts.regular.name, size: 20))
                 }
@@ -89,11 +86,7 @@ struct SignInView: View {
                 }.alert(isPresented: $isSignInError) {
                     Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("Okay")))
                 }
-                
-                Rectangle()
-                    .frame(height: 0.5)
-                    .foregroundColor(CustomColors.lightGrey.color)
-                    .padding(.horizontal, 10)
+                Divider()
                 
                 VStack {
                     Button(action: {
