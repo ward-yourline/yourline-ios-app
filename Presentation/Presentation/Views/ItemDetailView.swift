@@ -23,77 +23,12 @@ public struct ItemDetailView: View {
         ZStack {
             VStack(spacing: 10) {
                 ScrollView {
-                    AsyncImage(url: URL(string: item.imageURL)) { phase in
-                        switch phase {
-                        case .empty:
-                            Image("product_placeholder")
-                                .resizable()
-                        case .success(let image):
-                            image
-                                .resizable()
-                        case .failure:
-                            Image(systemName: "exclamationmark.circle")
-                                .resizable()
-                                .foregroundColor(.red)
-                        @unknown default:
-                            fatalError("Unhandled AsyncImage phase")
-                        }
-                    }
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 200)
-                    .padding(.bottom, 10)
+                    ItemImageView(item: item)
                     
                     Divider()
-                    
-                    HStack {
-                        VStack {
-                            HStack {
-                                VStack {
-                                    Text("Quantity")
-                                        .font(.callout)
-                                        .fontWeight(.bold)
-                                        .padding(.horizontal, 10)
-                                        .padding(.top, 5)
-                                        .frame(maxWidth: .infinity ,alignment: .leading)
-                                    Text("\(quantity)")
-                                        .padding(.horizontal, 10)
-                                        .padding(.bottom, 5)
-                                        .frame(maxWidth: .infinity ,alignment: .leading)
-                                }
-                                Button {
-                                    showPicker = true
-                                } label: {
-                                    Image(systemName: "chevron.down")
-                                }
-                                .frame(maxHeight: .infinity)
-                                .padding(.horizontal, 10)
-                                .foregroundColor(.black)
-                            }
-                        }
-                        .frame(width: 140, height: 50)
-                        .addBorder(CustomColors.lightGrey.color)
-                        
-                        WideButton(buttonTitle: "Buy") {
-                            // TODO
-                        }
-                    }
-                    .padding(.vertical, 10)
-                    
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text(item.title)
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        Text(item.price)
-                            .font(.callout)
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        Text(item.description)
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    .frame(maxWidth: .infinity)
+
+                    ItemPurchaseView(showPicker: showPicker, quantity: quantity)
+                    ItemInfoView(item: item)
                 }
                 .padding(.bottom, 10)
             }
@@ -131,6 +66,96 @@ public struct ItemDetailView: View {
             })
         }
         .navigationTitle("Store")
+    }
+}
+
+struct ItemImageView: View {
+    
+    let item: CollectionItem
+    
+    var body: some View {
+        AsyncImage(url: URL(string: item.imageURL)) { phase in
+            switch phase {
+            case .empty:
+                Image("product_placeholder")
+                    .resizable()
+            case .success(let image):
+                image
+                    .resizable()
+            case .failure:
+                Image(systemName: "exclamationmark.circle")
+                    .resizable()
+                    .foregroundColor(.red)
+            @unknown default:
+                fatalError("Unhandled AsyncImage phase")
+            }
+        }
+        .aspectRatio(contentMode: .fit)
+        .frame(height: 200)
+        .padding(.bottom, 10)
+    }
+}
+
+struct ItemPurchaseView: View {
+    @State private(set) var showPicker = false
+    @State private(set) var quantity = 1
+    
+    var body: some View {
+        HStack {
+            VStack {
+                HStack {
+                    VStack {
+                        Text("Quantity")
+                            .font(.callout)
+                            .fontWeight(.bold)
+                            .padding(.horizontal, 10)
+                            .padding(.top, 5)
+                            .frame(maxWidth: .infinity ,alignment: .leading)
+                        Text("\(quantity)")
+                            .padding(.horizontal, 10)
+                            .padding(.bottom, 5)
+                            .frame(maxWidth: .infinity ,alignment: .leading)
+                    }
+                    Button {
+                        showPicker = true
+                    } label: {
+                        Image(systemName: "chevron.down")
+                    }
+                    .frame(maxHeight: .infinity)
+                    .padding(.horizontal, 10)
+                    .foregroundColor(.black)
+                }
+            }
+            .frame(width: 140, height: 50)
+            .addBorder(CustomColors.lightGrey.color)
+            
+            WideButton(buttonTitle: "Buy") {
+                // TODO
+            }
+        }
+        .padding(.vertical, 10)
+    }
+}
+
+struct ItemInfoView: View {
+    let item: CollectionItem
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text(item.title)
+                .font(.title)
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Text(item.price)
+                .font(.callout)
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Text(item.description)
+                .font(.subheadline)
+                .foregroundColor(.gray)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 
