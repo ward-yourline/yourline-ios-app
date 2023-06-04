@@ -66,8 +66,8 @@ public struct ItemCartCell: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     VStack(alignment: .leading, spacing: 5.0) {
-                        Text("Item name")
-                            .font(Fonts.bold.swiftUIFont())
+                        Text("Some item Some item")
+                            .font(.body)
                             .multilineTextAlignment(.leading)
                             .lineLimit(1)
                         Text("£100.0")
@@ -104,10 +104,9 @@ public struct ItemCartCell: View {
                         .frame(width: 30, height: 30, alignment: .center)
                     }
                 }
-                .padding(.leading, 0.0)
+                .padding(.leading)
                 Spacer()
             }
-            .padding(.leading)
         }
         .listRowSeparator(.hidden)
         .padding()
