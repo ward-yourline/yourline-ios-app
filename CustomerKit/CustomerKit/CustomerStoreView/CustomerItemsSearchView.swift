@@ -1,5 +1,5 @@
 //
-//  CustomerStoreView.swift
+//  CustomerItemsSearchView.swift
 //  CustomerKit
 //
 //  Created by Warrd Adlani on 01/06/2023.
@@ -10,7 +10,7 @@ import Webservice
 import Utilities
 import Presentation
 
-public struct CustomerStoreView: View {
+public struct CustomerItemsSearchView: View {
     @State private var searchText = ""
 
     public var body: some View {
@@ -51,9 +51,9 @@ struct SearchBar: View {
     }
 }
 
-struct CustomerStoreView_Previews: PreviewProvider {
+struct CustomerItemsSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomerStoreView()
+        CustomerItemsSearchView()
     }
 }
 

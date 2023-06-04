@@ -28,20 +28,20 @@ public struct CustomerLandingView: View {
         TabView {
             CustomerHomeView(webService: webService)
                 .tabItem {
-                    Image("home-home_symbol")
+                    Image(systemName: "house")
                     Text("Home")
                 }
-            CustomerStoreView().tabItem {
-                Image("store-store_symbol")
-                Text("Store")
+            CustomerItemsSearchView().tabItem {
+                Image(systemName: "magnifyingglass")
+                Text("Search")
             }
             CustomerCartView().tabItem {
-                Image("shopping_cart-shopping_cart_symbol")
+                Image(systemName: "cart")
                 Text("Cart")
             }.badge(3)
             CustomerSettingsView().tabItem {
-                Image("settings-settings_symbol")
-                Text("Settings")
+                Image(systemName: "ellipsis")
+                Text("More")
             }
         }
         .tint(.darkSlateGray)

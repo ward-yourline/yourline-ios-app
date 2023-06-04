@@ -21,7 +21,7 @@
 		F3D414062A27D87800308061 /* CustomerLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414052A27D87800308061 /* CustomerLandingView.swift */; };
 		F3D4140D2A27D9CB00308061 /* CustomerLandingViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4140C2A27D9CB00308061 /* CustomerLandingViewRouter.swift */; };
 		F3D4141A2A29229500308061 /* CustomerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414192A29229500308061 /* CustomerHomeView.swift */; };
-		F3D4141C2A2922A000308061 /* CustomerStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4141B2A2922A000308061 /* CustomerStoreView.swift */; };
+		F3D4141C2A2922A000308061 /* CustomerItemsSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4141B2A2922A000308061 /* CustomerItemsSearchView.swift */; };
 		F3D4141F2A29233000308061 /* CustomerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4141E2A29233000308061 /* CustomerSettingsView.swift */; };
 		F3E608192A2BC43000645DB0 /* CustomAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3E608182A2BC42F00645DB0 /* CustomAssets.xcassets */; };
 /* End PBXBuildFile section */
@@ -52,7 +52,7 @@
 		F3D414052A27D87800308061 /* CustomerLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerLandingView.swift; sourceTree = "<group>"; };
 		F3D4140C2A27D9CB00308061 /* CustomerLandingViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerLandingViewRouter.swift; sourceTree = "<group>"; };
 		F3D414192A29229500308061 /* CustomerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHomeView.swift; sourceTree = "<group>"; };
-		F3D4141B2A2922A000308061 /* CustomerStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerStoreView.swift; sourceTree = "<group>"; };
+		F3D4141B2A2922A000308061 /* CustomerItemsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerItemsSearchView.swift; sourceTree = "<group>"; };
 		F3D4141E2A29233000308061 /* CustomerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSettingsView.swift; sourceTree = "<group>"; };
 		F3E608182A2BC42F00645DB0 /* CustomAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CustomAssets.xcassets; path = ../../Resources/Resources/CustomAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +155,7 @@
 		F3D414172A29226C00308061 /* CustomerStoreView */ = {
 			isa = PBXGroup;
 			children = (
-				F3D4141B2A2922A000308061 /* CustomerStoreView.swift */,
+				F3D4141B2A2922A000308061 /* CustomerItemsSearchView.swift */,
 			);
 			path = CustomerStoreView;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 				F3169C3F2A2A8E0E00F48565 /* CustomerCartView.swift in Sources */,
 				F3D414062A27D87800308061 /* CustomerLandingView.swift in Sources */,
 				F3D413DE2A27D81100308061 /* CustomerKit.docc in Sources */,
-				F3D4141C2A2922A000308061 /* CustomerStoreView.swift in Sources */,
+				F3D4141C2A2922A000308061 /* CustomerItemsSearchView.swift in Sources */,
 				F3D4140D2A27D9CB00308061 /* CustomerLandingViewRouter.swift in Sources */,
 				F3D4141A2A29229500308061 /* CustomerHomeView.swift in Sources */,
 				F3169C3C2A2A895A00F48565 /* CustomerHomeViewModel.swift in Sources */,
