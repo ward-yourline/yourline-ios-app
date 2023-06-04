@@ -22,14 +22,14 @@ class CustomerHomeViewModel: ObservableObject, ItemsCollectionViewDelegate {
     }
     
     func getItems() {
-        let query = FetAllItemsQuery()
+        let query = FetchItemsQuery(limit: 6)
         webService.apollo.fetch(query: query) { result in
             switch result {
             case .success(let fetchAllItems):
                 if let errors = fetchAllItems.errors {
                     print(errors)
                 }
-                if let items = fetchAllItems.data?.fetchAllItems {
+                if let items = fetchAllItems.data?.fetchItems {
                     DispatchQueue.main.async {
                         self.items = items.compactMap { $0 }.map { item in
                             Item(
