@@ -20,6 +20,7 @@ public struct CustomerStoreView: View {
                     SearchBar(text: $searchText)
                     Spacer()
                     CustomerCategoriesView()
+                        .padding(10)
                 }
             }
             .navigationTitle("Store")
@@ -61,11 +62,12 @@ struct CustomerCategoriesView: View {
     
     var body: some View {
         HStack() {
-            Text("Categoroes")
+            Text("Categories")
                 .font(.headline)
             Spacer()
         }
-        .padding(.horizontal, 10)
+        .padding(.top, 10)
+        
         VStack(spacing: 10) {
             HStack(spacing: 10) {
                 Text("Tech")
@@ -115,6 +117,5 @@ struct CustomerCategoriesView: View {
             }
             .frame(height: 100)
         }
-        .padding(10)
     }
 }
