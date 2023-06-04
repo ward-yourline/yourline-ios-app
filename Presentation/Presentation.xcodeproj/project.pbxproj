@@ -20,6 +20,7 @@
 		F3D414162A29133600308061 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414152A29133600308061 /* NavigationBarView.swift */; };
 		F3D414212A2934BC00308061 /* ItemsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414202A2934BC00308061 /* ItemsCollectionView.swift */; };
 		F3E608152A2B99EA00645DB0 /* VStack+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E608142A2B99EA00645DB0 /* VStack+Extensions.swift */; };
+		F3E608202A2D113300645DB0 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E6081F2A2D113300645DB0 /* PageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F3D414152A29133600308061 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		F3D414202A2934BC00308061 /* ItemsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionView.swift; sourceTree = "<group>"; };
 		F3E608142A2B99EA00645DB0 /* VStack+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VStack+Extensions.swift"; sourceTree = "<group>"; };
+		F3E6081F2A2D113300645DB0 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				F3D414152A29133600308061 /* NavigationBarView.swift */,
 				F3D414202A2934BC00308061 /* ItemsCollectionView.swift */,
 				F3169C372A2A84DF00F48565 /* ItemDetailView.swift */,
+				F3E6081F2A2D113300645DB0 /* PageControl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3169C382A2A84DF00F48565 /* ItemDetailView.swift in Sources */,
+				F3E608202A2D113300645DB0 /* PageControl.swift in Sources */,
 				F3E608152A2B99EA00645DB0 /* VStack+Extensions.swift in Sources */,
 				F3D413BC2A27D6E200308061 /* WideButton.swift in Sources */,
 				F3D413A62A27D6C900308061 /* Presentation.docc in Sources */,

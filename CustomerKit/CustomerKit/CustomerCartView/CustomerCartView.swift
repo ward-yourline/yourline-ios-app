@@ -18,16 +18,22 @@ public struct CustomerCartView: View {
 
     public var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
                 List {
                     ItemCartCell()
                     ItemCartCell()
                     ItemCartCell()
+                    ItemCartCell()
+                    ItemCartCell()
+                    ItemCartCell()
+                    ItemCartCell()
+                    ItemCartCell()
+                    ItemCartCell()
                 }
-                .padding(0)
                 .listStyle(.plain)
                 
-                VStack {
+                VStack(spacing: 10) {
+                    Divider()
                     HStack {
                         Text("Total:")
                         Spacer()
@@ -37,7 +43,8 @@ public struct CustomerCartView: View {
                         // TODO
                     }
                 }
-                .padding(10)
+                .padding(.horizontal, 10)
+                .padding(.bottom, 10)
             }
             .navigationTitle("Cart")
         }
@@ -59,8 +66,8 @@ public struct ItemCartCell: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     VStack(alignment: .leading, spacing: 5.0) {
-                        Text("Some item Some item")
-                            .font(.title3)
+                        Text("Item name")
+                            .font(Fonts.bold.swiftUIFont())
                             .multilineTextAlignment(.leading)
                             .lineLimit(1)
                         Text("£100.0")

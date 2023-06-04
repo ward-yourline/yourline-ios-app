@@ -13,7 +13,8 @@ import Domain
 
 struct CustomerHomeView: View {
     @StateObject private var viewModel: CustomerHomeViewModel
-    
+    @State var currentPageIndex : Int = 0
+
     init(webService: WebServiceProtocol) {
         let viewModel = CustomerHomeViewModel(webService: webService)
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -36,6 +37,11 @@ struct CustomerHomeView: View {
                                 Text("Promotional")
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
+                                
+                                VStack {
+                                    Spacer()
+                                    PageControl(currentPageIndex: currentPageIndex, numberOfPages: 3, indicatorColor: UIColor.gray, currentPageIndicatorTintColor: UIColor.black)
+                                }
                             }
                         }
                         
