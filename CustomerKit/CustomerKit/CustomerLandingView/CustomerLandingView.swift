@@ -44,7 +44,7 @@ public struct CustomerLandingView: View {
                 Text("Settings")
             }
         }
-        .tint(CustomColors.darkGrey.color)
+        .tint(.darkSlateGray)
     }
 }
 

@@ -78,7 +78,8 @@ public struct ItemsCollectionView: View {
                                     .multilineTextAlignment(.center)
                                     .frame(height: 20)
                                     .padding(.bottom, 10)
-                            }
+                            }.foregroundColor(.black)
+                            
                             WideButton(buttonTitle: "Buy") {
                                 // TODO
                             }

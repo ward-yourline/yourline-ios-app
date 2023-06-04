@@ -146,7 +146,7 @@ struct ItemPurchaseView: View {
                 }
             }
             .frame(width: 140)
-            .addBorder(CustomColors.lightGrey.color)
+            .addBorder(Color.platinum)
             
             WideButton(buttonTitle: "Buy") {
                 // TODO

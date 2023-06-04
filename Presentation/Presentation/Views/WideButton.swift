@@ -8,15 +8,14 @@
 import SwiftUI
 import Resources
 
-// TODO: Put in presentation layer
 public struct WideButton: View {
     private let buttonTitle: String
     private var onTap: () -> Void
     private let font: Fonts
-    private let backgroundColor: CustomColors
-    private let forgroundColor: CustomColors
+    private let backgroundColor: Color
+    private let forgroundColor: Color
     
-    public init(buttonTitle: String, forgroundColor: CustomColors = .white, backgroundColor: CustomColors = .darkGrey, font: Fonts = .bold, onTap: @escaping () -> Void) {
+    public init(buttonTitle: String, forgroundColor: Color = .white, backgroundColor: Color = .darkSlateGray, font: Fonts = .bold, onTap: @escaping () -> Void) {
         self.buttonTitle = buttonTitle
         self.onTap = onTap
         self.font = font
@@ -29,9 +28,9 @@ public struct WideButton: View {
             Button(action: onTap) {
                 Text(buttonTitle)
                     .frame(maxWidth: .infinity)
-                    .foregroundColor(forgroundColor.color)
+                    .foregroundColor(forgroundColor)
                     .padding()
-                    .background(backgroundColor.color)
+                    .background(backgroundColor)
                     .cornerRadius(8)
                     .font(font.swiftUIFont())
             }

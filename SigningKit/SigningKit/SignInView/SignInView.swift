@@ -34,10 +34,10 @@ struct SignInView: View {
                     HStack {
                         Text("Your")
                             .font(.custom(Fonts.bold.name, size: 48))
-                            .foregroundColor(CustomColors.blue.color)
+                            .foregroundColor(Color.softBlue)
                         Text("Line")
                             .font(.custom(Fonts.bold.name, size: 48))
-                            .foregroundColor(CustomColors.darkGrey.color)
+                            .foregroundColor(.darkSlateGray)
                     }
                     Text("Business and pleasure").font(.custom(Fonts.regular.name, size: 20))
                 }
@@ -98,7 +98,7 @@ struct SignInView: View {
                             .font(.custom(Fonts.bold.name, size: 16))
                             .background(
                                 RoundedRectangle(cornerRadius: 8)
-                                    .stroke(CustomColors.lightGrey.color, lineWidth: 1)
+                                    .stroke(Color.platinum, lineWidth: 1)
                             )
                     }
                 }
