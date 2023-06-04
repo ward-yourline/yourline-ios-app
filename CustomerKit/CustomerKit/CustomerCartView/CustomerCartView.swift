@@ -70,10 +70,7 @@ public struct ItemCartCell: View {
                     
                     HStack {
                         HStack {
-                            Text("Quantity:")
-                            Divider()
                             Text("2")
-                            
                             Button {
                                 // TODO
                             } label: {
@@ -103,8 +100,13 @@ public struct ItemCartCell: View {
                 .padding(.leading)
                 Spacer()
             }
-            Divider()
-        }.listRowSeparator(.hidden)
+        }
+        .listRowSeparator(.hidden)
+        .padding()
+        .background(Color.white)
+        .cornerRadius(8)
+        .shadow(radius: 4)
+        .frame(height: 110)
     }
 }
 
