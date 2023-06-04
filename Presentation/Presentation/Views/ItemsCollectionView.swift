@@ -87,7 +87,7 @@ public struct ItemsCollectionView: View {
                         }
                         .background(Color.white)
                         .cornerRadius(8)
-                        .shadow(radius: 4)
+                        .shadow(radius: 2)
                     }
                 }
             }

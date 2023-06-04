@@ -104,15 +104,16 @@ public struct ItemCartCell: View {
                         .frame(width: 30, height: 30, alignment: .center)
                     }
                 }
-                .padding(.leading)
+                .padding(.leading, 0.0)
                 Spacer()
             }
+            .padding(.leading)
         }
         .listRowSeparator(.hidden)
         .padding()
         .background(Color.white)
         .cornerRadius(8)
-        .shadow(radius: 4)
+        .shadow(radius: 2)
         .frame(height: 110)
     }
 }

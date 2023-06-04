@@ -19,6 +19,7 @@ public struct CustomerStoreView: View {
                 ScrollView {
                     SearchBar(text: $searchText)
                     Spacer()
+                    CustomerCategoriesView()
                 }
             }
             .navigationTitle("Store")
@@ -52,5 +53,68 @@ struct SearchBar: View {
 struct CustomerStoreView_Previews: PreviewProvider {
     static var previews: some View {
         CustomerStoreView()
+    }
+}
+
+
+struct CustomerCategoriesView: View {
+    
+    var body: some View {
+        HStack() {
+            Text("Categoroes")
+                .font(.headline)
+            Spacer()
+        }
+        .padding(.horizontal, 10)
+        VStack(spacing: 10) {
+            HStack(spacing: 10) {
+                Text("Tech")
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 2)
+                Text("Food")
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 2)
+            }
+            .frame(height: 100)
+
+            HStack(spacing: 10) {
+                Text("Leisure")
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 2)
+                Text("Domestic")
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 2)
+            }
+            .frame(height: 100)
+            
+            HStack(spacing: 10) {
+                Text("Entertainment")
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 2)
+                Text("Fitness")
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 2)
+            }
+            .frame(height: 100)
+        }
+        .padding(10)
     }
 }
