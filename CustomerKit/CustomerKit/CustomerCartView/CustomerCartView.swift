@@ -108,12 +108,14 @@ public struct ItemCartCell: View {
                 Spacer()
             }
         }
+        .padding(.leading, 0) // Set horizontal padding to zero
         .listRowSeparator(.hidden)
         .padding()
         .background(Color.white)
         .cornerRadius(8)
         .shadow(radius: 2)
         .frame(height: 110)
+        .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
     }
 }
 

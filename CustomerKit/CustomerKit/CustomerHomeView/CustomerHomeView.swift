@@ -53,7 +53,6 @@ struct CustomerHomeView: View {
                         .padding(.horizontal, 10)
                         
                         ItemsCollectionView(items: viewModel.items, delegate: viewModel)
-                            .padding(.horizontal, 10)
                             .refreshable {
                                 viewModel.getItems()
                             }
