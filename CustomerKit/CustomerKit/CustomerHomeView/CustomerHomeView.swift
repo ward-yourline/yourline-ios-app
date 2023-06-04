@@ -39,12 +39,11 @@ struct CustomerHomeView: View {
                             }
                         }
                         
-                        VStack(alignment: .leading) {
+                        HStack() {
                             Text("Recommended for you")
                                 .font(.headline)
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                            Spacer()
                         }
-                        .frame(maxWidth: .infinity)
                         .padding(.horizontal, 10)
                         
                         ItemsCollectionView(items: viewModel.items, delegate: viewModel)

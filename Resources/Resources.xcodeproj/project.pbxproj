@@ -34,6 +34,7 @@
 		F3CAF1C2285511A900E61B8A /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3CAF1AF285511A900E61B8A /* Poppins-Italic.ttf */; };
 		F3CAF1C3285511A900E61B8A /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3CAF1B0285511A900E61B8A /* Poppins-MediumItalic.ttf */; };
 		F3CAF1C62855140E00E61B8A /* CustomAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CAF1C52855140E00E61B8A /* CustomAssets.xcassets */; };
+		F3E6081E2A2CF4FB00645DB0 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E6081D2A2CF4FB00645DB0 /* Image+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		F3CAF1B0285511A900E61B8A /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		F3CAF1C42855130300E61B8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F3CAF1C52855140E00E61B8A /* CustomAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CustomAssets.xcassets; sourceTree = "<group>"; };
+		F3E6081D2A2CF4FB00645DB0 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F3CAF1C42855130300E61B8A /* Info.plist */,
+				F3E6081D2A2CF4FB00645DB0 /* Image+Extensions.swift */,
 				F3CAF19B2855116600E61B8A /* Fonts.swift */,
 				F3150BAF2A252E8700C90C7A /* Colors.swift */,
 				F3CAF19D285511A900E61B8A /* Fonts */,
@@ -307,6 +310,7 @@
 				F3CAF19C2855116600E61B8A /* Fonts.swift in Sources */,
 				F3150BB02A252E8700C90C7A /* Colors.swift in Sources */,
 				F3A361F32832C35800690696 /* Resources.docc in Sources */,
+				F3E6081E2A2CF4FB00645DB0 /* Image+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
