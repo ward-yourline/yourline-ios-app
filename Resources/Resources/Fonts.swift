@@ -23,7 +23,7 @@ public enum Fonts :String, CaseIterable {
         return self.rawValue
     }
     
-    public func swifUIFont(size: CGFloat = 16) -> Font {
+    public func swiftUIFont(size: CGFloat = 16) -> Font {
         return Font.custom(self.rawValue, size: size)
     }
 }

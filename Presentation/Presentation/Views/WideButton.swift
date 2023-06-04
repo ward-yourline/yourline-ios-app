@@ -11,25 +11,29 @@ import Resources
 // TODO: Put in presentation layer
 public struct WideButton: View {
     private let buttonTitle: String
-    private var completion: () -> Void
+    private var onTap: () -> Void
+    private let font: Fonts
+    private let backgroundColor: CustomColors
+    private let forgroundColor: CustomColors
     
-    public init(buttonTitle: String, completion: @escaping () -> Void) {
+    public init(buttonTitle: String, forgroundColor: CustomColors = .white, backgroundColor: CustomColors = .darkGrey, font: Fonts = .bold, onTap: @escaping () -> Void) {
         self.buttonTitle = buttonTitle
-        self.completion = completion
+        self.onTap = onTap
+        self.font = font
+        self.backgroundColor = backgroundColor
+        self.forgroundColor = forgroundColor
     }
 
     public var body: some View {
         VStack(spacing: 10) {
-            Button(action: {
-                completion()
-            }) {
+            Button(action: onTap) {
                 Text(buttonTitle)
                     .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
+                    .foregroundColor(forgroundColor.color)
                     .padding()
-                    .background(CustomColors.darkGrey.color)
+                    .background(backgroundColor.color)
                     .cornerRadius(8)
-                    .font(.custom(Fonts.bold.name, size: 16))
+                    .font(font.swiftUIFont())
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -39,8 +43,8 @@ public struct WideButton: View {
 
 struct WideButton_Previews: PreviewProvider {
     static var previews: some View {
-        WideButton(buttonTitle: "Test", completion: {
-            // Nothing
-        })
+        WideButton(buttonTitle: "Test") {
+            // Leave empty
+        }
     }
 }
