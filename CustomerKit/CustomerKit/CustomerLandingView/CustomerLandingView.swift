@@ -35,7 +35,7 @@ public struct CustomerLandingView: View {
                 Image(systemName: "magnifyingglass")
                 Text("Search")
             }
-            CustomerCartView().tabItem {
+            CustomerCartView(webService: webService).tabItem {
                 Image(systemName: "cart")
                 Text("Cart")
             }.badge(3)

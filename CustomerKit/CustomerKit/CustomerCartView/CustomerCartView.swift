@@ -13,7 +13,14 @@ import Presentation
 import Resources
 
 public struct CustomerCartView: View {
-      
+    @StateObject private var viewModel: CustomerCartViewModel
+    @State var currentPageIndex : Int = 0
+
+    init(webService: WebServiceProtocol) {
+        let viewModel = CustomerCartViewModel(webService: webService)
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     @State private var itemCount = 0
 
     public var body: some View {
@@ -47,6 +54,9 @@ public struct CustomerCartView: View {
                 .padding(.bottom, 10)
             }
             .navigationTitle("Cart")
+            .onAppear {
+                viewModel.getCart()
+            }
         }
     }
 }
@@ -121,6 +131,6 @@ public struct ItemCartCell: View {
 
 struct CustomerCartView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomerCartView()
+        CustomerCartView(webService: WebService())
     }
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F3169C382A2A84DF00F48565 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3169C372A2A84DF00F48565 /* ItemDetailView.swift */; };
 		F3169C412A2B91E800F48565 /* CustomAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3169C402A2B91E800F48565 /* CustomAssets.xcassets */; };
 		F3D413A62A27D6C900308061 /* Presentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = F3D413A52A27D6C900308061 /* Presentation.docc */; };
 		F3D413AC2A27D6C900308061 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413A12A27D6C900308061 /* Presentation.framework */; };
@@ -34,7 +33,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F3169C372A2A84DF00F48565 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		F3169C402A2B91E800F48565 /* CustomAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CustomAssets.xcassets; path = ../../Resources/Resources/CustomAssets.xcassets; sourceTree = "<group>"; };
 		F3D413A12A27D6C900308061 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413A42A27D6C900308061 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				F3D413BB2A27D6E200308061 /* WideButton.swift */,
 				F3D414152A29133600308061 /* NavigationBarView.swift */,
 				F3D414202A2934BC00308061 /* ItemsCollectionView.swift */,
-				F3169C372A2A84DF00F48565 /* ItemDetailView.swift */,
 				F3E6081F2A2D113300645DB0 /* PageControl.swift */,
 			);
 			path = Views;
@@ -252,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3169C382A2A84DF00F48565 /* ItemDetailView.swift in Sources */,
 				F3E608202A2D113300645DB0 /* PageControl.swift in Sources */,
 				F3E608152A2B99EA00645DB0 /* VStack+Extensions.swift in Sources */,
 				F3D413BC2A27D6E200308061 /* WideButton.swift in Sources */,

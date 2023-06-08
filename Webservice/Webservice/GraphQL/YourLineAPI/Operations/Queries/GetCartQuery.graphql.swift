@@ -3,12 +3,12 @@
 
 @_exported import ApolloAPI
 
-public class GetCartQuery: GraphQLQuery {
-  public static let operationName: String = "GetCart"
+public class FetchCart: GraphQLQuery {
+  public static let operationName: String = "FetchCart"
   public static let document: ApolloAPI.DocumentType = .notPersisted(
     definition: .init(
       #"""
-      query GetCart($id: ID!) {
+      query FetchCart($id: ID!) {
         fetchCart(id: $id) {
           __typename
           id

@@ -1,5 +1,5 @@
 //
-//  ItemDetailView.swift
+//  CustomerItemDetailView.swift
 //  Presentation
 //
 //  Created by Warrd Adlani on 02/06/2023.
@@ -9,8 +9,9 @@ import SwiftUI
 import Domain
 import Resources
 import Utilities
+import Presentation
 
-public struct ItemDetailView: View {
+public struct CustomerItemDetailView: View {
     
     private let item: Item
     @State private var quantity = 1
@@ -183,7 +184,7 @@ struct ItemInfoView: View {
 
 struct ItemDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemDetailView(item: Item(id: "123", imageURL: "http://localhost:8081/image/62a59176-5846-45d0-b14c-be896f5a90df", title: "Product title", description: """
+        CustomerItemDetailView(item: Item(id: "123", imageURL: "http://localhost:8081/image/62a59176-5846-45d0-b14c-be896f5a90df", title: "Product title", description: """
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
 """, price: "£100.00"))
     }

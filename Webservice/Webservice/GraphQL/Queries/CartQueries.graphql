@@ -1,4 +1,4 @@
-query GetCart($id: ID!) {
+query FetchCart($id: ID!) {
   fetchCart(id: $id) {
     id
     items {

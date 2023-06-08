@@ -61,7 +61,7 @@ struct CustomerHomeView: View {
                 // NavigationLink
                 if let selectedItem = viewModel.selectedItem {
                     NavigationLink(
-                        destination: ItemDetailView(item: selectedItem),
+                        destination: CustomerItemDetailView(item: selectedItem),
                         isActive: $viewModel.isShowingDetailView,
                         label: { EmptyView() }
                     )

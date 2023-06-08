@@ -23,6 +23,7 @@ public struct ItemsCollectionView: View {
         self.items = items
         self.delegate = delegate
     }
+    
     public var body: some View {
         let gridItems = [
             GridItem(.flexible(), spacing: 10),
