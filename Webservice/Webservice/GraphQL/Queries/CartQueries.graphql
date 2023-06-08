@@ -1,0 +1,19 @@
+query GetCart($id: ID!) {
+  fetchCart(id: $id) {
+    id
+    items {
+      id
+      cartID
+      quantity
+      value
+    }
+  }
+}
+
+mutation AddItemToCart($id: ID!, $itemID: ID!, $quantity: Int!) {
+  addItemToCart(id: $id, itemID: $itemID, quantity: $quantity)
+}
+
+mutation UpdateCartItemQuantity($itemID:ID!, $cartID:ID!, $quantity: Int!) {
+  updateCartItemQuantity(itemID: $itemID, cartID: $cartID, quantity: $quantity)
+}
