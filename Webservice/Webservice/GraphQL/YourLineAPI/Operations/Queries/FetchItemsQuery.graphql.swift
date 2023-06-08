@@ -3,13 +3,13 @@
 
 @_exported import ApolloAPI
 
-public class FetAllItemsQuery: GraphQLQuery {
-  public static let operationName: String = "FetAllItems"
+public class FetchItemsQuery: GraphQLQuery {
+  public static let operationName: String = "FetchItems"
   public static let document: ApolloAPI.DocumentType = .notPersisted(
     definition: .init(
       #"""
-      query FetAllItems {
-        fetchAllItems {
+      query FetchItems($limit: Int!) {
+        fetchItems(limit: $limit) {
           __typename
           name
           id
@@ -23,7 +23,13 @@ public class FetAllItemsQuery: GraphQLQuery {
       """#
     ))
 
-  public init() {}
+  public var limit: Int
+
+  public init(limit: Int) {
+    self.limit = limit
+  }
+
+  public var __variables: Variables? { ["limit": limit] }
 
   public struct Data: YourLineAPI.SelectionSet {
     public let __data: DataDict
@@ -31,15 +37,15 @@ public class FetAllItemsQuery: GraphQLQuery {
 
     public static var __parentType: ApolloAPI.ParentType { YourLineAPI.Objects.Query }
     public static var __selections: [ApolloAPI.Selection] { [
-      .field("fetchAllItems", [FetchAllItem?]?.self),
+      .field("fetchItems", [FetchItem?]?.self, arguments: ["limit": .variable("limit")]),
     ] }
 
-    public var fetchAllItems: [FetchAllItem?]? { __data["fetchAllItems"] }
+    public var fetchItems: [FetchItem?]? { __data["fetchItems"] }
 
-    /// FetchAllItem
+    /// FetchItem
     ///
     /// Parent Type: `Item`
-    public struct FetchAllItem: YourLineAPI.SelectionSet {
+    public struct FetchItem: YourLineAPI.SelectionSet {
       public let __data: DataDict
       public init(_dataDict: DataDict) { __data = _dataDict }
 
