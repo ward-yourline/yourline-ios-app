@@ -13,6 +13,7 @@
 		F3150BCE2A2624D800C90C7A /* Webservice.h in Headers */ = {isa = PBXBuildFile; fileRef = F3150BC02A2624D700C90C7A /* Webservice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3150BD92A2624FC00C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BD82A2624FC00C90C7A /* Utilities.framework */; };
 		F3150C0D2A26255400C90C7A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C0C2A26255400C90C7A /* Domain.framework */; };
+		F3CA95C82A326B2D00B47BF6 /* FetchItemsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95C72A326B2D00B47BF6 /* FetchItemsQuery.graphql.swift */; };
 		F3D413322A27AE5500308061 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413312A27AE5500308061 /* WebService.swift */; };
 		F3D413882A27C87A00308061 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = F3D413762A27C87A00308061 /* apollo-codegen-config.json */; };
 		F3D413892A27C87A00308061 /* Signing.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F3D413782A27C87A00308061 /* Signing.graphql */; };
@@ -48,6 +49,7 @@
 		F3150BCC2A2624D800C90C7A /* WebserviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceTests.swift; sourceTree = "<group>"; };
 		F3150BD82A2624FC00C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150C0C2A26255400C90C7A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CA95C72A326B2D00B47BF6 /* FetchItemsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchItemsQuery.graphql.swift; sourceTree = "<group>"; };
 		F3D413312A27AE5500308061 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		F3D413762A27C87A00308061 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
 		F3D413782A27C87A00308061 /* Signing.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Signing.graphql; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		F3D4137E2A27C87A00308061 /* Queries */ = {
 			isa = PBXGroup;
 			children = (
+				F3CA95C72A326B2D00B47BF6 /* FetchItemsQuery.graphql.swift */,
 				F3D414102A27E07400308061 /* FetAllItemsQuery.graphql.swift */,
 				F3D4137F2A27C87A00308061 /* SignInQuery.graphql.swift */,
 			);
@@ -343,6 +346,7 @@
 				F3150BC22A2624D700C90C7A /* Webservice.docc in Sources */,
 				F3D414132A27E15500308061 /* Item.graphql.swift in Sources */,
 				F3D4138D2A27C87A00308061 /* Query.graphql.swift in Sources */,
+				F3CA95C82A326B2D00B47BF6 /* FetchItemsQuery.graphql.swift in Sources */,
 				F3D4138C2A27C87A00308061 /* SignInQuery.graphql.swift in Sources */,
 				F3D414112A27E07400308061 /* FetAllItemsQuery.graphql.swift in Sources */,
 				F3D4138E2A27C87A00308061 /* Authentication.graphql.swift in Sources */,

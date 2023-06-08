@@ -25,11 +25,11 @@ public class FetAllItemsQuery: GraphQLQuery {
 
   public init() {}
 
-  public struct Data: YourLineAPI.SelectionSet {
+  public struct Data: SelectionSet {
     public let __data: DataDict
     public init(_dataDict: DataDict) { __data = _dataDict }
 
-    public static var __parentType: ApolloAPI.ParentType { YourLineAPI.Objects.Query }
+    public static var __parentType: ApolloAPI.ParentType { Objects.Query }
     public static var __selections: [ApolloAPI.Selection] { [
       .field("fetchAllItems", [FetchAllItem?]?.self),
     ] }
@@ -39,27 +39,27 @@ public class FetAllItemsQuery: GraphQLQuery {
     /// FetchAllItem
     ///
     /// Parent Type: `Item`
-    public struct FetchAllItem: YourLineAPI.SelectionSet {
+    public struct FetchAllItem: SelectionSet {
       public let __data: DataDict
       public init(_dataDict: DataDict) { __data = _dataDict }
 
-      public static var __parentType: ApolloAPI.ParentType { YourLineAPI.Objects.Item }
+      public static var __parentType: ApolloAPI.ParentType { Objects.Item }
       public static var __selections: [ApolloAPI.Selection] { [
         .field("__typename", String.self),
         .field("name", String.self),
-        .field("id", YourLineAPI.ID.self),
+        .field("id", ID.self),
         .field("type", String.self),
-        .field("parentID", YourLineAPI.ID?.self),
-        .field("categoryID", YourLineAPI.ID?.self),
+        .field("parentID", ID?.self),
+        .field("categoryID", ID?.self),
         .field("description", String?.self),
         .field("mainImage", String?.self),
       ] }
 
       public var name: String { __data["name"] }
-      public var id: YourLineAPI.ID { __data["id"] }
+      public var id: ID { __data["id"] }
       public var type: String { __data["type"] }
-      public var parentID: YourLineAPI.ID? { __data["parentID"] }
-      public var categoryID: YourLineAPI.ID? { __data["categoryID"] }
+      public var parentID: ID? { __data["parentID"] }
+      public var categoryID: ID? { __data["categoryID"] }
       public var description: String? { __data["description"] }
       public var mainImage: String? { __data["mainImage"] }
     }
