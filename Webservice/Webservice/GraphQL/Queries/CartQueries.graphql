@@ -6,6 +6,8 @@ query FetchCart($id: ID!) {
       cartID
       quantity
       value
+      name
+      mainImage
     }
   }
 }

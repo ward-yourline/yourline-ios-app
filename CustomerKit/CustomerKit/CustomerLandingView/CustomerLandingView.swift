@@ -15,13 +15,17 @@ public struct CustomerLandingView: View {
     
     private let router: CustomerLandingViewRouterProtocol
     private let webService: WebServiceProtocol
+    private let viewModel: CustomerCartViewModel
+    
+    @State private var badgeValue = 0
     
     internal init(
         router: CustomerLandingViewRouterProtocol,
-        webService: WebServiceProtocol) {
-            
+        webService: WebServiceProtocol
+    ) {
         self.router = router
         self.webService = webService
+        self.viewModel = CustomerCartViewModel(webService: webService)
     }
     
     public var body: some View {
@@ -35,16 +39,23 @@ public struct CustomerLandingView: View {
                 Image(systemName: "magnifyingglass")
                 Text("Search")
             }
-            CustomerCartView(webService: webService).tabItem {
+            
+            CustomerCartView(viewModel: viewModel).tabItem {
                 Image(systemName: "cart")
                 Text("Cart")
-            }.badge(3)
+            }.badge(badgeValue)
             CustomerSettingsView().tabItem {
                 Image(systemName: "ellipsis")
                 Text("More")
             }
         }
         .tint(.darkSlateGray)
+        .onAppear() {
+            BadgeHandler.instance.updateBlock = { count in
+                badgeValue = count
+            }
+            viewModel.getCart()
+        }
     }
 }
 

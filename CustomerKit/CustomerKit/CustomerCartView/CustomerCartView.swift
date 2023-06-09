@@ -11,13 +11,14 @@ import Webservice
 import Utilities
 import Presentation
 import Resources
+import Domain
 
 public struct CustomerCartView: View {
     @StateObject private var viewModel: CustomerCartViewModel
-    @State var currentPageIndex : Int = 0
+    @State var currentPageIndex: Int = 0
+    @State var totalPrice: Double = 0.0
 
-    init(webService: WebServiceProtocol) {
-        let viewModel = CustomerCartViewModel(webService: webService)
+    init(viewModel: CustomerCartViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
@@ -27,15 +28,9 @@ public struct CustomerCartView: View {
         NavigationView {
             VStack(spacing: 0) {
                 List {
-                    ItemCartCell()
-                    ItemCartCell()
-                    ItemCartCell()
-                    ItemCartCell()
-                    ItemCartCell()
-                    ItemCartCell()
-                    ItemCartCell()
-                    ItemCartCell()
-                    ItemCartCell()
+                    ForEach(viewModel.items, id: \.id) { item in
+                        ItemCartCell(cartItem: item)
+                    }
                 }
                 .listStyle(.plain)
                 
@@ -44,7 +39,7 @@ public struct CustomerCartView: View {
                     HStack {
                         Text("Total:")
                         Spacer()
-                        Text("£100.00")
+                        Text("£\(totalPrice)")
                     }
                     WideButton(buttonTitle: "Continue with purchase") {
                         // TODO
@@ -62,6 +57,13 @@ public struct CustomerCartView: View {
 }
 
 public struct ItemCartCell: View {
+
+    private let cartItem: CartItem
+    
+    init(cartItem: CartItem) {
+        self.cartItem = cartItem
+    }
+    
     public var body: some View {
         VStack {
             HStack(alignment: .top) {
@@ -76,18 +78,18 @@ public struct ItemCartCell: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     VStack(alignment: .leading, spacing: 5.0) {
-                        Text("Some item Some item")
+                        Text(cartItem.title)
                             .font(.body)
                             .multilineTextAlignment(.leading)
                             .lineLimit(1)
-                        Text("£100.0")
+                        Text("\(cartItem.price)")
                             .font(Fonts.bold.swiftUIFont())
                             .lineLimit(1)
                     }
                     
                     HStack {
                         HStack {
-                            Text("2")
+                            Text("\(cartItem.quantity)")
                             Button {
                                 // TODO
                             } label: {
@@ -131,6 +133,7 @@ public struct ItemCartCell: View {
 
 struct CustomerCartView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomerCartView(webService: WebService())
+        let vm = CustomerCartViewModel(webService: WebService())
+        CustomerCartView(viewModel: vm)
     }
 }

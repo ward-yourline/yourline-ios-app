@@ -18,6 +18,8 @@ public class FetchCart: GraphQLQuery {
             cartID
             quantity
             value
+            name
+            mainImage
           }
         }
       }
@@ -74,12 +76,16 @@ public class FetchCart: GraphQLQuery {
           .field("cartID", ID.self),
           .field("quantity", Int.self),
           .field("value", Double.self),
+          .field("name", String.self),
+          .field("mainImage", String.self)
         ] }
 
         public var id: ID { __data["id"] }
         public var cartID: ID { __data["cartID"] }
         public var quantity: Int { __data["quantity"] }
         public var value: Double { __data["value"] }
+        public var name: String { __data["name"] }
+        public var mainImage: String { __data["mainImage"] }
       }
     }
   }
