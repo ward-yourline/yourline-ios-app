@@ -12,10 +12,6 @@ import Domain
 import Presentation
 import Utilities
 
-protocol CustomerCartViewDelegate {
-    func didGetCartItems()
-}
-
 class CustomerCartViewModel: ObservableObject {
     private let webService: WebServiceProtocol
     

@@ -9,10 +9,22 @@ import SwiftUI
 import Webservice
 import Utilities
 import Presentation
+import Data // TODO: Put in VM
+
+public protocol CustomerSettingsViewDelegate {
+    func didSignOut()
+}
 
 public struct CustomerSettingsView: View {
-      
+
     @State var name = ""
+    let userStorage = UserStorage()
+    private var delegate: CustomerSettingsViewDelegate?
+    
+    init(delegate: CustomerSettingsViewDelegate?) {
+        self.delegate = delegate
+    }
+    
     public var body: some View {
         if #available(iOS 16.0, *) {
             NavigationStack {
@@ -29,7 +41,8 @@ public struct CustomerSettingsView: View {
                             // Reset logic
                         }
                         WideButton(buttonTitle: "Sign out") {
-                            // TODO
+                            userStorage.clearUserData()
+                            delegate?.didSignOut()
                         }
                     }
                 }
@@ -42,6 +55,6 @@ public struct CustomerSettingsView: View {
 }
 struct CustomerSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomerSettingsView()
+        CustomerSettingsView(delegate: nil)
     }
 }

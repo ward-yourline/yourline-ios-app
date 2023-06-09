@@ -12,10 +12,9 @@
 		F3CA95F42A33CE7C00B47BF6 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95F32A33CE7C00B47BF6 /* DataTests.swift */; };
 		F3CA95F52A33CE7C00B47BF6 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = F3CA95E72A33CE7B00B47BF6 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3CA96012A33CE9600B47BF6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA95FF2A33CE9600B47BF6 /* Domain.framework */; };
-		F3CA96022A33CE9600B47BF6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA95FF2A33CE9600B47BF6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F3CA96032A33CE9600B47BF6 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA96002A33CE9600B47BF6 /* Utilities.framework */; };
-		F3CA96042A33CE9600B47BF6 /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA96002A33CE9600B47BF6 /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F3CA96132A33CEEC00B47BF6 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA96122A33CEEC00B47BF6 /* UserStorage.swift */; };
+		F3CA96162A33CF6900B47BF6 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F3CA96152A33CF6900B47BF6 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,21 +26,6 @@
 			remoteInfo = Data;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F3CA96052A33CE9600B47BF6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F3CA96022A33CE9600B47BF6 /* Domain.framework in Embed Frameworks */,
-				F3CA96042A33CE9600B47BF6 /* Utilities.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F3CA95E42A33CE7B00B47BF6 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3CA96162A33CF6900B47BF6 /* KeychainSwift in Frameworks */,
 				F3CA96012A33CE9600B47BF6 /* Domain.framework in Frameworks */,
 				F3CA96032A33CE9600B47BF6 /* Utilities.framework in Frameworks */,
 			);
@@ -143,13 +128,15 @@
 				F3CA95E02A33CE7B00B47BF6 /* Sources */,
 				F3CA95E12A33CE7B00B47BF6 /* Frameworks */,
 				F3CA95E22A33CE7B00B47BF6 /* Resources */,
-				F3CA96052A33CE9600B47BF6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Data;
+			packageProductDependencies = (
+				F3CA96152A33CF6900B47BF6 /* KeychainSwift */,
+			);
 			productName = Data;
 			productReference = F3CA95E42A33CE7B00B47BF6 /* Data.framework */;
 			productType = "com.apple.product-type.framework";
@@ -199,6 +186,9 @@
 				Base,
 			);
 			mainGroup = F3CA95DA2A33CE7B00B47BF6;
+			packageReferences = (
+				F3CA96142A33CF6900B47BF6 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = F3CA95E52A33CE7B00B47BF6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -506,6 +496,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3CA96142A33CF6900B47BF6 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3CA96152A33CF6900B47BF6 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3CA96142A33CF6900B47BF6 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3CA95DB2A33CE7B00B47BF6 /* Project object */;
 }

@@ -100,7 +100,13 @@ final class MainViewRouter {
 
 extension MainViewRouter: SignInDelegate {
     func didSignIn() {
-        let router = CustomerLandingViewRouter(context: context)
+        let router = CustomerLandingViewRouter(context: context, delegate: self)
         router.start()
+    }
+}
+
+extension MainViewRouter: SignOutDelegate {
+    func didSignOut() {
+        openSignInView()
     }
 }

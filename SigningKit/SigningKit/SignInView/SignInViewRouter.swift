@@ -10,11 +10,13 @@ import Utilities
 import Foundation
 import SwiftUI
 import Webservice
+import Data
 
 public final class SignInViewRouter: SignInViewRouterProtocol {
     
     private weak var context: UIViewController?
     private weak var delegate: SignInDelegate?
+    private let userStorage = UserStorage()
     
     public init(context: UIViewController?, delegate: SignInDelegate?) {
         self.context = context
@@ -22,14 +24,16 @@ public final class SignInViewRouter: SignInViewRouterProtocol {
     }
     
     public func start() {
-        if
+        if isSignedIn() {
+            delegate?.didSignIn()
+        } else if
             let context = context?.children.first as? UINavigationController
         {
             let webService = WebService()
             let view = SignInView(router: self, webService: webService)
             
             let viewController = UIHostingController(rootView: view)
-            context.pushViewController(viewController, animated: true)
+            context.setViewControllers([viewController], animated: false)
         }
     }
     
@@ -44,5 +48,9 @@ public final class SignInViewRouter: SignInViewRouterProtocol {
     
     public func didSignIn() {
         delegate?.didSignIn()
+    }
+    
+    private func isSignedIn() -> Bool { // TODO: Put in VM
+        return (userStorage.getValueForKey(.userID) != nil)
     }
 }

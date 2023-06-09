@@ -44,7 +44,7 @@ public struct CustomerLandingView: View {
                 Image(systemName: "cart")
                 Text("Cart")
             }.badge(badgeValue)
-            CustomerSettingsView().tabItem {
+            CustomerSettingsView(delegate: self).tabItem {
                 Image(systemName: "ellipsis")
                 Text("More")
             }
@@ -59,8 +59,14 @@ public struct CustomerLandingView: View {
     }
 }
 
+extension CustomerLandingView: CustomerSettingsViewDelegate {
+    public func didSignOut() {
+        router.didSignOut()
+    }
+}
+
 struct CustomerLandingView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomerLandingView(router: CustomerLandingViewRouter(context: nil), webService: WebService())
+        CustomerLandingView(router: CustomerLandingViewRouter(context: nil, delegate: nil), webService: WebService())
     }
 }

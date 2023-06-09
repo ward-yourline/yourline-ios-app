@@ -9,6 +9,7 @@ import SwiftUI
 import Resources
 import Webservice
 import Presentation
+import Data // TODO: Put in VM
 
 struct SignInView: View {
     
@@ -20,6 +21,7 @@ struct SignInView: View {
     
     private var router: SignInViewRouter?
     private let webService: WebServiceProtocol
+    private let userStorage = UserStorage() // TODO: Put in VM
     
     init(router: SignInViewRouter? = nil, webService: WebServiceProtocol) {
         self.router = router
@@ -72,6 +74,20 @@ struct SignInView: View {
                                 errorMessage = errors.first?.message ?? ""
                             } else {
                                 print("Success! Result: \(graphQLResult)")
+                                
+                                guard
+                                    let token = graphQLResult.data?.signIn.accessToken,
+                                    let refreshToken = graphQLResult.data?.signIn.refreshToken,
+                                    let userID = graphQLResult.data?.signIn.id
+                                else {
+                                    errorMessage = "Missing data, failed to sign in."
+                                    return
+                                }
+                                
+                                userStorage.setValue(token, for: .accessToken)
+                                userStorage.setValue(refreshToken, for: .accessToken)
+                                userStorage.setValue(userID, for: .userID)
+                                
                                 router?.didSignIn()
                             }
                         case .failure(let error):
