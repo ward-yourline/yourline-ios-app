@@ -19,6 +19,7 @@
 		F3CA95CE2A326C7400B47BF6 /* CartItem.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95CC2A326C7400B47BF6 /* CartItem.graphql.swift */; };
 		F3CA95D02A326C8000B47BF6 /* Mutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95CF2A326C8000B47BF6 /* Mutation.graphql.swift */; };
 		F3CA95D22A326CC100B47BF6 /* GetCartQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95D12A326CC100B47BF6 /* GetCartQuery.graphql.swift */; };
+		F3CA96082A33CEC300B47BF6 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA96072A33CEC300B47BF6 /* Data.framework */; };
 		F3D413322A27AE5500308061 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413312A27AE5500308061 /* WebService.swift */; };
 		F3D413882A27C87A00308061 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = F3D413762A27C87A00308061 /* apollo-codegen-config.json */; };
 		F3D413892A27C87A00308061 /* Signing.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F3D413782A27C87A00308061 /* Signing.graphql */; };
@@ -60,6 +61,8 @@
 		F3CA95CC2A326C7400B47BF6 /* CartItem.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItem.graphql.swift; sourceTree = "<group>"; };
 		F3CA95CF2A326C8000B47BF6 /* Mutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutation.graphql.swift; sourceTree = "<group>"; };
 		F3CA95D12A326CC100B47BF6 /* GetCartQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCartQuery.graphql.swift; sourceTree = "<group>"; };
+		F3CA96062A33CEBA00B47BF6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CA96072A33CEC300B47BF6 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413312A27AE5500308061 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		F3D413762A27C87A00308061 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
 		F3D413782A27C87A00308061 /* Signing.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Signing.graphql; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 				F3150C0D2A26255400C90C7A /* Domain.framework in Frameworks */,
 				F3D413942A27C8B500308061 /* Apollo in Frameworks */,
 				F3D413962A27C8B500308061 /* ApolloAPI in Frameworks */,
+				F3CA96082A33CEC300B47BF6 /* Data.framework in Frameworks */,
 				F3150BD92A2624FC00C90C7A /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +143,8 @@
 		F3150BD72A2624FC00C90C7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3CA96072A33CEC300B47BF6 /* Data.framework */,
+				F3CA96062A33CEBA00B47BF6 /* Domain.framework */,
 				F3150C0C2A26255400C90C7A /* Domain.framework */,
 				F3150BD82A2624FC00C90C7A /* Utilities.framework */,
 			);

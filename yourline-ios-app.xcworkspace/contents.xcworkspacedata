@@ -11,6 +11,9 @@
       location = "group:Domain/Domain.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Data/Data.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Webservice/Webservice.xcodeproj">
    </FileRef>
    <FileRef

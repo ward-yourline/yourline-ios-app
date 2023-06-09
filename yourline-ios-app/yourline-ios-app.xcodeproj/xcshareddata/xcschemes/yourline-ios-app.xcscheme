@@ -56,6 +56,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3CA95E32A33CE7B00B47BF6"
+               BuildableName = "Data.framework"
+               BlueprintName = "Data"
+               ReferencedContainer = "container:../Data/Data.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F3D413A02A27D6C900308061"
                BuildableName = "Presentation.framework"
                BlueprintName = "Presentation"

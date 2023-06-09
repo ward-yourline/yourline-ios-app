@@ -20,6 +20,7 @@
 		F3150BDD2A26251000C90C7A /* Webservice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BDC2A26251000C90C7A /* Webservice.framework */; };
 		F3150C112A26255C00C90C7A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C102A26255C00C90C7A /* Domain.framework */; };
 		F3169C432A2B91FD00F48565 /* CustomAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3169C422A2B91FD00F48565 /* CustomAssets.xcassets */; };
+		F3CA96102A33CEDD00B47BF6 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA960F2A33CEDD00B47BF6 /* Data.framework */; };
 		F3D413C92A27D73600308061 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413C82A27D73600308061 /* Presentation.framework */; };
 		F3D413CA2A27D73600308061 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413C82A27D73600308061 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F3D414082A27D90F00308061 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414072A27D90F00308061 /* Protocols.swift */; };
@@ -64,6 +65,7 @@
 		F3150BDC2A26251000C90C7A /* Webservice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Webservice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150C102A26255C00C90C7A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3169C422A2B91FD00F48565 /* CustomAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CustomAssets.xcassets; path = ../../Resources/Resources/CustomAssets.xcassets; sourceTree = "<group>"; };
+		F3CA960F2A33CEDD00B47BF6 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413C82A27D73600308061 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D414072A27D90F00308061 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3CA96102A33CEDD00B47BF6 /* Data.framework in Frameworks */,
 				F3150C112A26255C00C90C7A /* Domain.framework in Frameworks */,
 				F3150BAA2A252B5000C90C7A /* Resources.framework in Frameworks */,
 				F3150BDD2A26251000C90C7A /* Webservice.framework in Frameworks */,
@@ -144,6 +147,7 @@
 		F3150B6D2A23B46A00C90C7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3CA960F2A33CEDD00B47BF6 /* Data.framework */,
 				F3D413C82A27D73600308061 /* Presentation.framework */,
 				F3150C102A26255C00C90C7A /* Domain.framework */,
 				F3150BDC2A26251000C90C7A /* Webservice.framework */,
