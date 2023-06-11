@@ -19,7 +19,14 @@ public enum UserKeys: String, CaseIterable {
     }
 }
 
-public final class UserStorage {
+public protocol UserStorageProtocol {
+    init()
+    func setValue(_ value: String, for key: UserKeys) -> Bool
+    func getValueForKey(_ key: UserKeys) -> String?
+    func clearUserData()
+}
+
+public final class UserStorage: UserStorageProtocol {
     
     private lazy var keychain = KeychainSwift()
     

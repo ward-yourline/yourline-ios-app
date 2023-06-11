@@ -23,7 +23,7 @@ class CustomerHomeViewModel: ObservableObject, ItemsCollectionViewDelegate {
     
     func getItems() {
         let query = FetchItemsQuery(limit: 6)
-        webService.apollo.fetch(query: query) { result in
+        webService.apollo.fetch(query: query, cachePolicy: .fetchIgnoringCacheCompletely) { result in
             switch result {
             case .success(let fetchAllItems):
                 if let errors = fetchAllItems.errors {

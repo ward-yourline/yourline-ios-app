@@ -29,7 +29,11 @@ public struct CustomerCartView: View {
             VStack(spacing: 0) {
                 List {
                     ForEach(viewModel.items, id: \.id) { item in
-                        ItemCartCell(cartItem: item)
+                        ItemCartCell(cartItem: item) { id in
+                            viewModel.removeItemFromCart(with: id) { result in
+                                    // TODO
+                            }
+                        }
                     }
                 }
                 .listStyle(.plain)
@@ -59,8 +63,10 @@ public struct CustomerCartView: View {
 public struct ItemCartCell: View {
 
     private let cartItem: CartItem
+    @State private var deleteBlock: ((String) -> Void)?
     
-    init(cartItem: CartItem) {
+    init(cartItem: CartItem, deleteBlock: ((String) -> Void)?) {
+        self.deleteBlock = deleteBlock
         self.cartItem = cartItem
     }
     
@@ -120,7 +126,7 @@ public struct ItemCartCell: View {
                         Spacer()
                         
                         Button {
-                            // TODO
+                            deleteBlock?(cartItem.id)
                         } label: {
                             Image(systemName: "trash")
                                 .resizable()
@@ -128,6 +134,7 @@ public struct ItemCartCell: View {
                                 .frame(width: 20, height: 20, alignment: .center)
                         }
                         .frame(width: 30, height: 30, alignment: .center)
+                        .buttonStyle(.plain)
                     }
                 }
                 .padding(.leading)

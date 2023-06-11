@@ -22,23 +22,25 @@ class CustomerCartViewModel: ObservableObject {
     }
     @Published var isShowingDetailView = false
     @Published var selectedItem: Item?
+    private var cartID: String = ""
     
     init(webService: WebServiceProtocol) {
         self.webService = webService
     }
     
     func getCart() {
-        let query = FetchCartItemsQuery(id: "cart__2R3Spm0CJG398iCrBhnolN7JPUp")
+        let query = FetchCartQuery(id: "cart__2R3Spm0CJG398iCrBhnolN7JPUp")
         
-        webService.apollo.fetch(query: query) { result in
+        webService.apollo.fetch(query: query, cachePolicy: .fetchIgnoringCacheCompletely) { result in
             switch result {
             case .success(let result):
                 if let errors = result.errors {
                     print(errors)
                 }
                 
-                guard let items = result.data?.fetchCartItems else { return }
-                
+                guard let cart = result.data?.fetchCart else { return }
+                guard let items = cart.items else { return }
+            
                 let cartItems = items.compactMap { item in
                     CartItem(
                         id: item?.id ?? "",
@@ -51,9 +53,32 @@ class CustomerCartViewModel: ObservableObject {
                 }
                 
                 self.items = cartItems
+                self.cartID = cart.id
                 
             case .failure(let error):
                 print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func removeItemFromCart(with id: String, completion: ((String) -> Void)) {
+        
+        let mutation = RemoveItemFromCartMutation(cartID: cartID, itemID: id)
+        
+        webService.apollo.perform(mutation: mutation) { [weak self] result in
+            switch result {
+                
+            case .success(let graphResult):
+                
+                if graphResult.errors == nil {
+                    self?.items.removeAll { cartItem in
+                        cartItem.id == id
+                    }
+                }
+                
+            case .failure(_):
+                // TODO
+                break
             }
         }
     }

@@ -10,6 +10,7 @@ import Webservice
 import Utilities
 import Presentation
 import Domain
+import Data
 
 struct CustomerHomeView: View {
     @StateObject private var viewModel: CustomerHomeViewModel
@@ -60,8 +61,15 @@ struct CustomerHomeView: View {
                 }
                 // NavigationLink
                 if let selectedItem = viewModel.selectedItem {
+                    let webService = WebService()
+                    let storage = UserStorage()
+                    let viewModel = CustomerItemDetailViewModel(
+                        item: selectedItem,
+                        webService: webService,
+                        userStorage: storage
+                    )
                     NavigationLink(
-                        destination: CustomerItemDetailView(item: selectedItem),
+                        destination: CustomerItemDetailView(viewModel: viewModel),
                         isActive: $viewModel.isShowingDetailView,
                         label: { EmptyView() }
                     )

@@ -1,11 +1,13 @@
-query FetchCartItems($id: ID!) {
-  fetchCartItems(cartID: $id, limit: 10) {
-      quantity
-      value
-      mainImage
-        name
+query FetchCart($id: ID!) {
+  fetchCart(cartID: $id, limit: 10) {
       id
-      cartID
+      items {
+        quantity
+        value
+        mainImage
+        name
+        id
+      }
   }
 }
 

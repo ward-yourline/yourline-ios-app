@@ -10,29 +10,37 @@ import Domain
 import Resources
 import Utilities
 import Presentation
+import Data
+import Webservice
 
 public struct CustomerItemDetailView: View {
     
-    private let item: Item
-    @State private var quantity = 1
+    @State private var quantity = 1 {
+        didSet {
+            viewModel.quantity = quantity
+        }
+    }
     @State private var showPicker = false
+    @StateObject private var viewModel: CustomerItemDetailViewModel
     
-    public init(item: Item) {
-        self.item = item
+    public init(viewModel: CustomerItemDetailViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
     
     public var body: some View {
         ZStack {
             VStack(spacing: 10) {
                 ScrollView {
-                    ItemImageView(item: item)
+                    ItemImageView(item: viewModel.item)
                     
                     Divider()
                     
                     ItemPurchaseView(showPicker: showPicker, quantity: $quantity, showPickerCallBack: {
                         showPicker = true
+                    }, didTapPurchaseBlock: {
+                        viewModel.addItemToCart()
                     })
-                    ItemInfoView(item: item)
+                    ItemInfoView(item: viewModel.item)
                 }
                 .padding(.bottom, 10)
             }
@@ -121,6 +129,7 @@ struct ItemPurchaseView: View {
     @Binding private(set) var quantity: Int
     
     private(set) var showPickerCallBack: () -> Void
+    private(set) var didTapPurchaseBlock: () -> Void
     
     var body: some View {
         HStack {
@@ -149,8 +158,8 @@ struct ItemPurchaseView: View {
             .frame(width: 140)
             .addBorder(Color.platinum)
             
-            WideButton(buttonTitle: "Buy") {
-                // TODO
+            WideButton(buttonTitle: "Add to cart") {
+                didTapPurchaseBlock()
             }
         }
         .padding(.vertical, 10)
@@ -184,8 +193,10 @@ struct ItemInfoView: View {
 
 struct ItemDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomerItemDetailView(item: Item(id: "123", imageURL: "http://localhost:8081/image/62a59176-5846-45d0-b14c-be896f5a90df", title: "Product title", description: """
+        let item = Item(id: "123", imageURL: "http://localhost:8081/image/62a59176-5846-45d0-b14c-be896f5a90df", title: "Product title", description: """
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-""", price: "£100.00"))
+""", price: "£100.00")
+        let vm = CustomerItemDetailViewModel(item: item, webService: WebService(), userStorage: UserStorage())
+        CustomerItemDetailView(viewModel: vm)
     }
 }

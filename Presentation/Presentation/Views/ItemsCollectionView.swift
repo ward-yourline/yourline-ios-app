@@ -50,7 +50,7 @@ public struct ItemsCollectionView: View {
                                     image
                                         .resizable()
                                 case .failure:
-                                    Image(systemName: "exclamationmark.circle")
+                                    Image(systemName: "product_placeholder")
                                         .resizable()
                                         .foregroundColor(.red)
                                 @unknown default:
@@ -85,7 +85,7 @@ public struct ItemsCollectionView: View {
                             .foregroundColor(.black)
                             .padding(.horizontal, 10)
                             
-                            WideButton(buttonTitle: "Buy") {
+                            WideButton(buttonTitle: "Add to cart") {
                                 // TODO
                             }
                             .padding()
