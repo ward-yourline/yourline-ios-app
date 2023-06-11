@@ -68,11 +68,25 @@ public struct ItemCartCell: View {
         VStack {
             HStack(alignment: .top) {
                 VStack {
-                    Image("product_placeholder")
-                        .resizable()
-                        .frame(width: 60, height: 60)
-                        .background(Color.red)
-                        .cornerRadius(10)
+                    AsyncImage(url: URL(string: cartItem.imageURL)) { phase in
+                        switch phase {
+                        case .empty:
+                            Image("product_placeholder")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        case .success(let image):
+                            image
+                                .resizable()
+                        case .failure:
+                            Image(systemName: "exclamationmark.circle")
+                                .resizable()
+                                .foregroundColor(.red)
+                        @unknown default:
+                            fatalError("Unhandled AsyncImage phase")
+                        }
+                    }
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 60, height: 60)
                     .clipped()
                 }
                 

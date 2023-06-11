@@ -45,6 +45,7 @@ public struct ItemsCollectionView: View {
                                 case .empty:
                                     Image("product_placeholder")
                                         .resizable()
+                                        .aspectRatio(contentMode: .fit)
                                 case .success(let image):
                                     image
                                         .resizable()
@@ -59,6 +60,7 @@ public struct ItemsCollectionView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(maxWidth: .infinity)
                             .frame(height: 100) // Adjust the fixed height here
+                            .clipped()
 
                             VStack(spacing: 10) {
                                 Text(items[index].title)
@@ -79,7 +81,9 @@ public struct ItemsCollectionView: View {
                                     .multilineTextAlignment(.center)
                                     .frame(height: 20)
                                     .padding(.bottom, 10)
-                            }.foregroundColor(.black)
+                            }
+                            .foregroundColor(.black)
+                            .padding(.horizontal, 10)
                             
                             WideButton(buttonTitle: "Buy") {
                                 // TODO
