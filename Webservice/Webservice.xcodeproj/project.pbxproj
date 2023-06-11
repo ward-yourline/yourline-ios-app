@@ -13,18 +13,18 @@
 		F3150BCE2A2624D800C90C7A /* Webservice.h in Headers */ = {isa = PBXBuildFile; fileRef = F3150BC02A2624D700C90C7A /* Webservice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3150BD92A2624FC00C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BD82A2624FC00C90C7A /* Utilities.framework */; };
 		F3150C0D2A26255400C90C7A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C0C2A26255400C90C7A /* Domain.framework */; };
-		F3CA95C82A326B2D00B47BF6 /* FetchItemsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95C72A326B2D00B47BF6 /* FetchItemsQuery.graphql.swift */; };
+		F3585C832A35E1A1008D23C5 /* FetchCartItemsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C7F2A35E1A0008D23C5 /* FetchCartItemsQuery.graphql.swift */; };
+		F3585C842A35E1A1008D23C5 /* FetchItemsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C802A35E1A0008D23C5 /* FetchItemsQuery.graphql.swift */; };
+		F3585C852A35E1A1008D23C5 /* FetAllItemsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C812A35E1A0008D23C5 /* FetAllItemsQuery.graphql.swift */; };
+		F3585C862A35E1A1008D23C5 /* SignInQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C822A35E1A1008D23C5 /* SignInQuery.graphql.swift */; };
 		F3CA95CA2A326BF100B47BF6 /* CartQueries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F3CA95C92A326BF100B47BF6 /* CartQueries.graphql */; };
-		F3CA95CD2A326C7400B47BF6 /* Cart.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95CB2A326C7400B47BF6 /* Cart.graphql.swift */; };
 		F3CA95CE2A326C7400B47BF6 /* CartItem.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95CC2A326C7400B47BF6 /* CartItem.graphql.swift */; };
 		F3CA95D02A326C8000B47BF6 /* Mutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95CF2A326C8000B47BF6 /* Mutation.graphql.swift */; };
-		F3CA95D22A326CC100B47BF6 /* GetCartQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95D12A326CC100B47BF6 /* GetCartQuery.graphql.swift */; };
 		F3CA96082A33CEC300B47BF6 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA96072A33CEC300B47BF6 /* Data.framework */; };
 		F3D413322A27AE5500308061 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413312A27AE5500308061 /* WebService.swift */; };
 		F3D413882A27C87A00308061 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = F3D413762A27C87A00308061 /* apollo-codegen-config.json */; };
 		F3D413892A27C87A00308061 /* Signing.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F3D413782A27C87A00308061 /* Signing.graphql */; };
 		F3D4138B2A27C87A00308061 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = F3D4137B2A27C87A00308061 /* schema.json */; };
-		F3D4138C2A27C87A00308061 /* SignInQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D4137F2A27C87A00308061 /* SignInQuery.graphql.swift */; };
 		F3D4138D2A27C87A00308061 /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413822A27C87A00308061 /* Query.graphql.swift */; };
 		F3D4138E2A27C87A00308061 /* Authentication.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413832A27C87A00308061 /* Authentication.graphql.swift */; };
 		F3D4138F2A27C87A00308061 /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413842A27C87A00308061 /* SchemaConfiguration.swift */; };
@@ -33,7 +33,6 @@
 		F3D413942A27C8B500308061 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = F3D413932A27C8B500308061 /* Apollo */; };
 		F3D413962A27C8B500308061 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F3D413952A27C8B500308061 /* ApolloAPI */; };
 		F3D4140F2A27DFE400308061 /* ItemQueries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F3D4140E2A27DFE400308061 /* ItemQueries.graphql */; };
-		F3D414112A27E07400308061 /* FetAllItemsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414102A27E07400308061 /* FetAllItemsQuery.graphql.swift */; };
 		F3D414132A27E15500308061 /* Item.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414122A27E15500308061 /* Item.graphql.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,26 +54,25 @@
 		F3150BCC2A2624D800C90C7A /* WebserviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceTests.swift; sourceTree = "<group>"; };
 		F3150BD82A2624FC00C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150C0C2A26255400C90C7A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3CA95C72A326B2D00B47BF6 /* FetchItemsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchItemsQuery.graphql.swift; sourceTree = "<group>"; };
+		F3585C7F2A35E1A0008D23C5 /* FetchCartItemsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchCartItemsQuery.graphql.swift; sourceTree = "<group>"; };
+		F3585C802A35E1A0008D23C5 /* FetchItemsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchItemsQuery.graphql.swift; sourceTree = "<group>"; };
+		F3585C812A35E1A0008D23C5 /* FetAllItemsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetAllItemsQuery.graphql.swift; sourceTree = "<group>"; };
+		F3585C822A35E1A1008D23C5 /* SignInQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInQuery.graphql.swift; sourceTree = "<group>"; };
 		F3CA95C92A326BF100B47BF6 /* CartQueries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CartQueries.graphql; sourceTree = "<group>"; };
-		F3CA95CB2A326C7400B47BF6 /* Cart.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.graphql.swift; sourceTree = "<group>"; };
 		F3CA95CC2A326C7400B47BF6 /* CartItem.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItem.graphql.swift; sourceTree = "<group>"; };
 		F3CA95CF2A326C8000B47BF6 /* Mutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutation.graphql.swift; sourceTree = "<group>"; };
-		F3CA95D12A326CC100B47BF6 /* GetCartQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCartQuery.graphql.swift; sourceTree = "<group>"; };
 		F3CA96062A33CEBA00B47BF6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CA96072A33CEC300B47BF6 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413312A27AE5500308061 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		F3D413762A27C87A00308061 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
 		F3D413782A27C87A00308061 /* Signing.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Signing.graphql; sourceTree = "<group>"; };
 		F3D4137B2A27C87A00308061 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		F3D4137F2A27C87A00308061 /* SignInQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInQuery.graphql.swift; sourceTree = "<group>"; };
 		F3D413822A27C87A00308061 /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
 		F3D413832A27C87A00308061 /* Authentication.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.graphql.swift; sourceTree = "<group>"; };
 		F3D413842A27C87A00308061 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
 		F3D413862A27C87A00308061 /* UserSignInInput.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignInInput.graphql.swift; sourceTree = "<group>"; };
 		F3D413872A27C87A00308061 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
 		F3D4140E2A27DFE400308061 /* ItemQueries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ItemQueries.graphql; sourceTree = "<group>"; };
-		F3D414102A27E07400308061 /* FetAllItemsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetAllItemsQuery.graphql.swift; sourceTree = "<group>"; };
 		F3D414122A27E15500308061 /* Item.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.graphql.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,10 +198,10 @@
 		F3D4137E2A27C87A00308061 /* Queries */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA95D12A326CC100B47BF6 /* GetCartQuery.graphql.swift */,
-				F3CA95C72A326B2D00B47BF6 /* FetchItemsQuery.graphql.swift */,
-				F3D414102A27E07400308061 /* FetAllItemsQuery.graphql.swift */,
-				F3D4137F2A27C87A00308061 /* SignInQuery.graphql.swift */,
+				F3585C812A35E1A0008D23C5 /* FetAllItemsQuery.graphql.swift */,
+				F3585C7F2A35E1A0008D23C5 /* FetchCartItemsQuery.graphql.swift */,
+				F3585C802A35E1A0008D23C5 /* FetchItemsQuery.graphql.swift */,
+				F3585C822A35E1A1008D23C5 /* SignInQuery.graphql.swift */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
@@ -223,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				F3CA95CF2A326C8000B47BF6 /* Mutation.graphql.swift */,
-				F3CA95CB2A326C7400B47BF6 /* Cart.graphql.swift */,
 				F3CA95CC2A326C7400B47BF6 /* CartItem.graphql.swift */,
 				F3D414122A27E15500308061 /* Item.graphql.swift */,
 				F3D413822A27C87A00308061 /* Query.graphql.swift */,
@@ -364,18 +361,17 @@
 				F3D413322A27AE5500308061 /* WebService.swift in Sources */,
 				F3D413912A27C87A00308061 /* SchemaMetadata.graphql.swift in Sources */,
 				F3D413902A27C87A00308061 /* UserSignInInput.graphql.swift in Sources */,
+				F3585C832A35E1A1008D23C5 /* FetchCartItemsQuery.graphql.swift in Sources */,
 				F3D4138F2A27C87A00308061 /* SchemaConfiguration.swift in Sources */,
-				F3CA95D22A326CC100B47BF6 /* GetCartQuery.graphql.swift in Sources */,
-				F3CA95CD2A326C7400B47BF6 /* Cart.graphql.swift in Sources */,
 				F3150BC22A2624D700C90C7A /* Webservice.docc in Sources */,
+				F3585C862A35E1A1008D23C5 /* SignInQuery.graphql.swift in Sources */,
 				F3D414132A27E15500308061 /* Item.graphql.swift in Sources */,
+				F3585C852A35E1A1008D23C5 /* FetAllItemsQuery.graphql.swift in Sources */,
 				F3CA95D02A326C8000B47BF6 /* Mutation.graphql.swift in Sources */,
 				F3D4138D2A27C87A00308061 /* Query.graphql.swift in Sources */,
-				F3CA95C82A326B2D00B47BF6 /* FetchItemsQuery.graphql.swift in Sources */,
-				F3D4138C2A27C87A00308061 /* SignInQuery.graphql.swift in Sources */,
-				F3D414112A27E07400308061 /* FetAllItemsQuery.graphql.swift in Sources */,
 				F3D4138E2A27C87A00308061 /* Authentication.graphql.swift in Sources */,
 				F3CA95CE2A326C7400B47BF6 /* CartItem.graphql.swift in Sources */,
+				F3585C842A35E1A1008D23C5 /* FetchItemsQuery.graphql.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

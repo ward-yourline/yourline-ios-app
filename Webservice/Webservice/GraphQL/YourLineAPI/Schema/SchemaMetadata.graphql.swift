@@ -25,7 +25,6 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
     case "Query": return Objects.Query
     case "Item": return Objects.Item
     case "Authentication": return Objects.Authentication
-    case "Cart": return Objects.Cart
     case "CartItem": return Objects.CartItem
     case "Mutation": return Objects.Mutation
     default: return nil

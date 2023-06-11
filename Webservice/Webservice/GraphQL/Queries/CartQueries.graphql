@@ -1,21 +1,22 @@
-query FetchCart($id: ID!) {
-  fetchCart(id: $id) {
-    id
-    items {
-      id
-      cartID
+query FetchCartItems($id: ID!) {
+  fetchCartItems(cartID: $id, limit: 10) {
       quantity
       value
-      name
       mainImage
-    }
+        name
+      id
+      cartID
   }
 }
 
-mutation AddItemToCart($id: ID!, $itemID: ID!, $quantity: Int!) {
-  addItemToCart(id: $id, itemID: $itemID, quantity: $quantity)
+mutation AddItemToCart($userID: ID!, $itemID: ID!, $quantity: Int!) {
+  addItemToCart(userID: $userID, itemID: $itemID, quantity: $quantity)
 }
 
 mutation UpdateCartItemQuantity($itemID:ID!, $cartID:ID!, $quantity: Int!) {
   updateCartItemQuantity(itemID: $itemID, cartID: $cartID, quantity: $quantity)
+}
+
+mutation RemoveItemFromCart($cartID: ID!, $itemID: ID!) {
+  removeItemFromCart(cartID: $cartID, itemID: $itemID)
 }

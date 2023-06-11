@@ -28,7 +28,7 @@ class CustomerCartViewModel: ObservableObject {
     }
     
     func getCart() {
-        let query = FetchCart(id: "user_2Pxr0hbhyKVdtGAPUhx9eN230Re")
+        let query = FetchCartItemsQuery(id: "cart__2R3Spm0CJG398iCrBhnolN7JPUp")
         
         webService.apollo.fetch(query: query) { result in
             switch result {
@@ -37,7 +37,7 @@ class CustomerCartViewModel: ObservableObject {
                     print(errors)
                 }
                 
-                guard let items = result.data?.fetchCart?.items else { return }
+                guard let items = result.data?.fetchCartItems else { return }
                 
                 let cartItems = items.compactMap { item in
                     CartItem(

@@ -1,1794 +1,1882 @@
 {
-  "data": {
-    "__schema": {
-      "queryType": {
-        "name": "Query"
-      },
-      "mutationType": {
-        "name": "Mutation"
-      },
-      "subscriptionType": null,
-      "types": [{
-        "kind": "OBJECT",
-        "name": "Authentication",
-        "description": null,
-        "fields": [{
-          "name": "id",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "accessToken",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "refreshToken",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "SCALAR",
-        "name": "Boolean",
-        "description": "The `Boolean` scalar type represents `true` or `false`.",
-        "fields": [],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "OBJECT",
-        "name": "Business",
-        "description": null,
-        "fields": [{
-          "name": "id",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "userID",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "name",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "address",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "phoneNumber",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "sectors",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "LIST",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "industries",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "LIST",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "categoryIDS",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "LIST",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "INPUT_OBJECT",
-        "name": "BusinessInput",
-        "description": null,
-        "fields": [],
-        "inputFields": [{
-          "name": "userID",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "name",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "address",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "phoneNumber",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "OBJECT",
-        "name": "Cart",
-        "description": null,
-        "fields": [{
-          "name": "id",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "items",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "LIST",
-            "name": null,
-            "ofType": {
-              "kind": "OBJECT",
-              "name": "CartItem",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "OBJECT",
-        "name": "CartItem",
-        "description": null,
-        "fields": [{
-          "name": "id",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "cartID",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "quantity",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "value",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Float",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "OBJECT",
-        "name": "Category",
-        "description": null,
-        "fields": [{
-          "name": "id",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "businessID",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "name",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "description",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "SCALAR",
-            "name": "String",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "items",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "LIST",
-            "name": null,
-            "ofType": {
-              "kind": "OBJECT",
-              "name": "Item",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "INPUT_OBJECT",
-        "name": "CategoryInput",
-        "description": null,
-        "fields": [],
-        "inputFields": [{
-          "name": "businessID",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "name",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "description",
-          "description": null,
-          "type": {
-            "kind": "SCALAR",
-            "name": "String",
-            "ofType": null
-          },
-          "defaultValue": null
-        }],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "INPUT_OBJECT",
-        "name": "CreateItemInput",
-        "description": null,
-        "fields": [],
-        "inputFields": [{
-          "name": "parentID",
-          "description": null,
-          "type": {
-            "kind": "SCALAR",
-            "name": "ID",
-            "ofType": null
-          },
-          "defaultValue": null
-        }, {
-          "name": "categoryID",
-          "description": null,
-          "type": {
-            "kind": "SCALAR",
-            "name": "ID",
-            "ofType": null
-          },
-          "defaultValue": null
-        }, {
-          "name": "name",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "type",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "description",
-          "description": null,
-          "type": {
-            "kind": "SCALAR",
-            "name": "String",
-            "ofType": null
-          },
-          "defaultValue": null
-        }, {
-          "name": "mainImage",
-          "description": null,
-          "type": {
-            "kind": "SCALAR",
-            "name": "String",
-            "ofType": null
-          },
-          "defaultValue": null
-        }, {
-          "name": "value",
-          "description": null,
-          "type": {
-            "kind": "SCALAR",
-            "name": "Int",
-            "ofType": null
-          },
-          "defaultValue": null
-        }],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "SCALAR",
-        "name": "Float",
-        "description": "The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point).",
-        "fields": [],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "SCALAR",
-        "name": "ID",
-        "description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID.",
-        "fields": [],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "OBJECT",
-        "name": "Industry",
-        "description": null,
-        "fields": [{
-          "name": "name",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "INPUT_OBJECT",
-        "name": "IndustryInput",
-        "description": null,
-        "fields": [],
-        "inputFields": [{
-          "name": "businessID",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "industries",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            }
-          },
-          "defaultValue": null
-        }],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "SCALAR",
-        "name": "Int",
-        "description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
-        "fields": [],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "OBJECT",
-        "name": "Item",
-        "description": null,
-        "fields": [{
-          "name": "id",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "name",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "type",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "parentID",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "SCALAR",
-            "name": "ID",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "categoryID",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "SCALAR",
-            "name": "ID",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "description",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "SCALAR",
-            "name": "String",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "mainImage",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "SCALAR",
-            "name": "String",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "value",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "SCALAR",
-            "name": "Int",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "OBJECT",
-        "name": "Mutation",
-        "description": null,
-        "fields": [{
-          "name": "signUp",
-          "description": null,
-          "args": [{
-            "name": "input",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "UserSignUpInput",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "OBJECT",
-            "name": "Authentication",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "createItem",
-          "description": null,
-          "args": [{
-            "name": "input",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "CreateItemInput",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "OBJECT",
-            "name": "Item",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "createBusiness",
-          "description": null,
-          "args": [{
-            "name": "input",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "BusinessInput",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "OBJECT",
-            "name": "Business",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "setItemValue",
-          "description": null,
-          "args": [{
-            "name": "value",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }, {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "addSectorToBusiness",
-          "description": null,
-          "args": [{
-            "name": "input",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "SectorInput",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "addIndustryToBusiness",
-          "description": null,
-          "args": [{
-            "name": "input",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "IndustryInput",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "createIndustry",
-          "description": null,
-          "args": [{
-            "name": "input",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "createSector",
-          "description": null,
-          "args": [{
-            "name": "input",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "createCategory",
-          "description": null,
-          "args": [{
-            "name": "input",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "CategoryInput",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "deleteCategory",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "addItemWithIDToCategory",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "deleteItemWithIDFromCategory",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "addItemToCart",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }, {
-            "name": "itemID",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }, {
-            "name": "quantity",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "updateCartItemQuantity",
-          "description": null,
-          "args": [{
-            "name": "itemID",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }, {
-            "name": "cartID",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }, {
-            "name": "quantity",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "OBJECT",
-        "name": "Query",
-        "description": null,
-        "fields": [{
-          "name": "signIn",
-          "description": null,
-          "args": [{
-            "name": "input",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "UserSignInInput",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "OBJECT",
-              "name": "Authentication",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "fetchUserWithID",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "OBJECT",
-            "name": "User",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "fetchItem",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "OBJECT",
-            "name": "Item",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "fetchAllItems",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "LIST",
-            "name": null,
-            "ofType": {
-              "kind": "OBJECT",
-              "name": "Item",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "fetchItems",
-          "description": null,
-          "args": [{
-            "name": "limit",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "LIST",
-            "name": null,
-            "ofType": {
-              "kind": "OBJECT",
-              "name": "Item",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "fetchBusinessesForUserID",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "LIST",
-            "name": null,
-            "ofType": {
-              "kind": "OBJECT",
-              "name": "Business",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "fetchBusinessForBusinessID",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "OBJECT",
-            "name": "Business",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "fetchCategoryForID",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "OBJECT",
-            "name": "Category",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "fetchAllCategoriesForBusinessID",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "LIST",
-            "name": null,
-            "ofType": {
-              "kind": "OBJECT",
-              "name": "Category",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "fetchItemsForCategoryID",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "LIST",
-            "name": null,
-            "ofType": {
-              "kind": "OBJECT",
-              "name": "Item",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "fetchCart",
-          "description": null,
-          "args": [{
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }],
-          "type": {
-            "kind": "OBJECT",
-            "name": "Cart",
-            "ofType": null
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "OBJECT",
-        "name": "Sector",
-        "description": null,
-        "fields": [{
-          "name": "name",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "INPUT_OBJECT",
-        "name": "SectorInput",
-        "description": null,
-        "fields": [],
-        "inputFields": [{
-          "name": "businessID",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "sectors",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            }
-          },
-          "defaultValue": null
-        }],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "SCALAR",
-        "name": "String",
-        "description": "The `String`scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
-        "fields": [],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "OBJECT",
-        "name": "User",
-        "description": null,
-        "fields": [{
-          "name": "id",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "ID",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "email",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }, {
-          "name": "accountType",
-          "description": null,
-          "args": [],
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "isDeprecated": false,
-          "deprecationReason": null
-        }],
-        "inputFields": [],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "INPUT_OBJECT",
-        "name": "UserSignInInput",
-        "description": null,
-        "fields": [],
-        "inputFields": [{
-          "name": "email",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "password",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }, {
-        "kind": "INPUT_OBJECT",
-        "name": "UserSignUpInput",
-        "description": null,
-        "fields": [],
-        "inputFields": [{
-          "name": "email",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "password",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }, {
-          "name": "accountType",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }],
-        "interfaces": [],
-        "enumValues": [],
-        "possibleTypes": []
-      }],
-      "directives": [{
-        "name": "deprecated",
-        "description": "The @deprecated built-in directive is used within the type system definition language to indicate deprecated portions of a GraphQL service's schema, such as deprecated fields on a type, arguments on a field, input fields on an input type, or values of an enum type.",
-        "locations": ["FIELD_DEFINITION", "ARGUMENT_DEFINITION", "INPUT_FIELD_DEFINITION", "ENUM_VALUE"],
-        "args": [{
-          "name": "reason",
-          "description": null,
-          "type": {
-            "kind": "SCALAR",
-            "name": "String",
-            "ofType": null
-          },
-          "defaultValue": "\"No longer supported\""
-        }]
-      }, {
-        "name": "include",
-        "description": "The @include directive may be provided for fields, fragment spreads, and inline fragments, and allows for conditional inclusion during execution as described by the if argument.",
-        "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
-        "args": [{
-          "name": "if",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }]
-      }, {
-        "name": "skip",
-        "description": "The @skip directive may be provided for fields, fragment spreads, and inline fragments, and allows for conditional exclusion during execution as described by the if argument.",
-        "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
-        "args": [{
-          "name": "if",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }]
-      }, {
-        "name": "specifiedBy",
-        "description": "The @specifiedBy built-in directive is used within the type system definition language to provide a scalar specification URL for specifying the behavior of custom scalar types.",
-        "locations": ["SCALAR"],
-        "args": [{
-          "name": "url",
-          "description": null,
-          "type": {
-            "kind": "NON_NULL",
-            "name": null,
-            "ofType": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          "defaultValue": null
-        }]
-      }]
-    }
-  }
+	"data": {
+		"__schema": {
+			"queryType": {
+				"name": "Query"
+			},
+			"mutationType": {
+				"name": "Mutation"
+			},
+			"subscriptionType": null,
+			"types": [{
+				"kind": "OBJECT",
+				"name": "Authentication",
+				"description": null,
+				"fields": [{
+					"name": "id",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "accessToken",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "refreshToken",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "SCALAR",
+				"name": "Boolean",
+				"description": "The `Boolean` scalar type represents `true` or `false`.",
+				"fields": [],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "OBJECT",
+				"name": "Business",
+				"description": null,
+				"fields": [{
+					"name": "id",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "userID",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "name",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "address",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "phoneNumber",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "sectors",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "industries",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "categoryIDS",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "INPUT_OBJECT",
+				"name": "BusinessInput",
+				"description": null,
+				"fields": [],
+				"inputFields": [{
+					"name": "userID",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "name",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "address",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "phoneNumber",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "OBJECT",
+				"name": "Cart",
+				"description": null,
+				"fields": [{
+					"name": "id",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "items",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "OBJECT",
+							"name": "CartItem",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "OBJECT",
+				"name": "CartItem",
+				"description": null,
+				"fields": [{
+					"name": "id",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "cartID",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "quantity",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Int",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "value",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Float",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "name",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "mainImage",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "OBJECT",
+				"name": "Category",
+				"description": null,
+				"fields": [{
+					"name": "id",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "businessID",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "name",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "description",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "SCALAR",
+						"name": "String",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "items",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "OBJECT",
+							"name": "Item",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "INPUT_OBJECT",
+				"name": "CategoryInput",
+				"description": null,
+				"fields": [],
+				"inputFields": [{
+					"name": "businessID",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "name",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "description",
+					"description": null,
+					"type": {
+						"kind": "SCALAR",
+						"name": "String",
+						"ofType": null
+					},
+					"defaultValue": null
+				}],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "INPUT_OBJECT",
+				"name": "CreateItemInput",
+				"description": null,
+				"fields": [],
+				"inputFields": [{
+					"name": "parentID",
+					"description": null,
+					"type": {
+						"kind": "SCALAR",
+						"name": "ID",
+						"ofType": null
+					},
+					"defaultValue": null
+				}, {
+					"name": "categoryID",
+					"description": null,
+					"type": {
+						"kind": "SCALAR",
+						"name": "ID",
+						"ofType": null
+					},
+					"defaultValue": null
+				}, {
+					"name": "name",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "type",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "description",
+					"description": null,
+					"type": {
+						"kind": "SCALAR",
+						"name": "String",
+						"ofType": null
+					},
+					"defaultValue": null
+				}, {
+					"name": "mainImage",
+					"description": null,
+					"type": {
+						"kind": "SCALAR",
+						"name": "String",
+						"ofType": null
+					},
+					"defaultValue": null
+				}, {
+					"name": "value",
+					"description": null,
+					"type": {
+						"kind": "SCALAR",
+						"name": "Int",
+						"ofType": null
+					},
+					"defaultValue": null
+				}],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "SCALAR",
+				"name": "Float",
+				"description": "The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point).",
+				"fields": [],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "SCALAR",
+				"name": "ID",
+				"description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID.",
+				"fields": [],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "OBJECT",
+				"name": "Industry",
+				"description": null,
+				"fields": [{
+					"name": "name",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "INPUT_OBJECT",
+				"name": "IndustryInput",
+				"description": null,
+				"fields": [],
+				"inputFields": [{
+					"name": "businessID",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "industries",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "String",
+								"ofType": null
+							}
+						}
+					},
+					"defaultValue": null
+				}],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "SCALAR",
+				"name": "Int",
+				"description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
+				"fields": [],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "OBJECT",
+				"name": "Item",
+				"description": null,
+				"fields": [{
+					"name": "id",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "name",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "type",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "parentID",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "SCALAR",
+						"name": "ID",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "categoryID",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "SCALAR",
+						"name": "ID",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "description",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "SCALAR",
+						"name": "String",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "mainImage",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "SCALAR",
+						"name": "String",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "value",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "SCALAR",
+						"name": "Float",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "OBJECT",
+				"name": "Mutation",
+				"description": null,
+				"fields": [{
+					"name": "signUp",
+					"description": null,
+					"args": [{
+						"name": "input",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "UserSignUpInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "OBJECT",
+						"name": "Authentication",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "addSectorToBusiness",
+					"description": null,
+					"args": [{
+						"name": "input",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "SectorInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "addIndustryToBusiness",
+					"description": null,
+					"args": [{
+						"name": "input",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "IndustryInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "createIndustry",
+					"description": null,
+					"args": [{
+						"name": "input",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "String",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "createSector",
+					"description": null,
+					"args": [{
+						"name": "input",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "String",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "createCategory",
+					"description": null,
+					"args": [{
+						"name": "input",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "CategoryInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "deleteCategory",
+					"description": null,
+					"args": [{
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "createBusiness",
+					"description": null,
+					"args": [{
+						"name": "input",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "BusinessInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "OBJECT",
+						"name": "Business",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "createItem",
+					"description": null,
+					"args": [{
+						"name": "input",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "CreateItemInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "OBJECT",
+						"name": "Item",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "setItemValue",
+					"description": null,
+					"args": [{
+						"name": "value",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "Float",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}, {
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "String",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "addItemWithIDToCategory",
+					"description": null,
+					"args": [{
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "deleteItemWithIDFromCategory",
+					"description": null,
+					"args": [{
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "addItemToCart",
+					"description": null,
+					"args": [{
+						"name": "userID",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}, {
+						"name": "itemID",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}, {
+						"name": "quantity",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "Int",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "removeItemFromCart",
+					"description": null,
+					"args": [{
+						"name": "cartID",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}, {
+						"name": "itemID",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "updateCartItemQuantity",
+					"description": null,
+					"args": [{
+						"name": "cartID",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}, {
+						"name": "itemID",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}, {
+						"name": "quantity",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "Int",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "OBJECT",
+				"name": "Query",
+				"description": null,
+				"fields": [{
+					"name": "signIn",
+					"description": null,
+					"args": [{
+						"name": "input",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "INPUT_OBJECT",
+								"name": "UserSignInInput",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "OBJECT",
+							"name": "Authentication",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "fetchUserWithID",
+					"description": null,
+					"args": [{
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "OBJECT",
+						"name": "User",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "fetchItem",
+					"description": null,
+					"args": [{
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "OBJECT",
+						"name": "Item",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "fetchAllItems",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "OBJECT",
+							"name": "Item",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "fetchItems",
+					"description": null,
+					"args": [{
+						"name": "limit",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "Int",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "OBJECT",
+							"name": "Item",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "fetchBusinessesForUserID",
+					"description": null,
+					"args": [{
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "OBJECT",
+							"name": "Business",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "fetchBusinessForBusinessID",
+					"description": null,
+					"args": [{
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "OBJECT",
+						"name": "Business",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "fetchCategoryForID",
+					"description": null,
+					"args": [{
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "OBJECT",
+						"name": "Category",
+						"ofType": null
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "fetchAllCategoriesForBusinessID",
+					"description": null,
+					"args": [{
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "OBJECT",
+							"name": "Category",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "fetchItemsForCategoryID",
+					"description": null,
+					"args": [{
+						"name": "id",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "OBJECT",
+							"name": "Item",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "fetchCartItems",
+					"description": null,
+					"args": [{
+						"name": "cartID",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "ID",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}, {
+						"name": "limit",
+						"description": null,
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "Int",
+								"ofType": null
+							}
+						},
+						"defaultValue": null
+					}],
+					"type": {
+						"kind": "LIST",
+						"name": null,
+						"ofType": {
+							"kind": "OBJECT",
+							"name": "CartItem",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "OBJECT",
+				"name": "Sector",
+				"description": null,
+				"fields": [{
+					"name": "name",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "INPUT_OBJECT",
+				"name": "SectorInput",
+				"description": null,
+				"fields": [],
+				"inputFields": [{
+					"name": "businessID",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "sectors",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "String",
+								"ofType": null
+							}
+						}
+					},
+					"defaultValue": null
+				}],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "SCALAR",
+				"name": "String",
+				"description": "The `String`scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+				"fields": [],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "OBJECT",
+				"name": "User",
+				"description": null,
+				"fields": [{
+					"name": "id",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "ID",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "email",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}, {
+					"name": "accountType",
+					"description": null,
+					"args": [],
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"isDeprecated": false,
+					"deprecationReason": null
+				}],
+				"inputFields": [],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "INPUT_OBJECT",
+				"name": "UserSignInInput",
+				"description": null,
+				"fields": [],
+				"inputFields": [{
+					"name": "email",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "password",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}, {
+				"kind": "INPUT_OBJECT",
+				"name": "UserSignUpInput",
+				"description": null,
+				"fields": [],
+				"inputFields": [{
+					"name": "email",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "password",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}, {
+					"name": "accountType",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}],
+				"interfaces": [],
+				"enumValues": [],
+				"possibleTypes": []
+			}],
+			"directives": [{
+				"name": "deprecated",
+				"description": "The @deprecated built-in directive is used within the type system definition language to indicate deprecated portions of a GraphQL service's schema, such as deprecated fields on a type, arguments on a field, input fields on an input type, or values of an enum type.",
+				"locations": ["FIELD_DEFINITION", "ARGUMENT_DEFINITION", "INPUT_FIELD_DEFINITION", "ENUM_VALUE"],
+				"args": [{
+					"name": "reason",
+					"description": null,
+					"type": {
+						"kind": "SCALAR",
+						"name": "String",
+						"ofType": null
+					},
+					"defaultValue": "\"No longer supported\""
+				}]
+			}, {
+				"name": "include",
+				"description": "The @include directive may be provided for fields, fragment spreads, and inline fragments, and allows for conditional inclusion during execution as described by the if argument.",
+				"locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+				"args": [{
+					"name": "if",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}]
+			}, {
+				"name": "skip",
+				"description": "The @skip directive may be provided for fields, fragment spreads, and inline fragments, and allows for conditional exclusion during execution as described by the if argument.",
+				"locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+				"args": [{
+					"name": "if",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}]
+			}, {
+				"name": "specifiedBy",
+				"description": "The @specifiedBy built-in directive is used within the type system definition language to provide a scalar specification URL for specifying the behavior of custom scalar types.",
+				"locations": ["SCALAR"],
+				"args": [{
+					"name": "url",
+					"description": null,
+					"type": {
+						"kind": "NON_NULL",
+						"name": null,
+						"ofType": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						}
+					},
+					"defaultValue": null
+				}]
+			}]
+		}
+	}
 }

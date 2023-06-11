@@ -8,28 +8,28 @@ public class AddItemToCartMutation: GraphQLMutation {
   public static let document: ApolloAPI.DocumentType = .notPersisted(
     definition: .init(
       #"""
-      mutation AddItemToCart($id: ID!, $itemID: ID!, $quantity: Int!) {
-        addItemToCart(id: $id, itemID: $itemID, quantity: $quantity)
+      mutation AddItemToCart($userID: ID!, $itemID: ID!, $quantity: Int!) {
+        addItemToCart(userID: $userID, itemID: $itemID, quantity: $quantity)
       }
       """#
     ))
 
-  public var id: ID
+  public var userID: ID
   public var itemID: ID
   public var quantity: Int
 
   public init(
-    id: ID,
+    userID: ID,
     itemID: ID,
     quantity: Int
   ) {
-    self.id = id
+    self.userID = userID
     self.itemID = itemID
     self.quantity = quantity
   }
 
   public var __variables: Variables? { [
-    "id": id,
+    "userID": userID,
     "itemID": itemID,
     "quantity": quantity
   ] }
@@ -41,7 +41,7 @@ public class AddItemToCartMutation: GraphQLMutation {
     public static var __parentType: ApolloAPI.ParentType { YourLineAPI.Objects.Mutation }
     public static var __selections: [ApolloAPI.Selection] { [
       .field("addItemToCart", Bool.self, arguments: [
-        "id": .variable("id"),
+        "userID": .variable("userID"),
         "itemID": .variable("itemID"),
         "quantity": .variable("quantity")
       ]),
