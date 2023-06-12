@@ -83,8 +83,8 @@ class CustomerCartViewModel: ObservableObject {
         }
     }
     
-    func itemForID(_ ID: String) -> Item? {
-        return nil
+    func getItemForID(_ ID: String) -> Item? {
+        return items.first { $0.item.id == ID }?.item
     }
     
     func getTotalPrice() -> Double {

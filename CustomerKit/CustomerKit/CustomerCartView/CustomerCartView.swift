@@ -12,11 +12,13 @@ import Utilities
 import Presentation
 import Resources
 import Domain
+import Data
 
 public struct CustomerCartView: View {
     @StateObject fileprivate var viewModel: CustomerCartViewModel
     @State var currentPageIndex: Int = 0
     @State var totalPrice: Double = 0.0
+    @State private var selectedItem: Item? = nil
 
     init(viewModel: CustomerCartViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -52,6 +54,14 @@ public struct CustomerCartView: View {
             .onAppear {
                 viewModel.getCart()
             }
+            .sheet(item: $selectedItem) { selectedItem in
+                
+                    let webService = WebService()
+                    let viewModel = CustomerItemDetailViewModel(item: selectedItem, webService: webService, userStorage: UserStorage())
+                    
+                    CustomerItemDetailView(viewModel: viewModel)
+                
+            }
         }
     }
 }
@@ -64,11 +74,11 @@ extension CustomerCartView: ItemCartCellDelegate {
     }
     
     public func didTapCell(with id: String) {
-//        NavigationView {
-//            let webService = WebService()
-//            let viewModel = CustomerItemDetailViewModel(item: <#T##Item#>, webService: <#T##WebServiceProtocol#>, userStorage: <#T##UserStorageProtocol#>)
-//            CustomerItemDetailView(viewModel: <#T##CustomerItemDetailViewModel#>)
-//        }
+        guard
+            let item = viewModel.getItemForID(id)
+        else
+        { return }
+        self.selectedItem = item
     }
     
     public func didTapQuantityButton(with id: String) {

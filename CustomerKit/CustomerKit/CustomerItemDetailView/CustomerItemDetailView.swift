@@ -56,7 +56,7 @@ public struct CustomerItemDetailView: View {
                 Spacer()
             })
         }
-        .navigationTitle("Store")
+        .navigationTitle(viewModel.item.title)
     }
 }
 
@@ -171,10 +171,10 @@ struct ItemInfoView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(item.title)
-                .font(.title)
-                .fontWeight(.bold)
-                .frame(maxWidth: .infinity, alignment: .leading)
+//            Text(item.title)
+//                .font(.title)
+//                .fontWeight(.bold)
+//                .frame(maxWidth: .infinity, alignment: .leading)
             Text("£\(item.price)")
                 .font(.callout)
                 .fontWeight(.bold)

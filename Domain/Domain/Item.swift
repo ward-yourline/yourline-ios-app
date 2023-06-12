@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Item {
+public struct Item: Identifiable {
     public let id: String
     public let imageURL: String
     public let title: String
