@@ -37,7 +37,7 @@ class CustomerHomeViewModel: ObservableObject, ItemsCollectionViewDelegate {
                                 imageURL: item.mainImage ?? "",
                                 title: item.name,
                                 description: item.description ?? "",
-                                price: "£100.00"
+                                price: 100.00
                             )
                         }
                     }

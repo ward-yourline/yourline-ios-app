@@ -14,7 +14,7 @@ import Resources
 import Domain
 
 public struct CustomerCartView: View {
-    @StateObject private var viewModel: CustomerCartViewModel
+    @StateObject fileprivate var viewModel: CustomerCartViewModel
     @State var currentPageIndex: Int = 0
     @State var totalPrice: Double = 0.0
 
@@ -28,12 +28,8 @@ public struct CustomerCartView: View {
         NavigationView {
             VStack(spacing: 0) {
                 List {
-                    ForEach(viewModel.items, id: \.id) { item in
-                        ItemCartCell(cartItem: item) { id in
-                            viewModel.removeItemFromCart(with: id) { result in
-                                    // TODO
-                            }
-                        }
+                    ForEach(viewModel.items, id: \.item.id) { item in
+                        ItemCartCellView(cartItem: item, delegate: self)
                     }
                 }
                 .listStyle(.plain)
@@ -60,95 +56,23 @@ public struct CustomerCartView: View {
     }
 }
 
-public struct ItemCartCell: View {
-
-    private let cartItem: CartItem
-    @State private var deleteBlock: ((String) -> Void)?
-    
-    init(cartItem: CartItem, deleteBlock: ((String) -> Void)?) {
-        self.deleteBlock = deleteBlock
-        self.cartItem = cartItem
+extension CustomerCartView: ItemCartCellDelegate {
+    public func didTapDeleteButton(with id: String) {
+        viewModel.removeItemFromCart(with: id) { result in
+                // TODO
+        }
     }
     
-    public var body: some View {
-        VStack {
-            HStack(alignment: .top) {
-                VStack {
-                    AsyncImage(url: URL(string: cartItem.imageURL)) { phase in
-                        switch phase {
-                        case .empty:
-                            Image("product_placeholder")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        case .success(let image):
-                            image
-                                .resizable()
-                        case .failure:
-                            Image(systemName: "exclamationmark.circle")
-                                .resizable()
-                                .foregroundColor(.red)
-                        @unknown default:
-                            fatalError("Unhandled AsyncImage phase")
-                        }
-                    }
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 60, height: 60)
-                    .clipped()
-                }
-                
-                VStack(alignment: .leading, spacing: 10) {
-                    VStack(alignment: .leading, spacing: 5.0) {
-                        Text(cartItem.title)
-                            .font(.body)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(1)
-                        Text("\(cartItem.price)")
-                            .font(Fonts.bold.swiftUIFont())
-                            .lineLimit(1)
-                    }
-                    
-                    HStack {
-                        HStack {
-                            Text("\(cartItem.quantity)")
-                            Button {
-                                // TODO
-                            } label: {
-                                Image(systemName: "chevron.down")
-                            }
-                        }
-                        .foregroundColor(Color(red: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/, green: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/, blue: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/))
-                        .padding(5)
-                        .background(Color.black.opacity(0.03))
-                        .frame(height: 30)
-                        .clipped()
-                        .cornerRadius(5)
-                        
-                        Spacer()
-                        
-                        Button {
-                            deleteBlock?(cartItem.id)
-                        } label: {
-                            Image(systemName: "trash")
-                                .resizable()
-                                .foregroundColor(Color(red: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/, green: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/, blue: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/))
-                                .frame(width: 20, height: 20, alignment: .center)
-                        }
-                        .frame(width: 30, height: 30, alignment: .center)
-                        .buttonStyle(.plain)
-                    }
-                }
-                .padding(.leading)
-                Spacer()
-            }
-        }
-        .padding(.leading, 0) // Set horizontal padding to zero
-        .listRowSeparator(.hidden)
-        .padding()
-        .background(Color.white)
-        .cornerRadius(8)
-        .shadow(radius: 2)
-        .frame(height: 110)
-        .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+    public func didTapCell(with id: String) {
+//        NavigationView {
+//            let webService = WebService()
+//            let viewModel = CustomerItemDetailViewModel(item: <#T##Item#>, webService: <#T##WebServiceProtocol#>, userStorage: <#T##UserStorageProtocol#>)
+//            CustomerItemDetailView(viewModel: <#T##CustomerItemDetailViewModel#>)
+//        }
+    }
+    
+    public func didTapQuantityButton(with id: String) {
+        // TODO
     }
 }
 

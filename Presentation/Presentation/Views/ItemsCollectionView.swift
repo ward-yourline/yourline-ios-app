@@ -104,12 +104,12 @@ public struct ItemsCollectionView: View {
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
         ItemsCollectionView(items: [
-            .init(id: "1", imageURL: "image1", title: "Mock Title", description: "Mock subtitle", price: "£100.00"),
-            .init(id: "2", imageURL: "image2", title: "Mock Title", description: "Mock subtitle", price: "£100.00"),
-            .init(id: "3", imageURL: "image3", title: "Mock Title", description: "Mock subtitle", price: "£100.00"),
-            .init(id: "4", imageURL: "image4", title: "Mock Title", description: "Mock subtitle", price: "£100.00"),
-            .init(id: "5", imageURL: "image5", title: "Mock Title", description: "Mock subtitle", price: "£100.00"),
-            .init(id: "6", imageURL: "image6", title: "Mock Title", description: "Mock subtitle", price: "£100.00")
+            .init(id: "1", imageURL: "image1", title: "Mock Title", description: "Mock subtitle", price: 100.00),
+            .init(id: "2", imageURL: "image2", title: "Mock Title", description: "Mock subtitle", price: 100.00),
+            .init(id: "3", imageURL: "image3", title: "Mock Title", description: "Mock subtitle", price: 100.00),
+            .init(id: "4", imageURL: "image4", title: "Mock Title", description: "Mock subtitle", price: 100.00),
+            .init(id: "5", imageURL: "image5", title: "Mock Title", description: "Mock subtitle", price: 100.00),
+            .init(id: "6", imageURL: "image6", title: "Mock Title", description: "Mock subtitle", price: 100.00)
         ], delegate: nil)
     }
 }

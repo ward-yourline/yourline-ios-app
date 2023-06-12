@@ -42,14 +42,14 @@ class CustomerCartViewModel: ObservableObject {
                 guard let items = cart.items else { return }
             
                 let cartItems = items.compactMap { item in
-                    CartItem(
+                    let itemDecorator = Item(
                         id: item?.id ?? "",
                         imageURL: item?.mainImage ?? "",
                         title: item?.name ?? "",
                         description: "",
-                        price: ceil(item!.value * 10) / 10.0,
-                        quantity: item?.quantity ?? 0
+                        price: ceil(item!.value * 10) / 10.0
                     )
+                    return CartItem(item: itemDecorator, quantity: item?.quantity ?? 0)
                 }
                 
                 self.items = cartItems
@@ -72,7 +72,7 @@ class CustomerCartViewModel: ObservableObject {
                 
                 if graphResult.errors == nil {
                     self?.items.removeAll { cartItem in
-                        cartItem.id == id
+                        cartItem.item.id == id
                     }
                 }
                 
@@ -83,7 +83,11 @@ class CustomerCartViewModel: ObservableObject {
         }
     }
     
+    func itemForID(_ ID: String) -> Item? {
+        return nil
+    }
+    
     func getTotalPrice() -> Double {
-        return items.reduce(0.0) { $0 + $1.price }
+        return items.reduce(0.0) { $0 + $1.item.price }
     }
 }

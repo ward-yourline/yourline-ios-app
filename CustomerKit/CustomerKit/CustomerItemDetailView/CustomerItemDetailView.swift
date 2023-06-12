@@ -175,7 +175,7 @@ struct ItemInfoView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Text(item.price)
+            Text("£\(item.price)")
                 .font(.callout)
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -195,7 +195,7 @@ struct ItemDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let item = Item(id: "123", imageURL: "http://localhost:8081/image/62a59176-5846-45d0-b14c-be896f5a90df", title: "Product title", description: """
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-""", price: "£100.00")
+""", price: 100.00)
         let vm = CustomerItemDetailViewModel(item: item, webService: WebService(), userStorage: UserStorage())
         CustomerItemDetailView(viewModel: vm)
     }
