@@ -13,19 +13,21 @@ import Presentation
 import Resources
 import Domain
 import Data
+import CheckoutKit
 
 public struct CustomerCartView: View {
     @StateObject fileprivate var viewModel: CustomerCartViewModel
     @State var currentPageIndex: Int = 0
     @State var totalPrice: Double = 0.0
     @State private var selectedItem: Item? = nil
-
+    
     init(viewModel: CustomerCartViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
     @State private var itemCount = 0
-
+    @State private var shouldOpenCheckOutView = false
+    
     public var body: some View {
         NavigationView {
             VStack(spacing: 0) {
@@ -44,23 +46,28 @@ public struct CustomerCartView: View {
                         Text("£\(totalPrice)")
                     }
                     WideButton(buttonTitle: "Continue with purchase") {
-                        // TODO
+                        shouldOpenCheckOutView = true
                     }
                 }
                 .padding(.horizontal, 10)
                 .padding(.bottom, 10)
+                
+                NavigationLink(
+                    destination:  CheckoutView(),
+                    isActive: $shouldOpenCheckOutView,
+                    label: { EmptyView() }
+                )
+                .hidden()
             }
             .navigationTitle("Cart")
             .onAppear {
                 viewModel.getCart()
             }
             .sheet(item: $selectedItem) { selectedItem in
+                let webService = WebService()
+                let viewModel = CustomerItemDetailViewModel(item: selectedItem, webService: webService, userStorage: UserStorage())
                 
-                    let webService = WebService()
-                    let viewModel = CustomerItemDetailViewModel(item: selectedItem, webService: webService, userStorage: UserStorage())
-                    
-                    CustomerItemDetailView(viewModel: viewModel)
-                
+                CustomerItemDetailView(viewModel: viewModel)
             }
         }
     }
@@ -69,7 +76,7 @@ public struct CustomerCartView: View {
 extension CustomerCartView: ItemCartCellDelegate {
     public func didTapDeleteButton(with id: String) {
         viewModel.removeItemFromCart(with: id) { result in
-                // TODO
+            // TODO
         }
     }
     

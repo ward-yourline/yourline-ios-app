@@ -20,6 +20,9 @@
       location = "group:Presentation/Presentation.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:CheckoutKit/CheckoutKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CustomerKit/CustomerKit.xcodeproj">
    </FileRef>
    <FileRef

@@ -112,6 +112,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3585D042A37A017008D23C5"
+               BuildableName = "CheckoutKit.framework"
+               BlueprintName = "CheckoutKit"
+               ReferencedContainer = "container:../CheckoutKit/CheckoutKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F3D413D82A27D81100308061"
                BuildableName = "CustomerKit.framework"
                BlueprintName = "CustomerKit"

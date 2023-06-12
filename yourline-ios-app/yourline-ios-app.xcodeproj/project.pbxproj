@@ -30,6 +30,8 @@
 		F317B0622A23AAC500438B9F /* yourline_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B0612A23AAC500438B9F /* yourline_ios_appTests.swift */; };
 		F317B06C2A23AAC500438B9F /* yourline_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B06B2A23AAC500438B9F /* yourline_ios_appUITests.swift */; };
 		F317B06E2A23AAC500438B9F /* yourline_ios_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317B06D2A23AAC500438B9F /* yourline_ios_appUITestsLaunchTests.swift */; };
+		F3585CF92A379FC2008D23C5 /* CheckoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3585CF82A379FC2008D23C5 /* CheckoutKit.framework */; };
+		F3585CFA2A379FC2008D23C5 /* CheckoutKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3585CF82A379FC2008D23C5 /* CheckoutKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F373E26E2A23AC9B00EED2E8 /* MainViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373E26D2A23AC9B00EED2E8 /* MainViewRouter.swift */; };
 		F3D413CD2A27D74300308061 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413CC2A27D74300308061 /* Presentation.framework */; };
 		F3D413CE2A27D74300308061 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3D413CC2A27D74300308061 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -68,6 +70,7 @@
 				F3150B742A23B47800C90C7A /* Utilities.framework in Embed Frameworks */,
 				F3150BA42A2529F500C90C7A /* Resources.framework in Embed Frameworks */,
 				F3150BE22A26251B00C90C7A /* Webservice.framework in Embed Frameworks */,
+				F3585CFA2A379FC2008D23C5 /* CheckoutKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +101,8 @@
 		F317B0672A23AAC500438B9F /* yourline-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yourline-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F317B06B2A23AAC500438B9F /* yourline_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourline_ios_appUITests.swift; sourceTree = "<group>"; };
 		F317B06D2A23AAC500438B9F /* yourline_ios_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourline_ios_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3585CEE2A379CAA008D23C5 /* CheckOutKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CheckOutKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3585CF82A379FC2008D23C5 /* CheckoutKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CheckoutKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F373E26D2A23AC9B00EED2E8 /* MainViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRouter.swift; sourceTree = "<group>"; };
 		F3D413CC2A27D74300308061 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D414092A27D99200308061 /* CustomerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CustomerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +120,7 @@
 				F3150B732A23B47800C90C7A /* Utilities.framework in Frameworks */,
 				F3150BA32A2529F500C90C7A /* Resources.framework in Frameworks */,
 				F3150BE12A26251B00C90C7A /* Webservice.framework in Frameworks */,
+				F3585CF92A379FC2008D23C5 /* CheckoutKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +146,8 @@
 		F3150B3B2A23B28800C90C7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3585CF82A379FC2008D23C5 /* CheckoutKit.framework */,
+				F3585CEE2A379CAA008D23C5 /* CheckOutKit.framework */,
 				F3D414092A27D99200308061 /* CustomerKit.framework */,
 				F3D413CC2A27D74300308061 /* Presentation.framework */,
 				F3150C142A26256800C90C7A /* Domain.framework */,
