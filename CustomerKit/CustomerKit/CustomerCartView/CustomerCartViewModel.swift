@@ -29,7 +29,7 @@ class CustomerCartViewModel: ObservableObject {
     }
     
     func getCart() {
-        let query = FetchCartQuery(id: "cart__2R3Spm0CJG398iCrBhnolN7JPUp")
+        let query = FetchCartQuery(id: "cart_2T7byKs78YedDIYSehj2VuH5bCb")
         
         webService.apollo.fetch(query: query, cachePolicy: .fetchIgnoringCacheCompletely) { result in
             switch result {
