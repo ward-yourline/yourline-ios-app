@@ -30,20 +30,13 @@ struct SignInView: View {
     
     var body: some View {
         ZStack {
-            
             VStack(spacing: 20) {
-                VStack {
-                    HStack {
-                        Text("Your")
-                            .font(.custom(Fonts.bold.name, size: 48))
-                            .foregroundColor(Color.softBlue)
-                        Text("Line")
-                            .font(.custom(Fonts.bold.name, size: 48))
-                            .foregroundColor(.darkSlateGray)
-                    }
-                    Text("Business and pleasure").font(.custom(Fonts.regular.name, size: 20))
+                HStack {
+                    Image("yl_splash_logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 256, height: 196, alignment: .center)
                 }
-                .padding(.bottom, 40)
                 
                 VStack(alignment: .leading, spacing: 20) {
                     Text("Sign in").font(.custom(Fonts.bold.name, size: 18))
@@ -128,7 +121,7 @@ struct SignInView: View {
                 }
             }
             .padding(.horizontal, 20.0)
-            .padding(.vertical, 20.0)
+            .padding(.vertical, 10.0)
             
             // Activity when busy
             if isBusy {
