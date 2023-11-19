@@ -1,0 +1,305 @@
+"""
+The @defer directive may be specified on a fragment spread to imply de-prioritization, that causes the fragment to be omitted in the initial response, and delivered as a subsequent response afterward. A query with @defer directive will cause the request to potentially return multiple responses, where non-deferred data is delivered in the initial response and data deferred delivered in a subsequent response. @include and @skip take precedence over @defer.
+"""
+directive @defer(if: Boolean = true, label: String) on FRAGMENT_SPREAD | INLINE_FRAGMENT
+
+"""
+A directive used by the Apollo iOS client to annotate operations or fragments that should be used exclusively for generating local cache mutations instead of as standard operations.
+"""
+directive @apollo_client_ios_localCacheMutation on QUERY | MUTATION | SUBSCRIPTION | FRAGMENT_DEFINITION
+
+"""
+Directs the executor to defer this fragment when the `if` argument is true or undefined.
+"""
+directive @defer(
+  """Deferred when true or undefined."""
+  if: Boolean
+
+  """Unique name"""
+  label: String
+) on FRAGMENT_SPREAD | INLINE_FRAGMENT
+
+type Authentication {
+  id: ID!
+  accessToken: String!
+  refreshToken: String!
+}
+
+type Business {
+  id: ID!
+  userID: ID!
+  name: String!
+  address: String!
+  phoneNumber: String!
+  email: String
+  sectors: [String]
+  industries: [String]
+  categoryIDS: [String]
+  companyLogo: String
+  createdDate: String
+}
+
+input BusinessInput {
+  userID: ID!
+  name: String!
+  email: String
+  address: String!
+  phoneNumber: String!
+  companyLogo: String
+}
+
+type Cart {
+  id: ID!
+  userID: ID!
+  items: [CartItem]
+}
+
+type CartItem {
+  id: ID!
+  cartID: ID!
+  itemID: ID!
+  quantity: Int!
+  value: Float!
+  name: String!
+  mainImage: String!
+}
+
+type Category {
+  id: ID!
+  businessID: ID!
+  name: String!
+  description: String
+  type: String!
+  items: [Item]
+}
+
+input CategoryInput {
+  businessID: String!
+  name: String!
+  description: String
+  type: String!
+}
+
+input CreateItemInput {
+  businessID: ID!
+  parentID: ID
+  categoryID: ID
+  name: String!
+  type: String!
+  description: String
+  mainImage: String
+  value: Float!
+  isVisible: Boolean!
+  isPurchasable: Boolean!
+}
+
+input EditItemInput {
+  itemID: ID!
+  name: String
+  description: String
+  mainImage: String
+  isVisible: Boolean
+  isPurchasable: Boolean
+  value: Float
+}
+
+type Industry {
+  name: String!
+}
+
+input IndustryInput {
+  businessID: String!
+  industries: [String]!
+}
+
+type Item {
+  id: ID!
+  name: String!
+  type: String!
+  businessID: ID!
+  categoryID: ID
+  description: String
+  mainImage: String
+  value: Float
+  childrenIDs: [String!]
+  parentIDs: [String!]
+  isVisible: Boolean
+  isPurchasable: Boolean
+  stock: Int
+}
+
+type Mutation {
+  signUp(input: UserSignUpInput!): Authentication
+  updateUserDetails(input: UserDetailsInput!): User
+  deleteAccount(id: ID!): Boolean!
+  deleteBusiness(id: ID!): Boolean!
+  addSectorToBusiness(input: SectorInput!): Boolean!
+  addIndustryToBusiness(input: IndustryInput!): Boolean!
+  createIndustry(input: String!): Boolean!
+  createSector(input: String!): Boolean!
+  createCategory(input: CategoryInput!): Boolean!
+  deleteCategory(id: ID!): Boolean!
+  createBusiness(input: BusinessInput!): Business
+  addBusinessLogoToID(id: ID!, logo: String!): String
+  createItem(input: CreateItemInput!): Item
+  editItem(input: EditItemInput!): Boolean!
+  setItemValue(value: Float!, id: String!): Boolean!
+  addItemWithIDToCategory(id: ID!): Boolean!
+  deleteItemWithIDFromCategory(id: ID!): Boolean!
+  deleteItemWithID(id: ID!): Boolean!
+  freezeItem(id: ID!): Boolean!
+  unFreezeItem(id: ID!): Boolean!
+  insertStockToInventory(itemID: ID!, quantity: Int!): Boolean!
+  addStockToInventory(itemID: ID!, quantity: Int!): Boolean!
+  removeStockToInventory(itemID: ID!, quantity: Int!): Boolean!
+  setStockQuantity(itemID: ID!, quantity: Int!): Boolean!
+  adjustStockLevels(itemID: ID!, adjustment: Int!): Boolean!
+  addChildIDToItem(parentID: ID!, childID: ID!): Boolean!
+  deleteChildIDForItem(childID: ID!, parentID: ID!): Boolean!
+  addItemToCart(userID: ID!, itemID: ID!, quantity: Int!): Boolean!
+  removeItemFromCart(cartItemID: ID!): Boolean!
+  updateCartItemQuantity(cartID: ID!, itemID: ID!, quantity: Int!): Boolean!
+  deleteCart(cartID: ID!): Boolean!
+  createTransaction(input: [TransactionInput!]): Boolean!
+  updateTransactionStatus(transactionID: ID!, newStatus: String): Boolean!
+  insertOperatingHours(input: [ServiceOperatingHoursInput!]!): Boolean!
+  removeOperatingHours(id: ID!, dayOfWeek: String!): Boolean!
+  updateOperatingHours(input: [ServiceOperatingHoursInput!]!): Boolean!
+  addEmailToMalingList(email: String!): Boolean!
+  addPollChoice(choice: String!): Boolean!
+}
+
+type Query {
+  signIn(input: UserSignInInput!): Authentication!
+  fetchUserWithID(id: ID!): User
+  fetchItem(id: ID!): Item
+  fetchAllItems(itemType: String, orderedBy: String): [Item]
+  fetchItems(limit: Int!, name: String, itemType: String, orderedBy: String): [Item]
+  fetchRecommendedItems(limit: Int!): [Item]
+  fetchTrendingItems(limit: Int!): [Item]
+  fetchOffersItems(limit: Int!): [Item]
+  fetchItemsForIDs(itemIDs: [ID!]!): [Item!]!
+  fetchChildIDsForItemID(id: ID!): [String!]
+  fetchItemsForBusinessID(id: ID!, itemType: String): [Item!]!
+  fetchBusinessesForUserID(id: ID!): [Business]
+  fetchBusinessForBusinessID(id: ID!): Business
+  fetchCategoryForID(id: ID!): Category
+  fetchAllCategoriesForBusinessID(id: ID!, ofType: String): [Category]
+  fetchItemsForCategoryID(id: ID!): [Item]
+  getStockQuantity(itemID: ID!): Int!
+  fetchCart(cartID: ID!, limit: Int!): Cart
+  fetchCartForUser(userID: ID!, limit: Int!): Cart
+  getTransaction(id: ID!): Transaction
+  getTransactionsForCustomer(customerId: ID!): [Transaction]
+  getTransactionRequestsForBusiness(businessID: ID!): [Transaction]
+  getOperatingHoursForService(id: ID!): [ServiceOperatingHours!]
+  getTimeLineItems(userID: ID!): [TimeLineItem!]!
+}
+
+type Sector {
+  name: String!
+}
+
+input SectorInput {
+  businessID: String!
+  sectors: [String]!
+}
+
+type ServiceOperatingHours {
+  itemID: ID!
+  dayOfWeek: String!
+  isOpen: Boolean!
+  startTime: String
+  endTime: String
+}
+
+input ServiceOperatingHoursInput {
+  itemID: ID!
+  dayOfWeek: String!
+  isOpen: Boolean!
+  startTime: String
+  endTime: String
+}
+
+type TimeLineItem {
+  id: ID!
+  year: String!
+  month: String!
+  day: String!
+  time: String!
+  content: String!
+}
+
+type Transaction {
+  id: ID!
+  purchaseDate: String!
+  customerID: String!
+  itemID: String!
+  businessID: String!
+  quantity: Int!
+  unitPrice: Float!
+  totalPrice: Float!
+  paymentMethod: String!
+  transactionStatus: String!
+  shippingAddress: String
+  billingAddress: String
+  orderNumber: String!
+  createdDate: String
+  additionalDetails: String
+  itemName: String!
+}
+
+input TransactionInput {
+  purchaseDate: String!
+  customerID: String!
+  itemID: String!
+  quantity: Int!
+  unitPrice: Float!
+  totalPrice: Float!
+  paymentMethod: String!
+  transactionStatus: String!
+  shippingAddress: String
+  billingAddress: String
+  additionalDetails: String
+}
+
+type User {
+  id: ID!
+  email: String!
+  accountType: String!
+  username: String
+  userImage: String
+  address: String
+  postCode: String
+  telephoneNumber: String
+}
+
+input UserDetailsInput {
+  userID: ID!
+  email: String
+  accountType: String
+  username: String
+  userImage: String
+  address: String
+  postCode: String
+  telephoneNumber: String
+}
+
+input UserSignInInput {
+  email: String!
+  password: String!
+}
+
+input UserSignUpInput {
+  email: String!
+  username: String!
+  password: String!
+  accountType: String!
+  userImage: String
+  firstName: String!
+  surname: String!
+  address: String!
+  postCode: String!
+  billingAddress: String
+  phoneNumber: String!
+}

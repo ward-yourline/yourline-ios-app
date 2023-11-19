@@ -1,0 +1,23 @@
+query FetAllItems {
+    fetchAllItems {
+      name
+      id
+      type
+      parentID
+      categoryID
+      description
+      mainImage
+    }
+}
+
+query FetchItems($limit: Int!) {
+    fetchItems(limit: $limit) {
+      name
+      id
+      type
+      parentID
+      categoryID
+      description
+      mainImage
+    }
+}
