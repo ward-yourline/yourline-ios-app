@@ -13,8 +13,8 @@ import Data // TODO: Put in VM
 
 struct SignInView: View {
     
-    @State private var emailText = "customer@customer.com"
-    @State private var passwordText = "123"
+    @State private var emailText = ""
+    @State private var passwordText = ""
     @State private var errorMessage = ""
     @State private var isSignInError = false
     @State private var isBusy = false
