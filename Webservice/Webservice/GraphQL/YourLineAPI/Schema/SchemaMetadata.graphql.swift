@@ -3,32 +3,43 @@
 
 import ApolloAPI
 
-public typealias ID = String
-
-public protocol SelectionSet: ApolloAPI.SelectionSet & ApolloAPI.RootSelectionSet
+public protocol YourLineAPI_SelectionSet: ApolloAPI.SelectionSet & ApolloAPI.RootSelectionSet
 where Schema == YourLineAPI.SchemaMetadata {}
 
-public protocol InlineFragment: ApolloAPI.SelectionSet & ApolloAPI.InlineFragment
+public protocol YourLineAPI_InlineFragment: ApolloAPI.SelectionSet & ApolloAPI.InlineFragment
 where Schema == YourLineAPI.SchemaMetadata {}
 
-public protocol MutableSelectionSet: ApolloAPI.MutableRootSelectionSet
+public protocol YourLineAPI_MutableSelectionSet: ApolloAPI.MutableRootSelectionSet
 where Schema == YourLineAPI.SchemaMetadata {}
 
-public protocol MutableInlineFragment: ApolloAPI.MutableSelectionSet & ApolloAPI.InlineFragment
+public protocol YourLineAPI_MutableInlineFragment: ApolloAPI.MutableSelectionSet & ApolloAPI.InlineFragment
 where Schema == YourLineAPI.SchemaMetadata {}
 
-public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
-  public static let configuration: ApolloAPI.SchemaConfiguration.Type = SchemaConfiguration.self
+public extension YourLineAPI {
+  typealias ID = String
 
-  public static func objectType(forTypename typename: String) -> ApolloAPI.Object? {
-    switch typename {
-    case "Query": return YourLineAPI.Objects.Query
-    case "Authentication": return YourLineAPI.Objects.Authentication
-    default: return nil
+  typealias SelectionSet = YourLineAPI_SelectionSet
+
+  typealias InlineFragment = YourLineAPI_InlineFragment
+
+  typealias MutableSelectionSet = YourLineAPI_MutableSelectionSet
+
+  typealias MutableInlineFragment = YourLineAPI_MutableInlineFragment
+
+  enum SchemaMetadata: ApolloAPI.SchemaMetadata {
+    public static let configuration: ApolloAPI.SchemaConfiguration.Type = SchemaConfiguration.self
+
+    public static func objectType(forTypename typename: String) -> ApolloAPI.Object? {
+      switch typename {
+      case "Query": return YourLineAPI.Objects.Query
+      case "Authentication": return YourLineAPI.Objects.Authentication
+      default: return nil
+      }
     }
   }
-}
 
-public enum Objects {}
-public enum Interfaces {}
-public enum Unions {}
+  enum Objects {}
+  enum Interfaces {}
+  enum Unions {}
+
+}

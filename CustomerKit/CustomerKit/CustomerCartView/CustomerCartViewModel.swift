@@ -29,58 +29,59 @@ class CustomerCartViewModel: ObservableObject {
     }
     
     func getCart() {
-        let query = FetchCartQuery(id: "cart_2T7byKs78YedDIYSehj2VuH5bCb")
-        
-        webService.apollo.fetch(query: query, cachePolicy: .fetchIgnoringCacheCompletely) { result in
-            switch result {
-            case .success(let result):
-                if let errors = result.errors {
-                    print(errors)
-                }
-                
-                guard let cart = result.data?.fetchCart else { return }
-                guard let items = cart.items else { return }
-            
-                let cartItems = items.compactMap { item in
-                    let itemDecorator = Item(
-                        id: item?.id ?? "",
-                        imageURL: item?.mainImage ?? "",
-                        title: item?.name ?? "",
-                        description: "",
-                        price: ceil(item!.value * 10) / 10.0
-                    )
-                    return CartItem(item: itemDecorator, quantity: item?.quantity ?? 0)
-                }
-                
-                self.items = cartItems
-                self.cartID = cart.id
-                
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+        print("getCart() called")
+//        let query = FetchCartQuery(id: "cart_2T7byKs78YedDIYSehj2VuH5bCb")
+//        
+//        webService.apollo.fetch(query: query, cachePolicy: .fetchIgnoringCacheCompletely) { result in
+//            switch result {
+//            case .success(let result):
+//                if let errors = result.errors {
+//                    print(errors)
+//                }
+//                
+//                guard let cart = result.data?.fetchCart else { return }
+//                guard let items = cart.items else { return }
+//            
+//                let cartItems = items.compactMap { item in
+//                    let itemDecorator = Item(
+//                        id: item?.id ?? "",
+//                        imageURL: item?.mainImage ?? "",
+//                        title: item?.name ?? "",
+//                        description: "",
+//                        price: ceil(item!.value * 10) / 10.0
+//                    )
+//                    return CartItem(item: itemDecorator, quantity: item?.quantity ?? 0)
+//                }
+//                
+//                self.items = cartItems
+//                self.cartID = cart.id
+//                
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
     }
     
     func removeItemFromCart(with id: String, completion: ((String) -> Void)) {
-        
-        let mutation = RemoveItemFromCartMutation(cartID: cartID, itemID: id)
-        
-        webService.apollo.perform(mutation: mutation) { [weak self] result in
-            switch result {
-                
-            case .success(let graphResult):
-                
-                if graphResult.errors == nil {
-                    self?.items.removeAll { cartItem in
-                        cartItem.item.id == id
-                    }
-                }
-                
-            case .failure(_):
-                // TODO
-                break
-            }
-        }
+        completion("removed item")
+//        let mutation = RemoveItemFromCartMutation(cartID: cartID, itemID: id)
+//        
+//        webService.apollo.perform(mutation: mutation) { [weak self] result in
+//            switch result {
+//                
+//            case .success(let graphResult):
+//                
+//                if graphResult.errors == nil {
+//                    self?.items.removeAll { cartItem in
+//                        cartItem.item.id == id
+//                    }
+//                }
+//                
+//            case .failure(_):
+//                // TODO
+//                break
+//            }
+//        }
     }
     
     func getItemForID(_ ID: String) -> Item? {

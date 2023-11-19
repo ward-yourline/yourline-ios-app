@@ -3,7 +3,7 @@
 
 import ApolloAPI
 
-public extension Objects {
+public extension YourLineAPI.Objects {
   static let Query = ApolloAPI.Object(
     typename: "Query",
     implementedInterfaces: []

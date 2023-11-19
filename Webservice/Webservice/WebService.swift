@@ -34,8 +34,8 @@ public final class WebService: WebServiceProtocol {
     public func signIn(with email: String, password: String, and completion: @escaping RequestCompletion) {
         // Magic here
 
-        let input = UserSignInInput(email: email, password: password)
-        let query = SignInQuery(input: input)
+        let input = YourLineAPI.UserSignInInput(email: email, password: password)
+        let query = YourLineAPI.SignInQuery(input: input)
 
         apollo.fetch(query: query) { result in // Change the query name to your query name
             switch result {

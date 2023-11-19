@@ -22,30 +22,31 @@ class CustomerHomeViewModel: ObservableObject, ItemsCollectionViewDelegate {
     }
     
     func getItems() {
-        let query = FetchItemsQuery(limit: 6)
-        webService.apollo.fetch(query: query, cachePolicy: .fetchIgnoringCacheCompletely) { result in
-            switch result {
-            case .success(let fetchAllItems):
-                if let errors = fetchAllItems.errors {
-                    print(errors)
-                }
-                if let items = fetchAllItems.data?.fetchItems {
-                    DispatchQueue.main.async {
-                        self.items = items.compactMap { $0 }.map { item in
-                            Item(
-                                id: item.id,
-                                imageURL: item.mainImage ?? "",
-                                title: item.name,
-                                description: item.description ?? "",
-                                price: 100.00
-                            )
-                        }
-                    }
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+        print("getItems() called")
+//        let query = FetchItemsQuery(limit: 6)
+//        webService.apollo.fetch(query: query, cachePolicy: .fetchIgnoringCacheCompletely) { result in
+//            switch result {
+//            case .success(let fetchAllItems):
+//                if let errors = fetchAllItems.errors {
+//                    print(errors)
+//                }
+//                if let items = fetchAllItems.data?.fetchItems {
+//                    DispatchQueue.main.async {
+//                        self.items = items.compactMap { $0 }.map { item in
+//                            Item(
+//                                id: item.id,
+//                                imageURL: item.mainImage ?? "",
+//                                title: item.name,
+//                                description: item.description ?? "",
+//                                price: 100.00
+//                            )
+//                        }
+//                    }
+//                }
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
     }
     
     func didTapItem(with id: String, at index: Int) {

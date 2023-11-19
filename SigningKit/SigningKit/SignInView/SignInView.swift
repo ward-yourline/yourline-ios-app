@@ -56,8 +56,8 @@ struct SignInView: View {
                 }
                 
                 WideButton(buttonTitle: "Sign in") {
-                    let input = UserSignInInput(email: emailText, password: passwordText)
-                    let query = SignInQuery(input: input)
+                    let input = YourLineAPI.UserSignInInput(email: emailText, password: passwordText)
+                    let query = YourLineAPI.SignInQuery(input: input)
                     isBusy = true
                     webService.apollo.fetch(query: query) { result in // Change the query name to your query name
                         switch result {

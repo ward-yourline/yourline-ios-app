@@ -1,43 +1,45 @@
 {
-  "schemaNamespace" : "YourLineAPI",
-  "input" : {
-    "operationSearchPaths" : [
-      "**/*.graphql"
-    ],
-    "schemaSearchPaths" : [
-      "./Schema/*.json"
-    ]
-  },
-  "output" : {
-    "testMocks" : {
-      "none" : {
-      }
+    "schemaNamespace" : "YourLineAPI",
+    "input" : {
+        "operationSearchPaths" : [
+            "**/*.graphql"
+        ],
+        "schemaSearchPaths" : [
+            "./Schema/*.json"
+        ]
     },
-    "schemaTypes" : {
-      "path" : "./YourLineAPI",
-      "moduleType" : {
-        "other" : {
+    "output" : {
+        "testMocks" : {
+            "none" : {
+            }
+        },
+        "schemaTypes": {
+            "moduleType": {
+                "embeddedInTarget": {
+                    "name": "Webservice",
+                    "accessModifier": "public"
+                }
+            },
+            "path": "./YourLineAPI/"
+        },
+        "operations" : {
+            "inSchemaModule" : {
+            }
         }
-      }
     },
-    "operations" : {
-      "inSchemaModule" : {
-      }
+    "schemaDownloadConfiguration": {
+        "downloadMethod": {
+            "introspection": {
+                "endpointURL": "http://localhost:8080/query",
+                "httpMethod": {
+                    "POST": {}
+                },
+                "includeDeprecatedInputValues": false,
+                "outputFormat": "JSON"
+            }
+        },
+        "downloadTimeout": 60,
+        "headers": [],
+        "outputPath": "./Schema/schema.json"
     }
-  },
-  "schemaDownloadConfiguration": {
-      "downloadMethod": {
-          "introspection": {
-              "endpointURL": "http://localhost:8080/query",
-              "httpMethod": {
-                  "POST": {}
-              },
-              "includeDeprecatedInputValues": false,
-              "outputFormat": "JSON"
-          }
-      },
-      "downloadTimeout": 60,
-      "headers": [],
-      "outputPath": "./Schema/schema.json"
-  }
 }

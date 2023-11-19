@@ -13,31 +13,22 @@
 		F3150BCE2A2624D800C90C7A /* Webservice.h in Headers */ = {isa = PBXBuildFile; fileRef = F3150BC02A2624D700C90C7A /* Webservice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3150BD92A2624FC00C90C7A /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150BD82A2624FC00C90C7A /* Utilities.framework */; };
 		F3150C0D2A26255400C90C7A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3150C0C2A26255400C90C7A /* Domain.framework */; };
-		F3585C842A35E1A1008D23C5 /* FetchItemsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C802A35E1A0008D23C5 /* FetchItemsQuery.graphql.swift */; };
-		F3585C852A35E1A1008D23C5 /* FetAllItemsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C812A35E1A0008D23C5 /* FetAllItemsQuery.graphql.swift */; };
-		F3585C862A35E1A1008D23C5 /* SignInQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C822A35E1A1008D23C5 /* SignInQuery.graphql.swift */; };
-		F3585C8B2A36095F008D23C5 /* AddItemToCartMutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C882A36095F008D23C5 /* AddItemToCartMutation.graphql.swift */; };
-		F3585C8C2A36095F008D23C5 /* UpdateCartItemQuantityMutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C892A36095F008D23C5 /* UpdateCartItemQuantityMutation.graphql.swift */; };
-		F3585C8D2A36095F008D23C5 /* RemoveItemFromCartMutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C8A2A36095F008D23C5 /* RemoveItemFromCartMutation.graphql.swift */; };
-		F3585C912A36177A008D23C5 /* FetchCartQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C902A36177A008D23C5 /* FetchCartQuery.graphql.swift */; };
-		F3585C932A3617F1008D23C5 /* Cart.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3585C922A3617F0008D23C5 /* Cart.graphql.swift */; };
+		F358339D2B0A946D00DB8E10 /* SignInQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35833932B0A946C00DB8E10 /* SignInQuery.graphql.swift */; };
+		F358339E2B0A946D00DB8E10 /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35833962B0A946C00DB8E10 /* Query.graphql.swift */; };
+		F358339F2B0A946D00DB8E10 /* Authentication.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35833972B0A946C00DB8E10 /* Authentication.graphql.swift */; };
+		F35833A02B0A946D00DB8E10 /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35833982B0A946C00DB8E10 /* SchemaConfiguration.swift */; };
+		F35833A12B0A946D00DB8E10 /* UserSignInInput.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358339A2B0A946C00DB8E10 /* UserSignInInput.graphql.swift */; };
+		F35833A22B0A946D00DB8E10 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358339B2B0A946C00DB8E10 /* SchemaMetadata.graphql.swift */; };
+		F35833A32B0A946D00DB8E10 /* YourLineAPI.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358339C2B0A946C00DB8E10 /* YourLineAPI.graphql.swift */; };
 		F3CA95CA2A326BF100B47BF6 /* CartQueries.graphql_bak in Resources */ = {isa = PBXBuildFile; fileRef = F3CA95C92A326BF100B47BF6 /* CartQueries.graphql_bak */; };
-		F3CA95CE2A326C7400B47BF6 /* CartItem.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95CC2A326C7400B47BF6 /* CartItem.graphql.swift */; };
-		F3CA95D02A326C8000B47BF6 /* Mutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA95CF2A326C8000B47BF6 /* Mutation.graphql.swift */; };
 		F3CA96082A33CEC300B47BF6 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA96072A33CEC300B47BF6 /* Data.framework */; };
 		F3D413322A27AE5500308061 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413312A27AE5500308061 /* WebService.swift */; };
 		F3D413882A27C87A00308061 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = F3D413762A27C87A00308061 /* apollo-codegen-config.json */; };
 		F3D413892A27C87A00308061 /* Signing.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F3D413782A27C87A00308061 /* Signing.graphql */; };
 		F3D4138B2A27C87A00308061 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = F3D4137B2A27C87A00308061 /* schema.json */; };
-		F3D4138D2A27C87A00308061 /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413822A27C87A00308061 /* Query.graphql.swift */; };
-		F3D4138E2A27C87A00308061 /* Authentication.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413832A27C87A00308061 /* Authentication.graphql.swift */; };
-		F3D4138F2A27C87A00308061 /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413842A27C87A00308061 /* SchemaConfiguration.swift */; };
-		F3D413902A27C87A00308061 /* UserSignInInput.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413862A27C87A00308061 /* UserSignInInput.graphql.swift */; };
-		F3D413912A27C87A00308061 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D413872A27C87A00308061 /* SchemaMetadata.graphql.swift */; };
 		F3D413942A27C8B500308061 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = F3D413932A27C8B500308061 /* Apollo */; };
 		F3D413962A27C8B500308061 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F3D413952A27C8B500308061 /* ApolloAPI */; };
 		F3D4140F2A27DFE400308061 /* ItemQueries.graphql_bak in Resources */ = {isa = PBXBuildFile; fileRef = F3D4140E2A27DFE400308061 /* ItemQueries.graphql_bak */; };
-		F3D414132A27E15500308061 /* Item.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D414122A27E15500308061 /* Item.graphql.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,30 +50,21 @@
 		F3150BD82A2624FC00C90C7A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3150C0C2A26255400C90C7A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F358338F2B0A918E00DB8E10 /* README_Graph.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_Graph.md; sourceTree = "<group>"; };
-		F3585C802A35E1A0008D23C5 /* FetchItemsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchItemsQuery.graphql.swift; sourceTree = "<group>"; };
-		F3585C812A35E1A0008D23C5 /* FetAllItemsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetAllItemsQuery.graphql.swift; sourceTree = "<group>"; };
-		F3585C822A35E1A1008D23C5 /* SignInQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInQuery.graphql.swift; sourceTree = "<group>"; };
-		F3585C882A36095F008D23C5 /* AddItemToCartMutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemToCartMutation.graphql.swift; sourceTree = "<group>"; };
-		F3585C892A36095F008D23C5 /* UpdateCartItemQuantityMutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCartItemQuantityMutation.graphql.swift; sourceTree = "<group>"; };
-		F3585C8A2A36095F008D23C5 /* RemoveItemFromCartMutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveItemFromCartMutation.graphql.swift; sourceTree = "<group>"; };
-		F3585C902A36177A008D23C5 /* FetchCartQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchCartQuery.graphql.swift; sourceTree = "<group>"; };
-		F3585C922A3617F0008D23C5 /* Cart.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.graphql.swift; sourceTree = "<group>"; };
+		F35833932B0A946C00DB8E10 /* SignInQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInQuery.graphql.swift; sourceTree = "<group>"; };
+		F35833962B0A946C00DB8E10 /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
+		F35833972B0A946C00DB8E10 /* Authentication.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.graphql.swift; sourceTree = "<group>"; };
+		F35833982B0A946C00DB8E10 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
+		F358339A2B0A946C00DB8E10 /* UserSignInInput.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignInInput.graphql.swift; sourceTree = "<group>"; };
+		F358339B2B0A946C00DB8E10 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
+		F358339C2B0A946C00DB8E10 /* YourLineAPI.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourLineAPI.graphql.swift; sourceTree = "<group>"; };
 		F3CA95C92A326BF100B47BF6 /* CartQueries.graphql_bak */ = {isa = PBXFileReference; lastKnownFileType = text; path = CartQueries.graphql_bak; sourceTree = "<group>"; };
-		F3CA95CC2A326C7400B47BF6 /* CartItem.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItem.graphql.swift; sourceTree = "<group>"; };
-		F3CA95CF2A326C8000B47BF6 /* Mutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutation.graphql.swift; sourceTree = "<group>"; };
 		F3CA96062A33CEBA00B47BF6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CA96072A33CEC300B47BF6 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D413312A27AE5500308061 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		F3D413762A27C87A00308061 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
 		F3D413782A27C87A00308061 /* Signing.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Signing.graphql; sourceTree = "<group>"; };
 		F3D4137B2A27C87A00308061 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		F3D413822A27C87A00308061 /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
-		F3D413832A27C87A00308061 /* Authentication.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.graphql.swift; sourceTree = "<group>"; };
-		F3D413842A27C87A00308061 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
-		F3D413862A27C87A00308061 /* UserSignInInput.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignInInput.graphql.swift; sourceTree = "<group>"; };
-		F3D413872A27C87A00308061 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
 		F3D4140E2A27DFE400308061 /* ItemQueries.graphql_bak */ = {isa = PBXFileReference; lastKnownFileType = text; path = ItemQueries.graphql_bak; sourceTree = "<group>"; };
-		F3D414122A27E15500308061 /* Item.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.graphql.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,14 +140,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F3585C872A36095F008D23C5 /* Mutations */ = {
+		F35833902B0A946C00DB8E10 /* YourLineAPI */ = {
 			isa = PBXGroup;
 			children = (
-				F3585C882A36095F008D23C5 /* AddItemToCartMutation.graphql.swift */,
-				F3585C892A36095F008D23C5 /* UpdateCartItemQuantityMutation.graphql.swift */,
-				F3585C8A2A36095F008D23C5 /* RemoveItemFromCartMutation.graphql.swift */,
+				F35833912B0A946C00DB8E10 /* Operations */,
+				F35833942B0A946C00DB8E10 /* Schema */,
+				F358339C2B0A946C00DB8E10 /* YourLineAPI.graphql.swift */,
 			);
-			path = Mutations;
+			path = YourLineAPI;
+			sourceTree = "<group>";
+		};
+		F35833912B0A946C00DB8E10 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				F35833922B0A946C00DB8E10 /* Queries */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		F35833922B0A946C00DB8E10 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				F35833932B0A946C00DB8E10 /* SignInQuery.graphql.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		F35833942B0A946C00DB8E10 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				F35833952B0A946C00DB8E10 /* Objects */,
+				F35833982B0A946C00DB8E10 /* SchemaConfiguration.swift */,
+				F35833992B0A946C00DB8E10 /* InputObjects */,
+				F358339B2B0A946C00DB8E10 /* SchemaMetadata.graphql.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		F35833952B0A946C00DB8E10 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F35833962B0A946C00DB8E10 /* Query.graphql.swift */,
+				F35833972B0A946C00DB8E10 /* Authentication.graphql.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		F35833992B0A946C00DB8E10 /* InputObjects */ = {
+			isa = PBXGroup;
+			children = (
+				F358339A2B0A946C00DB8E10 /* UserSignInInput.graphql.swift */,
+			);
+			path = InputObjects;
 			sourceTree = "<group>";
 		};
 		F3D413752A27C87A00308061 /* GraphQL */ = {
@@ -175,7 +201,7 @@
 				F3D413762A27C87A00308061 /* apollo-codegen-config.json */,
 				F3D413772A27C87A00308061 /* Queries */,
 				F3D4137A2A27C87A00308061 /* Schema */,
-				F3D4137C2A27C87A00308061 /* YourLineAPI */,
+				F35833902B0A946C00DB8E10 /* YourLineAPI */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -196,67 +222,6 @@
 				F3D4137B2A27C87A00308061 /* schema.json */,
 			);
 			path = Schema;
-			sourceTree = "<group>";
-		};
-		F3D4137C2A27C87A00308061 /* YourLineAPI */ = {
-			isa = PBXGroup;
-			children = (
-				F3D4137D2A27C87A00308061 /* Operations */,
-				F3D413802A27C87A00308061 /* Schema */,
-			);
-			path = YourLineAPI;
-			sourceTree = "<group>";
-		};
-		F3D4137D2A27C87A00308061 /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				F3585C872A36095F008D23C5 /* Mutations */,
-				F3D4137E2A27C87A00308061 /* Queries */,
-			);
-			path = Operations;
-			sourceTree = "<group>";
-		};
-		F3D4137E2A27C87A00308061 /* Queries */ = {
-			isa = PBXGroup;
-			children = (
-				F3585C902A36177A008D23C5 /* FetchCartQuery.graphql.swift */,
-				F3585C812A35E1A0008D23C5 /* FetAllItemsQuery.graphql.swift */,
-				F3585C802A35E1A0008D23C5 /* FetchItemsQuery.graphql.swift */,
-				F3585C822A35E1A1008D23C5 /* SignInQuery.graphql.swift */,
-			);
-			path = Queries;
-			sourceTree = "<group>";
-		};
-		F3D413802A27C87A00308061 /* Schema */ = {
-			isa = PBXGroup;
-			children = (
-				F3D413812A27C87A00308061 /* Objects */,
-				F3D413842A27C87A00308061 /* SchemaConfiguration.swift */,
-				F3D413852A27C87A00308061 /* InputObjects */,
-				F3D413872A27C87A00308061 /* SchemaMetadata.graphql.swift */,
-			);
-			path = Schema;
-			sourceTree = "<group>";
-		};
-		F3D413812A27C87A00308061 /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-				F3585C922A3617F0008D23C5 /* Cart.graphql.swift */,
-				F3CA95CF2A326C8000B47BF6 /* Mutation.graphql.swift */,
-				F3CA95CC2A326C7400B47BF6 /* CartItem.graphql.swift */,
-				F3D414122A27E15500308061 /* Item.graphql.swift */,
-				F3D413822A27C87A00308061 /* Query.graphql.swift */,
-				F3D413832A27C87A00308061 /* Authentication.graphql.swift */,
-			);
-			path = Objects;
-			sourceTree = "<group>";
-		};
-		F3D413852A27C87A00308061 /* InputObjects */ = {
-			isa = PBXGroup;
-			children = (
-				F3D413862A27C87A00308061 /* UserSignInInput.graphql.swift */,
-			);
-			path = InputObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,24 +345,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3585C8C2A36095F008D23C5 /* UpdateCartItemQuantityMutation.graphql.swift in Sources */,
 				F3D413322A27AE5500308061 /* WebService.swift in Sources */,
-				F3D413912A27C87A00308061 /* SchemaMetadata.graphql.swift in Sources */,
-				F3D413902A27C87A00308061 /* UserSignInInput.graphql.swift in Sources */,
-				F3585C932A3617F1008D23C5 /* Cart.graphql.swift in Sources */,
-				F3585C912A36177A008D23C5 /* FetchCartQuery.graphql.swift in Sources */,
-				F3585C8D2A36095F008D23C5 /* RemoveItemFromCartMutation.graphql.swift in Sources */,
-				F3D4138F2A27C87A00308061 /* SchemaConfiguration.swift in Sources */,
+				F358339E2B0A946D00DB8E10 /* Query.graphql.swift in Sources */,
+				F358339D2B0A946D00DB8E10 /* SignInQuery.graphql.swift in Sources */,
+				F358339F2B0A946D00DB8E10 /* Authentication.graphql.swift in Sources */,
+				F35833A32B0A946D00DB8E10 /* YourLineAPI.graphql.swift in Sources */,
+				F35833A12B0A946D00DB8E10 /* UserSignInInput.graphql.swift in Sources */,
 				F3150BC22A2624D700C90C7A /* Webservice.docc in Sources */,
-				F3585C8B2A36095F008D23C5 /* AddItemToCartMutation.graphql.swift in Sources */,
-				F3585C862A35E1A1008D23C5 /* SignInQuery.graphql.swift in Sources */,
-				F3D414132A27E15500308061 /* Item.graphql.swift in Sources */,
-				F3585C852A35E1A1008D23C5 /* FetAllItemsQuery.graphql.swift in Sources */,
-				F3CA95D02A326C8000B47BF6 /* Mutation.graphql.swift in Sources */,
-				F3D4138D2A27C87A00308061 /* Query.graphql.swift in Sources */,
-				F3D4138E2A27C87A00308061 /* Authentication.graphql.swift in Sources */,
-				F3CA95CE2A326C7400B47BF6 /* CartItem.graphql.swift in Sources */,
-				F3585C842A35E1A1008D23C5 /* FetchItemsQuery.graphql.swift in Sources */,
+				F35833A22B0A946D00DB8E10 /* SchemaMetadata.graphql.swift in Sources */,
+				F35833A02B0A946D00DB8E10 /* SchemaConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

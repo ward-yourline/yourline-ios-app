@@ -3,7 +3,7 @@
 
 import ApolloAPI
 
-public extension Objects {
+public extension YourLineAPI.Objects {
   static let Authentication = ApolloAPI.Object(
     typename: "Authentication",
     implementedInterfaces: []
